@@ -260,6 +260,8 @@ textarea{min-height:7rem;resize:vertical}
 .out{display:grid;gap:.6rem;padding:1rem;border:1px dashed var(--lime-ink);border-radius:12px;font-size:.92rem;background:var(--bg)}
 .out pre{margin:0;white-space:pre-wrap;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
 .out .acts{display:flex;flex-wrap:wrap;gap:.6rem}
+.ok-msg{margin:0;padding:1rem;border-radius:12px;background:#E6F2D9;color:#24440B;font-size:.95rem;border:1px solid #9ACD4E}
+#f-go[disabled]{opacity:.6;cursor:wait}
 .out .copy{color:var(--ink);border-color:var(--line)}
 @media (max-width:900px){.contact{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
 
@@ -977,7 +979,7 @@ footer{background:var(--deep);color:var(--on-dark-muted);font-size:.92rem}
         <h2 style="color:#EEF5EF;font-size:clamp(2rem,4vw,2.8rem);font-weight:700" data-i18n="c.t">Contáctanos</h2>
         <div class="who"><div class="ini">JG</div><div><h3>Joel Galeas</h3><small data-i18n="c.role">Especialista en Sostenibilidad Corporativa y Gestión de Carbono</small></div></div>
         <div class="ch"><small data-i18n="c.phone">Teléfono y WhatsApp</small><span class="val"><span id="v-tel">+504 9928-8718</span><button class="copy" type="button" data-copy="v-tel" data-i18n="c.copy">Copiar</button></span></div>
-        <div class="ch"><small data-i18n="c.mail">Correo electrónico</small><span class="val"><span id="v-mail">jjglobalservicessa@gmail.com</span><button class="copy" type="button" data-copy="v-mail" data-i18n="c.copy">Copiar</button></span></div>
+        <div class="ch"><small data-i18n="c.mail">Correo electrónico</small><span class="val"><a id="v-mail" href="mailto:jjglobalservicessa@gmail.com" style="color:inherit">jjglobalservicessa@gmail.com</a><button class="copy" type="button" data-copy="v-mail" data-i18n="c.copy">Copiar</button></span></div>
         <div class="ch"><small data-i18n="c.addr">Dirección</small><span class="val">Corquín, Copán, Honduras, C.A.</span></div>
       </div>
       <form id="f" novalidate>
@@ -986,6 +988,11 @@ footer{background:var(--deep);color:var(--on-dark-muted);font-size:.92rem}
           <label for="f-name"><span data-i18n="f.name">Nombre</span><input id="f-name" autocomplete="name"></label>
           <label for="f-org"><span data-i18n="f.org">Organización</span><input id="f-org" autocomplete="organization"></label>
         </div>
+        <div class="row">
+          <label for="f-mail"><span data-i18n="f.mail">Correo electrónico</span><input id="f-mail" type="email" autocomplete="email" inputmode="email"></label>
+          <label for="f-tel"><span data-i18n="f.tel">Teléfono o WhatsApp</span><input id="f-tel" type="tel" autocomplete="tel"></label>
+        </div>
+        <input type="text" name="_honey" id="f-hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
         <label for="f-svc"><span data-i18n="f.svc">Servicio de interés</span>
           <select id="f-svc">
             <option data-i18n="f.diag">Diagnóstico de sostenibilidad</option>
@@ -996,13 +1003,14 @@ footer{background:var(--deep);color:var(--on-dark-muted);font-size:.92rem}
             <option data-i18n="f.cert">Implementación de certificaciones</option>
           </select></label>
         <label for="f-msg"><span data-i18n="f.msg">Mensaje</span><textarea id="f-msg"></textarea></label>
-        <div><button class="btn lime" type="submit" data-i18n="f.send">Preparar mensaje</button></div>
+        <div><button class="btn lime" type="submit" id="f-go" data-i18n="f.send">Enviar mensaje</button></div>
         <p class="fnote"><span data-i18n="pv.f">Al enviar sus datos acepta nuestro</span> <button type="button" class="plink" data-priv data-i18n="pv.l">Aviso de privacidad</button>.</p>
-        <p id="err" hidden style="color:#B5462E;font-size:.9rem" data-i18n="f.err">Escriba su nombre y un mensaje para continuar.</p>
+        <p id="err" hidden style="color:#B5462E;font-size:.9rem" data-i18n="f.err">Escriba su nombre, un correo válido y su mensaje para continuar.</p>
+        <p class="ok-msg" id="f-ok" hidden role="status"><b data-i18n="f.okt">¡Mensaje enviado!</b> <span data-i18n="f.ok">Gracias por escribirnos. Joel Galeas le responderá a su correo a la brevedad.</span></p>
         <div class="out" id="out" hidden>
-          <span data-i18n="f.ready">Su mensaje está listo. Cópielo o envíelo por WhatsApp.</span>
+          <span data-i18n="f.ready">No pudimos enviar el mensaje automáticamente. Envíelo por correo o WhatsApp con un clic:</span>
           <pre id="out-txt"></pre>
-          <div class="acts"><button class="copy" type="button" id="out-copy" data-i18n="f.copy">Copiar mensaje</button><a class="copy" id="out-wa" href="https://wa.me/50499288718" target="_blank" rel="noopener" data-i18n="f.wa">Enviar por WhatsApp</a></div>
+          <div class="acts"><button class="copy" type="button" id="out-copy" data-i18n="f.copy">Copiar mensaje</button><a class="copy" id="out-wa" href="https://wa.me/50499288718" target="_blank" rel="noopener" data-i18n="f.wa">Enviar por WhatsApp</a><a class="copy" id="out-mail" href="mailto:jjglobalservicessa@gmail.com" data-i18n="f.em">Enviar por correo</a></div>
         </div>
       </form>
     </div>
@@ -1018,7 +1026,7 @@ footer{background:var(--deep);color:var(--on-dark-muted);font-size:.92rem}
     <div id="rd-pv">
       <p data-i18n="pv.1">JJ GLOBAL, con domicilio en Corquín, Copán, Honduras, es responsable del tratamiento de los datos personales que usted comparte a través de este sitio.</p>
       <h3 data-i18n="pv.h1">Qué datos recogemos</h3>
-      <p data-i18n="pv.2">Solo los que usted escribe en el formulario de contacto o envía por WhatsApp o correo: nombre, organización, servicio de interés y mensaje. El autodiagnóstico se calcula en su navegador y no se guarda ni se envía a menos que usted decida mandarlo.</p>
+      <p data-i18n="pv.2">Solo los que usted escribe en el formulario de contacto o envía por WhatsApp o correo: nombre, organización, correo, teléfono, servicio de interés y mensaje. Los mensajes del formulario se transmiten a nuestro correo mediante el servicio FormSubmit. El autodiagnóstico se calcula en su navegador y no se guarda ni se envía a menos que usted decida mandarlo.</p>
       <h3 data-i18n="pv.h2">Para qué los usamos</h3>
       <p data-i18n="pv.3">Para responder su consulta y preparar una propuesta. No vendemos ni compartimos sus datos con terceros, salvo obligación legal.</p>
       <h3 data-i18n="pv.h3">Almacenamiento en su navegador</h3>
@@ -1088,7 +1096,7 @@ const EN={
 "o.t":"Request a sustainability assessment","o.p":"We review your operation or farm and give you a clear picture: where your emissions are, what your buyers require and which measures pay off best.","o.l1":"Map of emission sources and risks","o.l2":"Gaps against customers, standards and certifications","o.l3":"Prioritized measures and work proposal","o.c":"Request assessment",
 "c.t":"Contact us","c.role":"Corporate Sustainability and Carbon Management Specialist","c.phone":"Phone and WhatsApp","c.mail":"Email","c.addr":"Address","c.copy":"Copy",
 "c.lead":"Leave us your details and we will send you a technical and financial proposal.",
-"f.name":"Name","f.org":"Organization","f.svc":"Service of interest","f.diag":"Sustainability assessment","f.arr":"ARRAIGO program","f.msg":"Message","f.send":"Prepare message","f.err":"Enter your name and a message to continue.","f.ready":"Your message is ready. Copy it or send it via WhatsApp.","f.copy":"Copy message","f.wa":"Send via WhatsApp",
+"f.name":"Name","f.org":"Organization","f.svc":"Service of interest","f.diag":"Sustainability assessment","f.arr":"ARRAIGO program","f.msg":"Message","f.send":"Send message","f.mail":"Email","f.tel":"Phone or WhatsApp","f.sending":"Sending…","f.okt":"Message sent!","f.ok":"Thank you for writing. Joel Galeas will reply to your email shortly.","f.em":"Send by email","f.err":"Enter your name, a valid email and your message to continue.","f.ready":"We could not send the message automatically. Send it by email or WhatsApp with one click:","f.copy":"Copy message","f.wa":"Send via WhatsApp",
 "ar.s":"Carbon certification for Central American coffee and cocoa. Measure, verify and add value to the sustainability of your crops.","p.badge":"A JJ GLOBAL program",
 "aq.t":"What is ARRAIGO?","aq.p1":"An integrated carbon certification platform designed for coffee and cocoa producers in Central America. ARRAIGO quantifies, verifies and prepares for market the carbon captured by each farm's sustainable practices.",
 "aq.p2":"It develops and implements carbon management based on the Greenhouse Gas Protocol (GHG Protocol) and IPCC guidelines, and prepares results for independent verification.","ar.c1":"Start your assessment",
@@ -1130,7 +1138,7 @@ const EN={
 "ct.0":"Seals and certifications","ct.1":"ISO standards and reference frameworks","n.quiz":"Self-assessment",
 "qz.t":"Sustainability <span>self-assessment</span>","qz.p":"Answer 10 questions and find out in two minutes how ready your farm, cooperative or company is to get certified and measure its carbon.",
 "qz.go":"See my result","qz.reset":"Reset","qz.note":"Indicative result. It does not replace an audit or a certification.","qz.e1":"Your result will appear here","qz.e2":"You will see your overall level, progress in four areas and the gaps to address first.",
-"pv.l":"Privacy notice","pv.f":"By sending your details you accept our","pv.1":"JJ GLOBAL, based in Corquín, Copán, Honduras, is responsible for the personal data you share through this site.","pv.h1":"What data we collect","pv.2":"Only what you write in the contact form or send by WhatsApp or email: name, organization, service of interest and message. The self-assessment is calculated in your browser and is not stored or sent unless you choose to send it.","pv.h2":"How we use it","pv.3":"To answer your inquiry and prepare a proposal. We do not sell or share your data with third parties, except where required by law.","pv.h3":"Storage in your browser","pv.4":"The site only stores the language you chose in your browser. We do not use advertising cookies.","pv.h4":"Your rights","pv.5":"You can ask us to access, correct or delete your data by writing to jjglobalservicessa@gmail.com.","pv.6":"Last updated: October 2026.",
+"pv.l":"Privacy notice","pv.f":"By sending your details you accept our","pv.1":"JJ GLOBAL, based in Corquín, Copán, Honduras, is responsible for the personal data you share through this site.","pv.h1":"What data we collect","pv.2":"Only what you write in the contact form or send by WhatsApp or email: name, organization, email, phone, service of interest and message. Form messages are delivered to our inbox through the FormSubmit service. The self-assessment is calculated in your browser and is not stored or sent unless you choose to send it.","pv.h2":"How we use it","pv.3":"To answer your inquiry and prepare a proposal. We do not sell or share your data with third parties, except where required by law.","pv.h3":"Storage in your browser","pv.4":"The site only stores the language you chose in your browser. We do not use advertising cookies.","pv.h4":"Your rights","pv.5":"You can ask us to access, correct or delete your data by writing to jjglobalservicessa@gmail.com.","pv.6":"Last updated: October 2026.",
 "rd.copy":"Copy article link","rd.wa":"Share on WhatsApp",
 "n.faq":"FAQ","n.guide":"Free guide",
 "gd.c":"Deforestation-free coffee","gd.cs":"Checklist for cooperatives and exporters","gd.k":"Free guide","gd.t":"Checklist: deforestation-free coffee","gd.p":"European buyers already ask for proof that coffee does not come from deforested land. This guide sums up, in a practical checklist, what a cooperative or exporter needs to have in order.","gd.l1":"Plot geolocation: points and polygons","gd.l2":"Cut-off date and land-use change analysis","gd.l3":"Traceability from producer to exported lot","gd.l4":"Legality documents and due diligence","gd.b":"Download the PDF guide","gd.w":"Request it on WhatsApp",
@@ -1192,10 +1200,27 @@ async function copyText(txt,btn,el){const old=btn.textContent;
   setTimeout(()=>btn.textContent=old,1600);}
 document.querySelectorAll("[data-copy]").forEach(b=>b.addEventListener("click",()=>{const el=document.getElementById(b.dataset.copy);copyText(el.textContent,b,el)}));
 const f=document.getElementById("f");
-function build(){const n=f["f-name"].value.trim(),o=f["f-org"].value.trim(),s=f["f-svc"].selectedOptions[0].textContent,m=f["f-msg"].value.trim(),en=lang==="en";
-  const t=(en?"Hello Joel,\n\n":"Estimado Joel:\n\n")+m+"\n\n"+(en?"Service: ":"Servicio: ")+s+"\n"+(en?"Name: ":"Nombre: ")+n+(o?"\n"+(en?"Organization: ":"Organización: ")+o:"");
-  document.getElementById("out-txt").textContent=t;document.getElementById("out-wa").href="https://wa.me/50499288718?text="+encodeURIComponent(t);return t;}
-f.addEventListener("submit",e=>{e.preventDefault();const ok=f["f-name"].value.trim()&&f["f-msg"].value.trim();document.getElementById("err").hidden=!!ok;if(!ok)return;build();document.getElementById("out").hidden=false;});
+function build(){const n=f["f-name"].value.trim(),o=f["f-org"].value.trim(),em=f["f-mail"].value.trim(),tl=f["f-tel"].value.trim(),s=f["f-svc"].selectedOptions[0].textContent,m=f["f-msg"].value.trim(),en=lang==="en";
+  const t=(en?"Hello Joel,\n\n":"Estimado Joel:\n\n")+m+"\n\n"+(en?"Service: ":"Servicio: ")+s+"\n"+(en?"Name: ":"Nombre: ")+n+(o?"\n"+(en?"Organization: ":"Organización: ")+o:"")+(em?"\n"+(en?"Email: ":"Correo: ")+em:"")+(tl?"\n"+(en?"Phone: ":"Teléfono: ")+tl:"");
+  document.getElementById("out-txt").textContent=t;document.getElementById("out-wa").href="https://wa.me/50499288718?text="+encodeURIComponent(t);
+  document.getElementById("out-mail").href="mailto:jjglobalservicessa@gmail.com?subject="+encodeURIComponent((en?"Website inquiry – ":"Consulta desde la web – ")+s)+"&body="+encodeURIComponent(t);return t;}
+const FORM_URL="https://formsubmit.co/ajax/jjglobalservicessa@gmail.com";
+f.addEventListener("submit",async e=>{e.preventDefault();
+  const en=lang==="en",em=f["f-mail"].value.trim(),okMail=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em);
+  const ok=f["f-name"].value.trim()&&f["f-msg"].value.trim()&&okMail;
+  document.getElementById("err").hidden=!!ok;document.getElementById("f-ok").hidden=true;document.getElementById("out").hidden=true;if(!ok)return;
+  if(f["f-hp"].value)return;
+  const txt=build(),btn=document.getElementById("f-go"),lbl=btn.textContent;btn.disabled=true;btn.textContent=en?"Sending…":"Enviando…";
+  const data={_subject:(en?"Website inquiry – ":"Nueva consulta desde la web – ")+f["f-svc"].selectedOptions[0].textContent,_template:"table",_captcha:"false",_replyto:em,
+    [en?"Name":"Nombre"]:f["f-name"].value.trim(),[en?"Organization":"Organización"]:f["f-org"].value.trim()||"—",[en?"Email":"Correo"]:em,[en?"Phone":"Teléfono"]:f["f-tel"].value.trim()||"—",
+    [en?"Service":"Servicio"]:f["f-svc"].selectedOptions[0].textContent,[en?"Message":"Mensaje"]:f["f-msg"].value.trim()};
+  let sent=false;
+  try{const r=await fetch(FORM_URL,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(data)});
+    const j=await r.json().catch(()=>({}));sent=r.ok&&String(j.success)==="true";}catch(err){sent=false;}
+  btn.disabled=false;btn.textContent=lbl;
+  if(sent){document.getElementById("f-ok").hidden=false;["f-name","f-org","f-mail","f-tel","f-msg"].forEach(k=>f[k].value="");}
+  else{document.getElementById("out").hidden=false;}
+});
 document.getElementById("out-copy").addEventListener("click",e=>copyText(build(),e.currentTarget,document.getElementById("out-txt")));
 
 const POSTS=[
