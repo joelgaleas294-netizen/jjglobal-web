@@ -1,0 +1,1729 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JJ Global S.A.</title>
+<meta name="description" content="JJ GLOBAL (Joel Galeas): sostenibilidad corporativa, gestión de carbono, agricultura climáticamente inteligente y ODS. Corquín, Copán, Honduras.">
+<meta name="theme-color" content="#123B29">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JJ Global S.A.">
+<meta property="og:description" content="JJ GLOBAL (Joel Galeas): sostenibilidad corporativa, gestión de carbono, agricultura climáticamente inteligente y ODS. Corquín, Copán, Honduras.">
+<meta property="og:image" content="https://jjglobal-web.vercel.app/og-jjglobal.jpg">
+<meta property="og:site_name" content="JJ Global S.A.">
+<meta property="og:url" content="https://jjglobal-web.vercel.app/">
+<meta name="application-name" content="JJ Global S.A.">
+<link rel="canonical" href="https://jjglobal-web.vercel.app/">
+<meta property="og:locale" content="es_HN">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: encabezado blanco con logotipo centrado; portada oscura con paneles de íconos y hojas flotantes; tarjetas de servicio superpuestas; títulos en dos tonos; bloques claros con tarjetas redondeadas */
+:root{
+  --bg:#FFFFFF; --soft:#F3F5F2; --ink:#0F2B20; --muted:#55655B; --line:#E1E7E2;
+  --deep:#123B29; --lime:#8DBF3F; --lime-ink:#4A7414; --water:#1F6E8C; --gold:#C99A3E;
+  --hero:#0B1F17; --on-dark:#EEF5EF; --on-dark-muted:#A9C1B2;
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --wrap:74rem; --r:28px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0D1712; --soft:#14211A; --ink:#E6EEE8; --muted:#9DB0A4; --line:#24352B;
+  --deep:#0F3022; --lime:#9ACD4E; --lime-ink:#A7D65F; --water:#62B4D3; --gold:#DDB05A;
+  --hero:#07130D; --on-dark:#E6EEE8; --on-dark-muted:#93AD9D; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0D1712; --soft:#14211A; --ink:#E6EEE8; --muted:#9DB0A4; --line:#24352B;
+  --deep:#0F3022; --lime:#9ACD4E; --lime-ink:#A7D65F; --water:#62B4D3; --gold:#DDB05A;
+  --hero:#07130D; --on-dark:#E6EEE8; --on-dark-muted:#93AD9D; color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:5.5rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.65;margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,4vw,2.5rem)}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.04;text-wrap:balance;margin:0;letter-spacing:-.015em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.duo{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:700;text-align:center;line-height:1}
+.duo span{display:block;color:var(--lime-ink)}
+.duo.left{text-align:left}
+.lead{color:var(--muted);max-width:44rem;font-size:1.08rem}
+.center{text-align:center;margin-inline:auto}
+section.sec{padding-block:clamp(4rem,9vw,7rem)}
+.sec-head{display:grid;gap:1.2rem;justify-items:center;margin-bottom:clamp(2.5rem,5vw,3.5rem);text-align:center}
+
+/* Barra superior */
+.topbar{background:var(--deep);color:var(--on-dark-muted);font-size:.8rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:.4rem}
+.topbar .c{display:flex;gap:1.2rem;flex-wrap:wrap}
+.topbar a{text-decoration:none}
+.lang{display:flex;align-self:center;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{all:unset;cursor:pointer;font-family:var(--mono);font-size:.72rem;padding:.35rem .7rem;color:var(--muted)}
+.lang button:focus-visible{outline:2px solid var(--gold)}
+.mm .lang{border-color:rgba(169,193,178,.35)}.mm .lang button{color:var(--on-dark-muted)}
+.mmtop{display:flex;justify-content:space-between;align-items:center}
+@media (max-width:560px){.icons .lang{display:none}}
+.lang button[aria-pressed="true"]{background:var(--lime);color:#0B1F17}
+@media (max-width:640px){.topbar .c span:nth-child(n+2){display:none}}
+@media (max-width:820px){.hero svg.panels{opacity:.3}}
+
+/* Encabezado */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--bg);box-shadow:0 8px 24px -18px rgba(10,30,20,.35)}
+.hdr{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;padding-block:.7rem}
+.burger{all:unset;cursor:pointer;width:2.4rem;height:2rem;display:grid;align-content:space-between;padding:.35rem 0}
+.burger i{display:block;height:4px;border-radius:2px;background:var(--lime)}
+.brand{display:grid;justify-items:center;gap:.15rem;text-decoration:none}
+.brand svg{width:54px;height:54px;color:var(--ink)}
+.brand b{font-family:var(--display);font-weight:800;font-size:1.05rem;letter-spacing:.12em;color:var(--lime-ink);white-space:nowrap}
+.icons{justify-self:end;display:flex;gap:.6rem}
+.round{width:2.6rem;height:2.6rem;border-radius:50%;background:var(--lime);display:grid;place-items:center;color:#fff;box-shadow:0 6px 14px -6px rgba(60,100,20,.6);text-decoration:none}
+.round svg{width:1.2rem;height:1.2rem}
+.navd{display:none}
+@media (min-width:1240px){
+  .hdr{grid-template-columns:auto 1fr auto}
+  .icons a[href="#contacto"]{display:none}
+  .burger{display:none}
+  .brand{grid-auto-flow:column;gap:.6rem;align-items:center}
+  .brand svg{width:44px;height:44px}
+  .navd{display:flex;justify-content:center;gap:.3rem;list-style:none;margin:0;padding:0}
+}
+.navd > li{position:relative}
+.navd > li > a,.navd > li > button{all:unset;cursor:pointer;display:flex;align-items:center;gap:.3rem;padding:.6rem .7rem;font-weight:600;font-size:.92rem;border-radius:999px;white-space:nowrap}
+.navd > li > a:hover,.navd > li > button:hover,.navd > li:focus-within > button{background:var(--soft)}
+.navd svg{width:.8rem;height:.8rem}
+.dd{position:absolute;top:100%;left:0;min-width:17rem;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:.5rem;box-shadow:0 20px 40px -20px rgba(10,30,20,.35);display:none}
+.navd > li:hover .dd,.navd > li:focus-within .dd{display:grid}
+.dd a{padding:.6rem .8rem;border-radius:10px;text-decoration:none;font-size:.92rem}
+.dd a:hover{background:var(--soft);color:var(--lime-ink)}
+.navd .cta{background:var(--lime);color:#0B1F17;margin-left:.4rem}
+.navd .cta:hover{background:var(--lime)!important;filter:brightness(1.05)}
+
+/* Menú móvil */
+.mm{position:fixed;inset:0;z-index:60;background:var(--deep);color:var(--on-dark);padding:calc(1.2rem + env(safe-area-inset-top,0px)) clamp(16px,6vw,2.5rem) 2rem;display:grid;align-content:start;gap:1.4rem;overflow:auto}
+.mm .x{all:unset;cursor:pointer;font-size:2rem;line-height:1;color:var(--lime)}
+.mm nav{display:grid;gap:.2rem}
+.mm nav a{font-family:var(--display);font-size:1.7rem;font-weight:700;text-decoration:none;padding:.35rem 0}
+.mm nav small{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;color:var(--lime);text-transform:uppercase;margin-top:1rem}
+.mm nav a.sub{font-family:var(--body);font-size:1.05rem;font-weight:500;color:var(--on-dark-muted);padding:.25rem 0 .25rem 1rem}
+
+/* Portada */
+.hero{position:relative;background:var(--hero);color:var(--on-dark);overflow:hidden;isolation:isolate}
+.hero .bg{position:absolute;inset:0;z-index:-2;background:
+  radial-gradient(60% 80% at 75% 35%,rgba(70,140,120,.55),transparent 70%),
+  radial-gradient(50% 70% at 20% 80%,rgba(141,191,63,.18),transparent 70%),
+  linear-gradient(180deg,#0B1F17,#10291F)}
+.hero svg.panels{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.9}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:grid;gap:1.6rem;padding-block:clamp(3.5rem,8vw,6rem) clamp(9rem,16vw,12rem)}
+.kicker{font-family:var(--mono);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lime)}
+.hero h1{font-size:clamp(2.5rem,6.4vw,5.2rem);font-weight:700;max-width:14ch}
+.hero h1 span{color:var(--lime)}
+.hero p.sub{color:var(--on-dark-muted);max-width:38rem;font-size:clamp(1.02rem,1.5vw,1.18rem)}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;font-size:.95rem;border:1px solid transparent;cursor:pointer;font-family:var(--body);transition:transform .2s,filter .2s}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn.lime{background:var(--lime);color:#0B1F17}
+.btn.ghost{border-color:rgba(238,245,239,.35);color:var(--on-dark)}
+.btn.dark{background:var(--deep);color:#EEF5EF}
+.btn svg{width:1rem;height:1rem}
+
+/* Tarjetas superpuestas */
+.cards{position:relative;z-index:3;margin-top:calc(-1 * clamp(7rem,13vw,9.5rem))}
+.cards .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;filter:drop-shadow(0 30px 40px rgba(10,30,20,.25))}
+.ccard{position:relative;min-height:19rem;padding:2.2rem 1.6rem 1.8rem;display:grid;justify-items:center;align-content:end;gap:1.1rem;text-align:center;text-decoration:none;color:#fff;transition:transform .25s}
+.ccard:hover{transform:translateY(-6px)}
+.ccard .more{position:absolute;top:1rem;right:1rem;border:1.5px solid currentColor;padding:.12rem .55rem;font-size:.8rem;font-weight:600}
+.ccard svg{width:6.5rem;height:6.5rem}
+.ccard h3{font-family:var(--body);font-weight:500;font-size:1.15rem;line-height:1.3;max-width:15rem}
+.c1{background:#123B29;border-radius:var(--r) 0 0 var(--r)}
+.c2{background:#1F6E8C}
+.c3{background:#8DBF3F;color:#0B1F17;border-radius:0 var(--r) var(--r) 0}
+@media (max-width:820px){.cards .grid{grid-template-columns:1fr 1fr}.c3{grid-column:1/-1;border-radius:0 0 var(--r) var(--r);min-height:13rem}.c1{border-radius:var(--r) 0 0 0}.c2{border-radius:0 var(--r) 0 0}.ccard{min-height:15rem}.ccard svg{width:5rem;height:5rem}}
+@media (max-width:420px){.ccard{padding:2.6rem 1rem 1.4rem}.ccard h3{font-size:1rem}}
+
+/* Indicadores */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.stat{background:var(--soft);border-radius:var(--r);padding:2.2rem 1.2rem;display:grid;justify-items:center;gap:.5rem;text-align:center}
+.stat b{font-family:var(--display);font-size:clamp(3rem,6vw,4.2rem);font-weight:700;color:var(--lime-ink);line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:1.15rem;line-height:1.25}
+.stat strong{font-weight:700}
+@media (max-width:900px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Nosotros */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.about .txt{display:grid;gap:1.1rem;color:var(--muted)}
+.about .txt strong{color:var(--ink)}
+.mv{display:grid;gap:1rem}
+.mvc{border-radius:var(--r);padding:1.8rem;display:grid;gap:.6rem}
+.mvc small{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase}
+.mvc p{font-size:1.04rem}
+.mvc.m{background:var(--deep);color:#EEF5EF}.mvc.m small{color:var(--lime)}
+.mvc.v{background:var(--soft)}.mvc.v small{color:var(--lime-ink)}
+.vals{display:flex;flex-wrap:wrap;gap:.5rem}
+.vals span{border:1px solid var(--line);border-radius:999px;padding:.4rem .9rem;font-size:.9rem;font-weight:500}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+
+/* Servicios */
+.svcs{background:var(--soft)}
+.tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-bottom:2rem}
+.tab{all:unset;cursor:pointer;padding:.7rem 1.2rem;border-radius:999px;font-weight:600;font-size:.95rem;background:var(--bg);border:1px solid var(--line)}
+.tab[aria-selected="true"]{background:var(--deep);color:#EEF5EF;border-color:var(--deep)}
+.tab:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.pane{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:1.2rem}
+.pane .intro{border-radius:var(--r);padding:2rem;color:#fff;display:grid;gap:1rem;align-content:start}
+.pane .intro svg{width:4.5rem;height:4.5rem}
+.pane .intro h3{font-size:clamp(1.6rem,2.6vw,2.1rem);font-weight:700}
+.pane .intro p{opacity:.9}
+.pane .list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.it{background:var(--bg);border-radius:20px;padding:1.4rem;display:grid;gap:.4rem;align-content:start;border:1px solid var(--line)}
+.it .tag{font-family:var(--mono);font-size:.7rem;color:var(--water);letter-spacing:.03em}
+.it h4{font-size:1.08rem;font-weight:600}
+.it p{color:var(--muted);font-size:.93rem}
+@media (max-width:900px){.pane{grid-template-columns:1fr}}
+@media (max-width:560px){.pane .list{grid-template-columns:1fr}}
+
+/* ARRAIGO */
+.arr{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);border-radius:var(--r);overflow:hidden;background:var(--deep);color:#EEF5EF}
+.arr .t{padding:clamp(1.8rem,4vw,3rem);display:grid;gap:1rem;align-content:start}
+.badge{justify-self:start;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--lime);color:var(--lime);padding:.25rem .65rem;border-radius:999px}
+.arr h3{font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:800;letter-spacing:-.02em}
+.arr .t p{color:var(--on-dark-muted)}
+.arr ul{margin:0;padding:0;list-style:none;display:grid;gap:.55rem}
+.arr li{display:grid;grid-template-columns:1rem minmax(0,1fr);gap:.6rem}
+.arr li::before{content:"";width:.5rem;height:.5rem;margin-top:.62rem;border-radius:50%;background:var(--lime)}
+.arr .art{min-height:22rem;background:radial-gradient(circle at 70% 25%,rgba(141,191,63,.3),transparent 50%),linear-gradient(160deg,#1C4A35,#0B1F17);display:grid;place-items:center;padding:2rem 1rem}
+.phone{width:14.5rem;max-width:100%;aspect-ratio:9/18.5;background:#08120D;border-radius:2rem;padding:.55rem;box-shadow:0 25px 50px -20px rgba(0,0,0,.6),inset 0 0 0 2px #2B3B33;transform:rotate(-4deg)}
+.scr{height:100%;border-radius:1.55rem;background:#F3F5F1;color:#0F2B20;padding:.9rem .7rem;display:grid;gap:.45rem;align-content:start;font-size:.72rem;overflow:hidden}
+.ab{display:flex;justify-content:space-between;align-items:center;font-family:var(--display);font-weight:700;font-size:.85rem;color:#123B29}
+.off{font-family:var(--mono);font-weight:400;font-size:.55rem;background:#E7F1D8;color:#4A7417;padding:.12rem .4rem;border-radius:999px}
+.pc{background:#fff;border:1px solid #DCE4DD;border-radius:.6rem;padding:.45rem .55rem;display:grid;gap:.15rem}
+.pc small{font-size:.58rem;color:#55655B;text-transform:uppercase;letter-spacing:.06em}
+.pc b{font-size:.8rem}
+.bar{height:.35rem;background:#E3E9E4;border-radius:999px;overflow:hidden}.bar i{display:block;height:100%;background:#8DBF3F}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:.45rem}
+.sv{margin-top:.2rem;background:#123B29;color:#fff;text-align:center;border-radius:999px;padding:.5rem;font-weight:600}
+.steps{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.steps li{background:var(--soft);border-radius:20px;padding:1.4rem;display:grid;gap:.4rem;align-content:start}
+.steps li span{width:2.2rem;height:2.2rem;border-radius:50%;display:grid;place-items:center;background:var(--lime);color:#0B1F17;font-weight:700}
+.steps h4{font-size:1.06rem;font-weight:600;margin-top:.3rem}
+.steps p{color:var(--muted);font-size:.92rem}
+@media (max-width:900px){.arr{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+
+/* Sectores */
+.sectors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.sector{border-radius:var(--r);padding:1.6rem;display:grid;grid-template-columns:3.2rem minmax(0,1fr);gap:1rem;align-items:center;background:var(--soft)}
+.sector .ic{width:3.2rem;height:3.2rem;border-radius:50%;background:var(--lime);display:grid;place-items:center;color:#0B1F17}
+.sector .ic svg{width:1.5rem;height:1.5rem}
+.sector h4{font-size:1.05rem;font-weight:600}
+.sector p{color:var(--muted);font-size:.9rem}
+@media (max-width:900px){.sectors{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.sectors{grid-template-columns:1fr}}
+
+/* Normas */
+.norms{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1rem}
+@media (max-width:1000px){.norms{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:640px){.norms{grid-template-columns:repeat(2,minmax(0,1fr))}.norm b{font-size:1.4rem}}
+.norm{aspect-ratio:3/4;border-radius:18px;padding:1.2rem;display:grid;align-content:space-between;color:#fff;position:relative;overflow:hidden;box-shadow:0 18px 30px -22px rgba(10,30,20,.6)}
+.norm::after{content:"";position:absolute;right:-30%;bottom:-20%;width:90%;aspect-ratio:1;border-radius:50%;border:14px solid rgba(255,255,255,.12)}
+.norm small{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.norm b{font-family:var(--display);font-size:1.7rem;font-weight:800;line-height:1}
+.norm p{font-size:.85rem;line-height:1.35;opacity:.92;position:relative;z-index:1}
+.n1{background:#123B29}.n2{background:#1F6E8C}.n3{background:#4E7F1B}.n4{background:#8A6420}.n5{background:#2F5D4A}.n6{background:#5B3E7A}
+
+/* Diagnóstico */
+.offer{background:var(--lime);color:#0B1F17;border-radius:var(--r);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) auto;gap:clamp(1.5rem,4vw,3rem);align-items:center;padding:clamp(1.8rem,4vw,3rem)}
+.offer h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;margin-bottom:.7rem}
+.offer ul{margin:0;padding:0;list-style:none;display:grid;gap:.5rem;font-weight:500}
+.offer li{display:grid;grid-template-columns:1.3rem minmax(0,1fr);gap:.4rem}
+.offer li::before{content:"✓";font-weight:800}
+@media (max-width:980px){.offer{grid-template-columns:1fr}.offer .btn{justify-self:start}}
+
+/* Contacto */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(1.5rem,4vw,3rem);margin-top:3rem}
+.person{border-radius:var(--r);background:var(--deep);color:#EEF5EF;padding:2rem;display:grid;gap:1.1rem;align-content:start}
+.who{display:grid;grid-template-columns:4rem minmax(0,1fr);gap:1rem;align-items:center}
+.who .ini{width:4rem;height:4rem;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:1.35rem;background:var(--lime);color:#0B1F17}
+.who h3{font-size:1.45rem}
+.who small{display:block;margin-top:.3rem;font-size:.9rem;line-height:1.35;color:var(--lime)}
+.ch{display:grid;gap:.15rem;padding-top:.9rem;border-top:1px solid rgba(169,193,178,.25)}
+.ch small{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-muted)}
+.ch .val{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;font-size:1.08rem;overflow-wrap:anywhere}
+.copy{all:unset;cursor:pointer;font-family:var(--mono);font-size:.7rem;padding:.25rem .6rem;border:1px solid rgba(169,193,178,.4);border-radius:999px;color:var(--on-dark-muted)}
+form{display:grid;gap:1rem;min-width:0;background:var(--soft);border-radius:var(--r);padding:clamp(1.4rem,3vw,2rem)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{display:grid;gap:.35rem;font-size:.85rem;color:var(--muted);font-weight:500}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:.75rem .85rem;width:100%}
+textarea{min-height:7rem;resize:vertical}
+.out{display:grid;gap:.6rem;padding:1rem;border:1px dashed var(--lime-ink);border-radius:12px;font-size:.92rem;background:var(--bg)}
+.out pre{margin:0;white-space:pre-wrap;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.out .acts{display:flex;flex-wrap:wrap;gap:.6rem}
+.ok-msg{margin:0;padding:1rem;border-radius:12px;background:#E6F2D9;color:#24440B;font-size:.95rem;border:1px solid #9ACD4E}
+#f-go[disabled]{opacity:.6;cursor:wait}
+.out .copy{color:var(--ink);border-color:var(--line)}
+@media (max-width:900px){.contact{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+#calculadora .kicker{color:var(--lime-ink)}
+.calc{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:1.5rem;align-items:start}
+.cc-form{background:var(--soft);border:1px solid var(--line);border-radius:var(--r);padding:clamp(1.2rem,3vw,2rem);display:grid;gap:1.2rem}
+.cc-who{display:grid;grid-template-columns:minmax(7rem,.4fr) 1fr;gap:1rem}
+.cc-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem}
+.cc-tab{display:flex;align-items:center;justify-content:center;gap:.45rem;border:0;background:transparent;border-radius:999px;padding:.65rem .5rem;font:inherit;font-weight:600;font-size:.92rem;color:var(--muted);cursor:pointer}
+.cc-tab svg{width:1.2rem;height:1.2rem;flex:none}
+.cc-tab[aria-selected=true]{background:var(--deep);color:#EEF5EF}
+.cc-tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.cc-panel{display:grid;gap:1rem}
+.cc-row{display:grid;grid-template-columns:1fr auto 1fr;gap:.6rem;align-items:end}
+.cc-row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:end}
+.cc-swap{width:2.8rem;height:2.8rem;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;display:grid;place-items:center;margin-bottom:.1rem}
+.cc-swap svg{width:1.2rem;height:1.2rem}
+.cc-chk{display:flex;align-items:center;gap:.6rem;font-size:.95rem;color:var(--ink);cursor:pointer;padding:.75rem 0}
+.cc-chk input{width:1.2rem;height:1.2rem;accent-color:var(--deep);padding:0}
+.cc-err{color:#B5462E;font-size:.9rem;margin:0}
+.cc-res .cc-hi{font-size:1.15rem;color:#EEF5EF;margin:0}
+.cc-res .cc-hi b{color:#9ACD4E}
+.cc-big b{font-size:clamp(3rem,7vw,4.4rem)}
+.cc-big{grid-template-columns:1fr}
+.cc-sub{margin:0;color:var(--on-dark-muted);font-size:.95rem}
+.cc-sub .lv{font-weight:700}.cc-sub .lv.ok{color:#9ACD4E}.cc-sub .lv.mid{color:#E8C25A}.cc-sub .lv.low{color:#F08A6E}
+.cc-dl{margin:0;display:grid;gap:0;border-top:1px solid rgba(238,245,239,.15)}
+.cc-dl div{display:grid;grid-template-columns:minmax(7rem,.8fr) 1.2fr;gap:.8rem;padding:.55rem 0;border-bottom:1px solid rgba(238,245,239,.15);font-size:.9rem}
+.cc-dl dt{color:var(--on-dark-muted)}.cc-dl dd{margin:0;color:#EEF5EF}
+.cc-eq{margin:0;font-size:.95rem;color:#EEF5EF}
+.cc-src{margin:0;font-size:.78rem;color:var(--on-dark-muted);line-height:1.5}
+.cc-acts{display:flex;flex-wrap:wrap;gap:.6rem}
+.cc-acts .btn.ghost{background:transparent;border:1px solid rgba(238,245,239,.35);color:#EEF5EF}
+@media (max-width:900px){.calc{grid-template-columns:1fr}}
+@media (max-width:520px){.cc-who,.cc-row2{grid-template-columns:1fr}.cc-row{grid-template-columns:1fr}.cc-swap{justify-self:center;transform:rotate(90deg)}.cc-tab span{font-size:.85rem}}
+
+
+/* Pie */
+footer{background:var(--deep);color:var(--on-dark-muted);font-size:.92rem}
+.fcols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2rem;padding-block:3.5rem 2.5rem}
+.fcols h4{font-family:var(--display);color:#EEF5EF;font-size:1.15rem;margin-bottom:.8rem}
+.fcols a{text-decoration:none;display:block;padding:.15rem 0}
+.fcols a:hover{color:var(--lime)}
+.fbrand{display:grid;gap:.8rem;align-content:start}
+.fbrand .b{display:flex;align-items:center;gap:.6rem;color:#EEF5EF}
+.fbrand svg{width:42px;height:42px;color:#EEF5EF}
+.fbrand b{font-family:var(--display);font-size:1.15rem;letter-spacing:.08em}
+.fbot{border-top:1px solid rgba(169,193,178,.2)}
+.fbot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-block:1.2rem;font-size:.82rem}
+@media (max-width:900px){.fcols{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.fcols{grid-template-columns:1fr}}
+
+.wa{position:fixed;right:max(1rem,env(safe-area-inset-right,0px));bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:50;width:3.6rem;height:3.6rem;border-radius:50%;background:#3DBE6A;color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px -10px rgba(0,0,0,.45);transition:transform .2s}
+.wa:hover{transform:scale(1.06)}
+.wa svg{width:1.8rem;height:1.8rem}
+
+/* ARRAIGO ampliado */
+.feats,.bens{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.2rem}
+.feat,.ben{border-radius:22px;padding:1.6rem;display:grid;gap:.5rem;align-content:start;background:var(--soft)}
+.ben{background:var(--bg);border:1px solid var(--line);text-align:center;justify-items:center}
+.feat .ic,.ben .ic{width:3rem;height:3rem;border-radius:14px;display:grid;place-items:center;background:var(--lime);color:#0B1F17}
+.ben .ic{border-radius:50%;width:3.4rem;height:3.4rem}
+.feat .ic svg,.ben .ic svg{width:1.5rem;height:1.5rem}
+.feat h4,.ben h4{font-size:1.12rem;font-weight:600;margin-top:.3rem}
+.feat p,.ben p{color:var(--muted);font-size:.94rem}
+@media (max-width:900px){.feats,.bens{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.feats,.bens{grid-template-columns:1fr}}
+.story{background:var(--deep);color:#EEF5EF;padding-block:clamp(4rem,9vw,7rem)}
+.story-g{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(2rem,6vw,5rem);align-items:start}
+.story h2{font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:700;margin:.8rem 0 1.6rem}
+.story h2 span{color:var(--lime)}
+.story blockquote{margin:0;padding-left:1.2rem;border-left:4px solid var(--lime);font-family:var(--display);font-size:clamp(1.3rem,2.2vw,1.7rem);line-height:1.25;color:#EEF5EF}
+.story-txt{display:grid;gap:1rem;color:var(--on-dark-muted)}
+.story-txt em{font-style:normal;color:var(--lime);font-weight:600}
+.opps{margin:0;padding:0;list-style:none;display:grid;gap:.55rem}
+.opps li{display:grid;grid-template-columns:1.5rem minmax(0,1fr);gap:.5rem;color:#EEF5EF}
+.opps li::before{content:"";width:1.1rem;height:1.1rem;margin-top:.3rem;border-radius:50%;background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12l4 4 8-8' fill='none' stroke='%230B1F17' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") center/70% no-repeat}
+.story .close{color:#EEF5EF;font-size:1.08rem}
+@media (max-width:860px){.story-g{grid-template-columns:1fr}}
+.steps5{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem;position:relative}
+.steps5 li{background:var(--soft);border-radius:22px;padding:1.5rem 1.2rem;display:grid;gap:.45rem;align-content:start;text-align:center;justify-items:center}
+.steps5 li span{width:3rem;height:3rem;border-radius:50%;display:grid;place-items:center;background:var(--deep);color:#EEF5EF;font-family:var(--display);font-weight:700;font-size:1.3rem;box-shadow:0 0 0 6px var(--bg)}
+.steps5 h4{font-size:1.06rem;font-weight:600;margin-top:.4rem}
+.steps5 p{color:var(--muted);font-size:.9rem}
+@media (max-width:1000px){.steps5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.steps5{grid-template-columns:1fr}.steps5 li{text-align:left;justify-items:start}}
+.monitor{margin-top:1.2rem;border-radius:22px;background:color-mix(in srgb,var(--lime) 18%,var(--bg));display:grid;grid-template-columns:3rem minmax(0,1fr);gap:1rem;align-items:center;padding:1.4rem 1.6rem}
+.monitor svg{width:2.6rem;height:2.6rem;color:var(--lime-ink)}
+.arr-cta{margin-top:2rem;border-radius:var(--r);background:linear-gradient(135deg,#123B29,#1C5A3C);color:#EEF5EF;padding:clamp(1.8rem,4vw,2.8rem);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.5rem;align-items:center}
+.arr-cta h3{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:700;margin-bottom:.5rem}
+.arr-cta p{color:var(--on-dark-muted)}
+@media (max-width:820px){.arr-cta{grid-template-columns:1fr}.arr-cta .btn{justify-self:start}}
+
+/* Certificaciones */
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-bottom:1.8rem}
+.chip{all:unset;cursor:pointer;padding:.55rem 1.05rem;border-radius:999px;font-weight:600;font-size:.9rem;background:var(--soft);border:1px solid var(--line)}
+.chip[aria-pressed="true"]{background:var(--lime);color:#0B1F17;border-color:var(--lime)}
+.chip:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.certs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.cert{position:relative;border-radius:22px;padding:1.4rem 1.3rem 1.2rem;background:var(--bg);border:1px solid var(--line);display:grid;gap:.45rem;align-content:start;overflow:hidden}
+.cert::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:var(--c)}
+.cert small{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+:root[data-theme="dark"] .cert small{color:var(--lime-ink)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cert small{color:var(--lime-ink)}}
+.cert h4{font-size:1.2rem;font-weight:700}
+.cert p{color:var(--muted);font-size:.9rem}
+.cert .mk{margin-top:.3rem;font-size:.78rem;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:.35rem}
+.cert .mk::before{flex:none;content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--lime)}
+@media (min-width:1001px){.cert.wide{grid-column:span 2}}
+@media (max-width:1000px){.certs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:720px){.certs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.certs{grid-template-columns:1fr}}
+.impl{margin-top:2rem;border-radius:var(--r);background:var(--deep);color:#EEF5EF;padding:clamp(1.6rem,4vw,2.6rem);display:grid;gap:1.3rem}
+.impl h3{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:700}
+.impl ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem}
+.impl li{display:grid;gap:.6rem;align-content:start;font-size:.95rem;border-top:2px solid rgba(169,193,178,.3);padding-top:.9rem}
+.impl li b{width:2.2rem;height:2.2rem;border-radius:50%;display:grid;place-items:center;background:var(--lime);color:#0B1F17}
+.impl .note{color:var(--on-dark-muted);font-size:.9rem}
+@media (max-width:900px){.impl ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.impl ol{grid-template-columns:1fr}}
+
+/* Blog */
+.posts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.post{all:unset;cursor:pointer;display:grid;grid-template-rows:auto 1fr;border-radius:var(--r);overflow:hidden;background:var(--bg);border:1px solid var(--line);transition:transform .25s,box-shadow .25s}
+.post:hover{transform:translateY(-4px);box-shadow:0 24px 40px -28px rgba(10,30,20,.5)}
+.post:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.post.feat-post{grid-column:1/-1;grid-template-columns:1.2fr 1fr;grid-template-rows:none}
+@media (min-width:981px){.post.lg2,.post.lg3{grid-column:span 2;grid-template-columns:1fr 1fr;grid-template-rows:none}.post.lg3{grid-column:1/-1}.post.lg2 .cover,.post.lg3 .cover{aspect-ratio:auto;min-height:100%}.post.lg2 .pbody,.post.lg3 .pbody{align-content:center}}
+@media (min-width:641px) and (max-width:980px){.post.md2{grid-column:1/-1}}
+.cover{position:relative;aspect-ratio:16/9;max-width:100%;overflow:hidden;display:grid;place-items:center}
+.feat-post .cover{aspect-ratio:auto;min-height:100%}
+.cover svg{width:46%;height:auto;max-height:70%;color:rgba(255,255,255,.92)}
+.cover::after{content:"";position:absolute;inset:auto -20% -40% auto;width:70%;aspect-ratio:1;border-radius:50%;border:18px solid rgba(255,255,255,.1)}
+.cover .tg{position:absolute;left:1rem;top:1rem;background:rgba(255,255,255,.92);color:#0F2B20;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.3rem .65rem;border-radius:999px}
+.pbody{padding:1.3rem 1.4rem 1.5rem;display:grid;gap:.6rem;align-content:start}
+.pbody small{font-family:var(--mono);font-size:.7rem;color:var(--muted);letter-spacing:.06em}
+.pbody h3{font-size:1.25rem;font-weight:700;line-height:1.15}
+.feat-post .pbody{padding:2rem;align-content:center}
+.feat-post .pbody h3{font-size:clamp(1.5rem,2.6vw,2.1rem)}
+.pbody p{color:var(--muted);font-size:.94rem}
+.pbody .rd{font-weight:600;color:var(--lime-ink);display:flex;align-items:center;gap:.35rem;font-size:.92rem}
+.pbody .rd svg{width:1rem;height:1rem}
+@media (max-width:980px){.posts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.posts{grid-template-columns:1fr}.post.feat-post{grid-template-columns:1fr}.feat-post .cover{aspect-ratio:16/9}}
+.reader{width:min(52rem,calc(100% - 32px));max-height:calc(100% - 32px);padding:0;border:0;border-radius:var(--r);background:var(--bg);color:var(--ink);overflow:auto;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.reader::backdrop{background:rgba(6,18,12,.65);backdrop-filter:blur(3px)}
+.rd-cover{height:12rem;display:grid;place-items:center;position:relative;overflow:hidden}
+.rd-cover svg{height:60%;width:auto;color:rgba(255,255,255,.92)}
+.rd-x{all:unset;cursor:pointer;position:absolute;top:.8rem;right:1rem;width:2.4rem;height:2.4rem;border-radius:50%;background:rgba(255,255,255,.92);color:#0F2B20;display:grid;place-items:center;font-size:1.6rem;line-height:1}
+.rd-x:focus-visible{outline:2px solid var(--gold)}
+.rd-body{padding:clamp(1.4rem,4vw,2.6rem);display:grid;gap:1rem}
+.rd-meta{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;color:var(--lime-ink);text-transform:uppercase}
+.rd-body h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:700}
+.rd-note{font-size:.88rem;color:var(--muted);font-style:italic}
+#rd-c{display:grid;gap:.9rem;max-width:42rem}
+#rd-c h3{font-size:1.3rem;font-weight:700;margin-top:.6rem}
+#rd-c p,#rd-c li{color:var(--muted)}
+#rd-c strong{color:var(--ink)}
+#rd-c ul{margin:0;padding-left:1.2rem;display:grid;gap:.4rem}
+.rd-src{border-top:1px solid var(--line);padding-top:1rem;font-size:.88rem;display:grid;gap:.3rem}
+.rd-src b{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.rd-src a{color:var(--water)}
+.rd-cta{border-radius:20px;background:var(--soft);padding:1.2rem 1.4rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;font-weight:600}
+
+.chart{background:var(--soft);border-radius:18px;padding:1.1rem 1.2rem;display:grid;gap:.55rem}
+.ch-t{font-weight:600;color:var(--ink)!important;font-size:.95rem}
+.ch-s{font-size:.78rem!important}
+.hb{display:grid;grid-template-columns:minmax(7rem,12rem) minmax(0,1fr) auto;gap:.7rem;align-items:center;font-size:.88rem}
+.hb span{color:var(--muted)}
+.hb .bar{height:.9rem;background:var(--line);border-radius:999px;overflow:hidden}
+.hb .bar i{display:block;height:100%;background:var(--lime-ink);border-radius:999px}
+.hb b{font-variant-numeric:tabular-nums;color:var(--ink);min-width:4.2rem;text-align:right}
+@media (max-width:520px){.hb{grid-template-columns:1fr auto}.hb span{grid-column:1/-1}}
+
+/* Pestañas certificaciones */
+.ctabs{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem;margin:0 auto 1.6rem;padding:.35rem;background:var(--soft);border-radius:999px;width:max-content;max-width:100%}
+.ctab{all:unset;cursor:pointer;padding:.65rem 1.2rem;border-radius:999px;font-weight:600;font-size:.94rem;text-align:center}
+.ctab[aria-selected="true"]{background:var(--deep);color:#EEF5EF}
+.ctab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (max-width:560px){.ctabs{border-radius:20px;width:100%}.ctab{flex:1 1 100%}}
+#cp1 .norms{margin-top:.4rem}
+/* Autodiagnóstico */
+#autodiagnostico{background:var(--soft)}
+.quiz{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:1.5rem;align-items:start}
+.qz-form{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:clamp(1.2rem,3vw,2rem);display:grid;gap:1.2rem}
+.qz-prog{display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:center;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.qz-prog .bar,.qz-areas .bar{height:.6rem;background:var(--line);border-radius:999px;overflow:hidden}
+.qz-prog .bar i{display:block;height:100%;background:var(--lime);transition:width .25s}
+.qz-area{border:0;margin:0;padding:0;display:grid;gap:.9rem}
+.qz-area legend{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--lime-ink);margin-bottom:.5rem}
+#qz-items{display:grid;gap:1.6rem}
+.qz-q{display:grid;gap:.5rem}
+.qz-q p{font-weight:500}
+.qz-opts{display:flex;flex-wrap:wrap;gap:.45rem}
+.qz-o{position:relative;display:block;font-size:.88rem;color:var(--ink)}
+.qz-o input{position:absolute;opacity:0;width:1px;height:1px}
+.qz-o span{display:block;padding:.45rem 1rem;border-radius:999px;border:1px solid var(--line);background:var(--soft);cursor:pointer;font-weight:500}
+.qz-o input:checked+span{background:var(--deep);border-color:var(--deep);color:#EEF5EF}
+.qz-o input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}
+.qz-act{display:flex;flex-wrap:wrap;gap:.6rem}
+.btn.ghost-d{border-color:var(--line);color:var(--ink);background:transparent}
+.qz-note{font-size:.82rem;color:var(--muted)}
+.qz-res{position:sticky;top:6.5rem;background:var(--deep);color:#EEF5EF;border-radius:var(--r);padding:clamp(1.4rem,3vw,2rem);display:grid;gap:1rem}
+.qz-empty{display:grid;gap:.7rem;justify-items:start}
+.qz-empty svg{width:3rem;height:3rem;color:var(--lime)}
+.qz-empty h3{font-size:1.4rem}
+.qz-empty p,.qz-msg{color:var(--on-dark-muted)}
+#qz-out{display:grid;gap:1rem}
+.qz-score{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:center}
+.qz-score b{font-family:var(--display);font-size:3.6rem;line-height:1;font-variant-numeric:tabular-nums}
+.qz-score b small{font-size:1.4rem}
+.qz-score span{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-muted)}
+.qz-score h3{font-size:1.5rem}
+.qz-score.ok b,.qz-score.ok h3{color:#9ACD4E}.qz-score.mid b,.qz-score.mid h3{color:#E8C25A}.qz-score.low b,.qz-score.low h3{color:#F08A6E}
+.qz-warn{font-size:.85rem;color:#E8C25A}
+.qz-areas{display:grid;gap:.5rem}
+.qz-areas .hb span,.qz-areas .hb b{color:#EEF5EF}
+.qz-areas .bar{background:rgba(255,255,255,.15)}
+.qz-areas .bar i{display:block;height:100%;background:var(--lime);border-radius:999px}
+#qz-out h4{font-size:1.05rem;margin-top:.3rem}
+.qz-gaps{margin:0;padding-left:1.1rem;display:grid;gap:.35rem;color:var(--on-dark-muted);font-size:.93rem}
+@media (max-width:900px){.quiz{grid-template-columns:1fr}.qz-res{position:static}}
+/* Compartir y privacidad */
+.rd-share{display:flex;flex-wrap:wrap;gap:.5rem}
+.copy2{all:unset;cursor:pointer;font-size:.85rem;font-weight:600;padding:.45rem .9rem;border-radius:999px;border:1px solid var(--line);color:var(--ink);overflow-wrap:anywhere}
+.copy2:hover{background:var(--soft)}
+.plink{all:unset;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.plink:focus-visible{outline:2px solid var(--gold)}
+.fnote{font-size:.82rem;color:var(--muted)}
+.priv .rd-body{padding-top:3rem}
+#rd-pv{display:grid;gap:.8rem;max-width:42rem}
+#rd-pv h3{font-size:1.1rem;margin-top:.4rem}
+#rd-pv p{color:var(--muted)}
+
+/* Guía */
+.guide{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(1.5rem,5vw,4rem);align-items:center;background:var(--soft);border-radius:var(--r);padding:clamp(1.6rem,4vw,3rem)}
+.g-cover{display:grid;place-items:center}
+.g-doc{width:min(15rem,100%);aspect-ratio:3/4;background:#123B29;color:#EEF5EF;border-radius:10px;padding:1.4rem 1.2rem;display:grid;align-content:start;gap:.5rem;box-shadow:16px 20px 0 -4px var(--lime),0 30px 50px -25px rgba(0,0,0,.5);transform:rotate(-3deg)}
+.g-k{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;color:#9ACD4E}
+.g-doc b{font-family:var(--display);font-size:1.6rem;line-height:1.05}
+.g-doc small{font-size:.72rem;color:#BFD3C6;margin-bottom:.6rem}
+.g-doc i{display:block;height:.45rem;border-radius:4px;background:rgba(255,255,255,.14)}
+.g-doc i:nth-child(odd){width:80%}
+.g-txt{display:grid;gap:1rem}
+.g-txt .kicker{color:var(--lime-ink)}
+.g-txt h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:700}
+.g-txt p{color:var(--muted)}
+.g-txt ul{margin:0;padding:0;list-style:none;display:grid;gap:.45rem}
+.g-txt li{display:grid;grid-template-columns:1.3rem minmax(0,1fr);gap:.4rem;font-weight:500}
+.g-txt li::before{content:"✓";color:var(--lime-ink);font-weight:800}
+@media (max-width:820px){.guide{grid-template-columns:1fr}}
+/* Preguntas frecuentes */
+.faq{max-width:52rem;margin:0 auto;display:grid;gap:.7rem}
+.faq details{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:0 1.3rem}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:center;padding:1.1rem 0;font-weight:600;font-size:1.04rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:1.8rem;height:1.8rem;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--lime-ink);font-size:1.2rem;font-weight:700;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:6px}
+.faq details p{color:var(--muted);padding-bottom:1.2rem;max-width:46rem}
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebSite", "name": "JJ Global S.A.", "alternateName": ["JJ GLOBAL", "JJ Global Services S.A."], "url": "https://jjglobal-web.vercel.app/", "inLanguage": ["es", "en"]}, {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "JJ Global S.A.", "url": "https://jjglobal-web.vercel.app/", "logo": "https://jjglobal-web.vercel.app/logo-jjglobal.png", "image": "https://jjglobal-web.vercel.app/og-jjglobal.jpg", "description": "JJ GLOBAL (Joel Galeas): sostenibilidad corporativa, gestión de carbono, agricultura climáticamente inteligente y ODS. Corquín, Copán, Honduras.", "telephone": "+504 9928-8718", "email": "jjglobalservicessa@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Corquín", "addressRegion": "Copán", "addressCountry": "HN"}, "areaServed": ["Honduras", "Centroamérica"], "founder": {"@type": "Person", "name": "Joel Galeas", "jobTitle": "Especialista en Sostenibilidad Corporativa y Gestión de Carbono"}, "alternateName": "JJ GLOBAL"}]</script>
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="iso" viewBox="0 0 200 200">
+    <path d="M108.57 18.45 A82 82 0 0 1 174.91 133.35" fill="none" stroke="#3E9A6C" stroke-width="14"/>
+    <path d="M166.34 148.20 A82 82 0 0 1 33.66 148.20" fill="none" stroke="#3A93B5" stroke-width="14"/>
+    <path d="M25.09 133.35 A82 82 0 0 1 91.43 18.45" fill="none" stroke="#C99A3E" stroke-width="14"/>
+    <path fill="currentColor" d="M76.3125 128.78125C89.0078125 128.78125 96.46875 122.1015625 96.46875 110.109375V69.796875H82.875V110.34375C82.875 115.3828125 80.4140625 117.8828125 76.3125 117.8828125C72.171875 117.8828125 69.7109375 115.3828125 69.7109375 110.421875V106.671875H55.921875V110.1875C55.921875 122.1015625 63.4609375 128.78125 76.3125 128.78125ZM121.5 128.78125C134.1953125 128.78125 141.65625 122.1015625 141.65625 110.109375V69.796875H128.0625V110.34375C128.0625 115.3828125 125.6015625 117.8828125 121.5 117.8828125C117.359375 117.8828125 114.8984375 115.3828125 114.8984375 110.421875V106.671875H101.109375V110.1875C101.109375 122.1015625 108.6484375 128.78125 121.5 128.78125Z"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-1.9-.9-.8.8a4 4 0 0 1-2.4-2.4l.8-.8-.9-1.9z" fill="currentColor"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="c-gear" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M50 14l6 9 10-3 2 10 10 3-3 10 8 7-8 7 3 10-10 3-2 10-10-3-6 9-6-9-10 3-2-10-10-3 3-10-8-7 8-7-3-10 10-3 2-10 10 3z"/><circle cx="50" cy="56" r="14"/><path d="M50 70V34M50 46c-8-2-11-8-11-14 8 0 11 6 11 14zM50 42c6-4 12-3 14 2-5 4-10 3-14-2"/></symbol>
+  <symbol id="c-plant" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M30 40a12 12 0 0 1 4-23 16 16 0 0 1 30-2 11 11 0 0 1 8 21z"/><path d="M50 86V52M50 70c-12 0-22-8-24-18 12-2 22 4 24 18zM50 64c10 0 18-7 20-16-10-2-18 4-20 16"/><path d="M50 52c-5 6-5 14 0 20 5-6 5-14 0-20" /><path d="M22 54h6M25 51v6M76 54h6M79 51v6"/></symbol>
+  <symbol id="c-globe" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="42" r="22"/><path d="M28 42h44M50 20c8 8 8 36 0 44M50 20c-8 8-8 36 0 44"/><path d="M14 70c10 2 18 8 24 14h24c4 0 6-5 2-7l-14-5M86 70c-10 2-18 8-24 14"/></symbol>
+  <symbol id="s-cup" viewBox="0 0 24 24"><path d="M4 9h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6zM17 11h1.5a2.5 2.5 0 0 1 0 5H17M8 3c0 2 2 2 2 4M12 3c0 2 2 2 2 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="s-fac" viewBox="0 0 24 24"><path d="M3 21V10l6 4V10l6 4V6h6v15zM17 10h2M17 14h2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="s-hand" viewBox="0 0 24 24"><path d="M2 12l4-4 4 2 3-2 4 1 5 3M6 8l-2 8 4 3 3-1 4 3 3-2 2-4M11 13l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="s-tree" viewBox="0 0 24 24"><path d="M12 22v-7M12 15l-3-3M12 13l3-2M7 15a5 5 0 0 1 1-9 5 5 0 0 1 8 0 5 5 0 0 1 1 9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="s-wave" viewBox="0 0 24 24"><path d="M2 16c3 0 3-2 5-2s2 2 5 2 3-2 5-2 2 2 5 2M2 20c3 0 3-2 5-2s2 2 5 2 3-2 5-2 2 2 5 2M12 12V4M12 4c-3 1-4 3-4 5 3 0 4-2 4-5zM12 6c2-1 4 0 5 2-2 1-4 0-5-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="s-co2" viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1 0 9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><text x="12" y="15.5" font-size="5.5" font-family="sans-serif" font-weight="700" text-anchor="middle" fill="currentColor">CO₂</text></symbol>
+  <symbol id="f-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="f-check" viewBox="0 0 24 24"><path d="M12 2l3 2.5 3.8-.3.8 3.7 3.2 2.1-1.6 3.5 1.6 3.5-3.2 2.1-.8 3.7-3.8-.3L12 25l-3-2.5" fill="none" stroke="currentColor" stroke-width="0"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12l3 3 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="f-coin" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="f-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="f-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="f-hand" viewBox="0 0 24 24"><path d="M2 12l4-4 4 2 3-2 4 1 5 3M6 8l-2 8 4 3 3-1 4 3 3-2 2-4M11 13l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="f-sprout" viewBox="0 0 24 24"><path d="M12 21v-9M12 12C12 7 9 4 4 4c0 5 3 8 8 8zM12 14c0-4 3-7 8-7 0 4-3 7-8 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="f-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 14l-1.5 8 5-3 5 3-1.5-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="f-people" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 20c0-2.5 1.5-4.5 3.5-4.5S22 17 22 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="f-cycle" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3M18 3v4h-4M6 21v-4h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+
+
+<header class="top">
+  <div class="wrap hdr">
+    <button class="burger" id="burger" aria-label="Menú" aria-expanded="false" aria-controls="mm"><i></i><i></i><i></i></button>
+    <a class="brand" href="#inicio" aria-label="JJ GLOBAL"><svg><use href="#iso"/></svg><b>JJ GLOBAL</b></a>
+    <ul class="navd">
+      <li><button type="button"><span data-i18n="n.us">Nosotros</span><svg><use href="#i-chev"/></svg></button>
+        <div class="dd"><a href="#nosotros" data-i18n="n.who">Quiénes somos</a><a href="#nosotros" data-i18n="n.mv">Misión y visión</a><a href="#sectores" data-i18n="n.sec">Con quién trabajamos</a><a href="#preguntas" data-i18n="n.faq">Preguntas frecuentes</a></div></li>
+      <li><button type="button"><span data-i18n="n.svc">Nuestros servicios</span><svg><use href="#i-chev"/></svg></button>
+        <div class="dd"><a href="#servicios" data-tab="0" data-i18n="t1">Sostenibilidad corporativa y servicios ambientales</a><a href="#servicios" data-tab="1" data-i18n="t2">Agricultura climáticamente inteligente</a><a href="#servicios" data-tab="2" data-i18n="t3">Desarrollo sostenible y ODS</a></div></li>
+      <li><button type="button"><span>ARRAIGO</span><svg><use href="#i-chev"/></svg></button>
+        <div class="dd"><a href="#arraigo" data-i18n="n.aq">¿Qué es ARRAIGO?</a><a href="#protocolo" data-i18n="n.pr">Cómo funciona</a><a href="#beneficios" data-i18n="n.be">Beneficios</a></div></li>
+      <li><button type="button"><span data-i18n="n.cert">Certificaciones</span><svg><use href="#i-chev"/></svg></button>
+        <div class="dd"><a href="#certificaciones" data-ct="0" data-i18n="ct.0">Sellos y certificaciones</a><a href="#certificaciones" data-ct="1" data-i18n="ct.1">Normas ISO y marcos de referencia</a><a href="#autodiagnostico" data-i18n="n.quiz">Autodiagnóstico</a><a href="#calculadora" data-i18n="n.calc">Calculadora de huella</a></div></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a class="cta" href="#contacto" data-i18n="n.contact">Contáctanos</a></li>
+    </ul>
+    <div class="icons">
+      <div class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es" aria-pressed="true">ES</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+      <a class="round" href="https://wa.me/50499288718" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+      <a class="round" href="#contacto" aria-label="Correo"><svg><use href="#i-mail"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<div class="mm" id="mm" hidden>
+  <div class="mmtop"><div class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es" aria-pressed="true">ES</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div><button class="x" id="mmx" aria-label="Cerrar">×</button></div>
+  <nav>
+    <small data-i18n="n.us">Nosotros</small>
+    <a class="sub" href="#nosotros" data-i18n="n.who">Quiénes somos</a>
+    <a class="sub" href="#nosotros" data-i18n="n.mv">Misión y visión</a>
+    <a class="sub" href="#sectores" data-i18n="n.sec">Con quién trabajamos</a>
+    <a class="sub" href="#preguntas" data-i18n="n.faq">Preguntas frecuentes</a>
+    <small data-i18n="n.svc">Nuestros servicios</small>
+    <a class="sub" href="#servicios" data-tab="0" data-i18n="t1">Sostenibilidad corporativa y servicios ambientales</a>
+    <a class="sub" href="#servicios" data-tab="1" data-i18n="t2">Agricultura climáticamente inteligente</a>
+    <a class="sub" href="#servicios" data-tab="2" data-i18n="t3">Desarrollo sostenible y ODS</a>
+    <small data-i18n="n.more">Más</small>
+    <a href="#arraigo">ARRAIGO</a>
+    <a class="sub" href="#protocolo" data-i18n="n.pr">Cómo funciona</a>
+    <a class="sub" href="#beneficios" data-i18n="n.be">Beneficios</a>
+    <a href="#certificaciones" data-i18n="n.cert">Certificaciones</a>
+    <a class="sub" href="#certificaciones" data-ct="1" data-i18n="ct.1">Normas ISO y marcos de referencia</a>
+    <a class="sub" href="#autodiagnostico" data-i18n="n.quiz">Autodiagnóstico</a>
+    <a class="sub" href="#calculadora" data-i18n="n.calc">Calculadora de huella</a>
+    <a href="#blog">Blog</a>
+    <a href="#contacto" data-i18n="n.contact">Contáctanos</a>
+  </nav>
+</div>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="bg"></div>
+  <svg class="panels" viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="rgba(255,255,255,.05)" stroke="rgba(200,230,215,.22)" stroke-width="1.5">
+      <rect x="820" y="90" width="150" height="130" rx="18"/><rect x="1000" y="60" width="190" height="150" rx="18"/><rect x="1220" y="110" width="150" height="130" rx="18"/>
+      <rect x="900" y="250" width="170" height="150" rx="18"/><rect x="1100" y="240" width="150" height="140" rx="18"/><rect x="1280" y="280" width="140" height="130" rx="18"/>
+      <rect x="760" y="430" width="140" height="120" rx="18"/><rect x="1180" y="420" width="160" height="130" rx="18"/>
+    </g>
+    <g fill="none" stroke="rgba(220,240,228,.55)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M865 175a16 16 0 0 1-2-32 22 22 0 0 1 42-4 15 15 0 0 1 8 28z"/><text x="895" y="166" font-size="17" font-family="sans-serif" font-weight="700" fill="rgba(220,240,228,.6)" stroke="none" text-anchor="middle">CO₂</text>
+      <path d="M1095 190V110M1095 110l-34-14M1095 110l30-24M1095 110l6 38"/><circle cx="1095" cy="110" r="5"/>
+      <path d="M1250 210l20-60h60l20 60zM1262 180h76M1290 150l-6 60M1310 150l6 60M1300 210v18"/>
+      <path d="M950 360l35-35 35 35v40h-70zM985 400v-22h14v22M1012 312c-14 4-18 14-16 22 12-2 18-10 16-22"/>
+      <path d="M1145 300a30 30 0 1 1 60 0M1150 330c20 12 40 12 50 0M1158 350l-6 18M1192 350l6 18"/>
+      <path d="M1320 330l20-12 20 12M1340 318v40M1325 360h30M1318 345l-10 10M1362 345l10 10"/>
+      <path d="M800 520c10-26 30-36 60-36-2 26-20 40-46 40M806 520c14-12 26-20 40-26"/>
+      <path d="M1225 470h50v30a20 20 0 0 1-20 20h-10a20 20 0 0 1-20-20zM1275 480h8a8 8 0 0 1 0 16h-8M1240 458c0 6 6 6 6 12M1254 458c0 6 6 6 6 12"/>
+    </g>
+  </svg>
+  <canvas id="leaves" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kicker" data-i18n="h.k">Sostenibilidad · Carbono · ODS</p>
+    <h1 data-i18n-html="h.t">Sostenibilidad que se <span>cultiva</span>, se mide y se demuestra.</h1>
+    <p class="sub" data-i18n="h.s">Especialistas en sostenibilidad corporativa y servicios ambientales, agricultura climáticamente inteligente y baja en carbono, y desarrollo sostenible alineado con los ODS para empresas y cadenas de valor.</p>
+    <div class="btns">
+      <a class="btn lime" href="#contacto"><span data-i18n="h.c1">Solicitar diagnóstico</span><svg><use href="#i-arrow"/></svg></a>
+      <a class="btn ghost" href="#servicios" data-i18n="h.c2">Nuestros servicios</a>
+    </div>
+  </div>
+</section>
+
+<div class="cards"><div class="wrap"><div class="grid">
+  <a class="ccard c1" href="#servicios" data-tab="0"><span class="more" data-i18n="more">Ver más</span><svg><use href="#c-gear"/></svg><h3 data-i18n="c1">Sostenibilidad corporativa y servicios ambientales</h3></a>
+  <a class="ccard c2" href="#servicios" data-tab="1"><span class="more" data-i18n="more">Ver más</span><svg><use href="#c-plant"/></svg><h3 data-i18n="c2">Agricultura climáticamente inteligente</h3></a>
+  <a class="ccard c3" href="#servicios" data-tab="2"><span class="more" data-i18n="more">Ver más</span><svg><use href="#c-globe"/></svg><h3 data-i18n="c3">Desarrollo sostenible y ODS</h3></a>
+</div></div></div>
+
+<section class="sec" id="indicadores">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="duo" data-i18n-html="ind.t">Nuestra <span>capacidad</span></h2></div>
+    <div class="stats">
+      <div class="stat"><b data-count="3">3</b><span data-i18n-html="ind.1">Líneas de <strong>servicio</strong></span></div>
+      <div class="stat"><b data-count="16">16</b><span data-i18n-html="ind.2">Servicios <strong>especializados</strong></span></div>
+      <div class="stat"><b data-count="14">14</b><span data-i18n-html="ind.3">Certificaciones que <strong>implementamos</strong></span></div>
+      <div class="stat"><b data-count="11">11</b><span data-i18n-html="ind.4"><strong>ODS</strong> a los que contribuimos</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="nosotros" style="padding-top:0">
+  <div class="wrap about">
+    <div style="display:grid;gap:1.6rem">
+      <h2 class="duo left" data-i18n-html="ab.t">Quiénes <span>somos</span></h2>
+      <div class="txt">
+        <p data-i18n-html="ab.p1"><strong>JJ GLOBAL</strong> es una empresa hondureña con sede en Corquín, Copán, en el corazón de la región cafetalera del occidente del país. Acompañamos a empresas, cooperativas, organizaciones de productores y proyectos de cooperación a integrar la sostenibilidad en sus operaciones y en toda su cadena de valor.</p>
+        <p data-i18n="ab.p2">Unimos gestión ambiental, ciencia del clima y conocimiento del campo, con un equipo que trabaja tanto en la oficina como en la finca.</p>
+      </div>
+      <div class="vals"><span data-i18n="v1">Rigor técnico</span><span data-i18n="v2">Transparencia</span><span data-i18n="v3">Arraigo territorial</span><span data-i18n="v4">Innovación</span></div>
+    </div>
+    <div class="mv">
+      <div class="mvc m"><small data-i18n="m.k">Misión</small><p data-i18n="m.p">Impulsar la sostenibilidad de empresas, organizaciones productoras y cadenas de valor mediante servicios ambientales, gestión del carbono y agricultura climáticamente inteligente, con rigor técnico, conocimiento del territorio y resultados medibles alineados con los ODS.</p></div>
+      <div class="mvc v"><small data-i18n="vi.k">Visión</small><p data-i18n="vi.p">Ser en 2030 la firma de referencia en Centroamérica en sostenibilidad corporativa y gestión productiva baja en carbono, reconocida por transformar cadenas de valor rurales en modelos competitivos, resilientes y con impacto demostrable.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec svcs" id="servicios">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="duo" data-i18n-html="s.t">Nuestros <span>servicios</span></h2><p class="lead center" data-i18n="s.p">Tres líneas que pueden contratarse por separado o integrarse en un programa de sostenibilidad a la medida de su organización.</p></div>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" id="tb0" aria-selected="true" aria-controls="p0" data-i18n="t1">Sostenibilidad corporativa y servicios ambientales</button>
+      <button class="tab" role="tab" id="tb1" aria-selected="false" aria-controls="p1" data-i18n="t2">Agricultura climáticamente inteligente</button>
+      <button class="tab" role="tab" id="tb2" aria-selected="false" aria-controls="p2" data-i18n="t3">Desarrollo sostenible y ODS</button>
+    </div>
+    <div class="pane" role="tabpanel" id="p0" aria-labelledby="tb0">
+      <div class="intro" style="background:#123B29"><svg><use href="#c-gear"/></svg><h3 data-i18n="t1">Sostenibilidad corporativa y servicios ambientales</h3><p data-i18n="l1.p">Para empresas que necesitan gestionar su desempeño ambiental, social y de gobernanza, y demostrarlo.</p></div>
+      <div class="list">
+        <div class="it"><span class="tag">ESG · GRI</span><h4 data-i18n="l1.a">Estrategia ESG y reportes de sostenibilidad</h4><p data-i18n="l1.ad">Materialidad, indicadores y memorias bajo estándares GRI.</p></div>
+        <div class="it"><span class="tag">ISO 14064-1 · -2 · -3 · ISO 14067</span><h4 data-i18n="l1.b">Huella de carbono y proyectos de GEI</h4><p data-i18n="l1.bd">Inventarios de organización y de producto, proyectos de reducción y remoción, y preparación para validación y verificación.</p></div>
+        <div class="it"><span class="tag">ISO 14068-1</span><h4 data-i18n="l1.e">Gestión hacia la carbono neutralidad</h4><p data-i18n="l1.ed">Hoja de ruta, reducción de emisiones, compensación con créditos de calidad y sustento de la declaración para su verificación.</p></div>
+        <div class="it"><span class="tag" data-i18n="l1.ct">EIA · Licencias</span><h4 data-i18n="l1.c">Evaluación y cumplimiento ambiental</h4><p data-i18n="l1.cd">Estudios de impacto ambiental, diagnósticos y planes de gestión.</p></div>
+        <div class="it"><span class="tag">ISO 14001 · ISO 9001</span><h4 data-i18n="l1.d">Sistemas de gestión</h4><p data-i18n="l1.dd">Diseño e implementación de sistemas ambientales y de calidad.</p></div>
+        <div class="it"><span class="tag">ISO 45001</span><h4 data-i18n="l1.f">Salud y seguridad ocupacional</h4><p data-i18n="l1.fd">Identificación de peligros, evaluación de riesgos y programas de seguridad para personal de campo y planta.</p></div>
+      </div>
+    </div>
+    <div class="pane" role="tabpanel" id="p1" aria-labelledby="tb1" hidden>
+      <div class="intro" style="background:#1F6E8C"><svg><use href="#c-plant"/></svg><h3 data-i18n="t2">Agricultura climáticamente inteligente</h3><p data-i18n="l2.p">Gestión productiva baja en carbono para fincas, cooperativas y agroindustrias.</p></div>
+      <div class="list">
+        <div class="it"><span class="tag" data-i18n="l2.at">Productividad · Adaptación · Mitigación</span><h4 data-i18n="l2.a">Planes de finca climáticamente inteligentes</h4><p data-i18n="l2.ad">Prácticas que elevan el rendimiento y la resiliencia mientras reducen emisiones.</p></div>
+        <div class="it"><span class="tag" data-i18n="l2.bt">Bajas emisiones</span><h4 data-i18n="l2.b">Producción baja en carbono</h4><p data-i18n="l2.bd">Fertilización, compostaje de pulpa, aguas mieles y eficiencia en beneficios.</p></div>
+        <div class="it"><span class="tag" data-i18n="l2.ct">Agroforestería</span><h4 data-i18n="l2.c">Sistemas agroforestales y suelos</h4><p data-i18n="l2.cd">Sombra diversificada, conservación de suelos y carbono en cultivos permanentes.</p></div>
+        <div class="it"><span class="tag" data-i18n="l2.dt">Certificaciones</span><h4 data-i18n="l2.d">Certificación y trazabilidad</h4><p data-i18n="l2.dd">Preparación para sellos sostenibles, orgánicos y requisitos de deforestación cero.</p></div>
+        <div class="it"><span class="tag">BPM · HACCP · ISO 22000</span><h4 data-i18n="l2.e">Inocuidad alimentaria</h4><p data-i18n="l2.ed">Buenas prácticas de manufactura, planes HACCP y sistemas ISO 22000 / FSSC 22000 en beneficios, plantas y agroindustrias.</p></div>
+        <div class="it"><span class="tag">FDA · FSMA</span><h4 data-i18n="l2.f">Cumplimiento FDA para exportar</h4><p data-i18n="l2.fd">Registro de instalaciones ante la FDA, requisitos de la FSMA y documentación de soporte para importadores en Estados Unidos.</p></div>
+      </div>
+    </div>
+    <div class="pane" role="tabpanel" id="p2" aria-labelledby="tb2" hidden>
+      <div class="intro" style="background:#4E7F1B"><svg><use href="#c-globe"/></svg><h3 data-i18n="t3">Desarrollo sostenible y ODS</h3><p data-i18n="l3.p">Mecanismos que vinculan las actividades de empresas y cadenas con metas medibles de los ODS.</p></div>
+      <div class="list">
+        <div class="it"><span class="tag" data-i18n="l3.at">Agenda 2030</span><h4 data-i18n="l3.a">Alineación con los ODS</h4><p data-i18n="l3.ad">Metas a las que contribuye su operación e indicadores para medirlas.</p></div>
+        <div class="it"><span class="tag" data-i18n="l3.bt">Cadenas de valor</span><h4 data-i18n="l3.b">Cadenas de valor sostenibles</h4><p data-i18n="l3.bd">Riesgos e impactos del productor al mercado, con planes de mejora.</p></div>
+        <div class="it"><span class="tag" data-i18n="l3.ct">REDD+ · Carbono azul</span><h4 data-i18n="l3.c">Proyectos de carbono y servicios ecosistémicos</h4><p data-i18n="l3.cd">Formulación para mercados de carbono y pagos por servicios ambientales.</p></div>
+        <div class="it"><span class="tag" data-i18n="l3.dt">Cooperación</span><h4 data-i18n="l3.d">Proyectos de desarrollo y salvaguardas</h4><p data-i18n="l3.dd">Formulación, línea base y evaluación con enfoque de género y participación comunitaria.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="certificaciones">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="duo" data-i18n-html="ce.t">Implementación de <span>certificaciones</span></h2>
+      <p class="lead center" data-i18n="ce.p">Preparamos a fincas, cooperativas y agroindustrias para obtener y mantener las certificaciones que exigen sus compradores, desde el diagnóstico hasta la auditoría.</p>
+    </div>
+    <div class="ctabs" role="tablist" aria-label="Certificaciones y normas">
+      <button class="ctab" role="tab" id="ct0" aria-selected="true" aria-controls="cp0" data-i18n="ct.0">Sellos y certificaciones</button>
+      <button class="ctab" role="tab" id="ct1" aria-selected="false" aria-controls="cp1" tabindex="-1" data-i18n="ct.1">Normas ISO y marcos de referencia</button>
+    </div>
+    <div id="cp0" role="tabpanel" aria-labelledby="ct0">
+    <div class="chips" role="group" aria-label="Filtrar certificaciones">
+      <button class="chip" type="button" data-f="all" aria-pressed="true" data-i18n="cf.all">Todas</button>
+      <button class="chip" type="button" data-f="org" aria-pressed="false" data-i18n="cf.org">Orgánicas y regenerativas</button>
+      <button class="chip" type="button" data-f="sus" aria-pressed="false" data-i18n="cf.sus">Sostenibilidad y comercio justo</button>
+      <button class="chip" type="button" data-f="cli" aria-pressed="false" data-i18n="cf.cli">Clima</button>
+      <button class="chip" type="button" data-f="ino" aria-pressed="false" data-i18n="cf.ino">Inocuidad</button>
+    </div>
+    <div class="certs" id="certs">
+      <div class="cert wide" data-c="org" style="--c:#4E7F1B"><small data-i18n="cc.org">Orgánica</small><h4 data-i18n="ce1.t">Orgánico UE y USDA NOP</h4><p data-i18n="ce1.p">Producción sin agroquímicos de síntesis bajo el reglamento europeo y el programa orgánico de Estados Unidos.</p><span class="mk" data-i18n="ce1.m">Europa · Estados Unidos</span></div>
+      <div class="cert" data-c="org" style="--c:#4E7F1B"><small data-i18n="cc.org">Orgánica</small><h4>JAS</h4><p data-i18n="ce2.p">Norma orgánica agrícola de Japón, requisito para vender productos orgánicos en ese mercado.</p><span class="mk" data-i18n="ce2.m">Japón</span></div>
+      <div class="cert" data-c="org" style="--c:#4E7F1B"><small data-i18n="cc.org">Orgánica</small><h4>Bio Suisse</h4><p data-i18n="ce3.p">Estándar orgánico suizo con exigencias adicionales sobre la finca completa, biodiversidad y comercio.</p><span class="mk" data-i18n="ce3.m">Suiza</span></div>
+      <div class="cert" data-c="org" style="--c:#4E7F1B"><small data-i18n="cc.org">Orgánica</small><h4>Naturland</h4><p data-i18n="ce4.p">Estándar orgánico alemán que integra criterios sociales y de comercio justo.</p><span class="mk" data-i18n="ce4.m">Alemania · Europa</span></div>
+      <div class="cert" data-c="org" style="--c:#2F5D4A"><small data-i18n="cc.bio">Biodinámica</small><h4>Demeter</h4><p data-i18n="ce5.p">Agricultura biodinámica: la finca como organismo vivo, con preparados y ciclos propios. Parte de la base orgánica.</p><span class="mk" data-i18n="ce5.m">Internacional</span></div>
+      <div class="cert" data-c="org" style="--c:#2F5D4A"><small data-i18n="cc.reg">Regenerativa</small><h4>ROC</h4><p data-i18n="ce6.p">Regenerative Organic Certified: salud del suelo, bienestar animal y justicia social sobre una base orgánica.</p><span class="mk" data-i18n="ce6.m">Estados Unidos · Internacional</span></div>
+      <div class="cert" data-c="sus" style="--c:#1F6E8C"><small data-i18n="cc.sus">Sostenibilidad</small><h4>Rainforest Alliance</h4><p data-i18n="ce7.p">Agricultura sostenible: protección de bosques, derechos laborales, medios de vida y mejora continua.</p><span class="mk" data-i18n="ce7.m">Internacional</span></div>
+      <div class="cert" data-c="sus" style="--c:#1F6E8C"><small data-i18n="cc.sus">Sostenibilidad</small><h4>C.A.F.E. Practices</h4><p data-i18n="ce8.p">Programa de abastecimiento responsable de Starbucks: calidad, transparencia económica, responsabilidad social y liderazgo ambiental.</p><span class="mk" data-i18n="ce8.m">Cadena Starbucks</span></div>
+      <div class="cert" data-c="sus" style="--c:#1F6E8C"><small data-i18n="cc.bird">Biodiversidad</small><h4>Bird Friendly</h4><p data-i18n="ce9.p">Sello del Smithsonian para café de sombra diversa que conserva el hábitat de las aves. Requiere certificación orgánica.</p><span class="mk" data-i18n="ce9.m">Estados Unidos · Japón</span></div>
+      <div class="cert" data-c="sus" style="--c:#8A6420"><small data-i18n="cc.fair">Comercio justo</small><h4 data-i18n="ce10.t">Comercio Justo</h4><p data-i18n="ce10.p">Precios mínimos, prima social y organización democrática de pequeños productores (Fairtrade, SPP).</p><span class="mk" data-i18n="ce10.m">Internacional</span></div>
+      <div class="cert" data-c="sus" style="--c:#8A6420"><small data-i18n="cc.gen">Género</small><h4 data-i18n="ce11.t">Con Manos de Mujer</h4><p data-i18n="ce11.p">Distingue el café producido y gestionado por mujeres, con criterios de equidad y participación en la cadena.</p><span class="mk" data-i18n="ce11.m">Mercados diferenciados</span></div>
+      <div class="cert wide" data-c="cli" style="--c:#123B29"><small data-i18n="cc.cli">Clima</small><h4 data-i18n="ce12.t">Huella de carbono</h4><p data-i18n="ce12.p">Cuantificación de las emisiones del producto o la organización con ISO 14067, ISO 14064-1 y el GHG Protocol.</p><span class="mk" data-i18n="ce12.m">Compradores y mercados de carbono</span></div>
+      <div class="cert" data-c="cli" style="--c:#123B29"><small data-i18n="cc.cli">Clima</small><h4 data-i18n="ce13.t">Carbono neutro</h4><p data-i18n="ce13.p">Ruta de reducción y compensación de emisiones bajo ISO 14068-1, con declaración verificada por un tercero.</p><span class="mk" data-i18n="ce13.m">Internacional</span></div>
+      <div class="cert" data-c="ino" style="--c:#5B3E7A"><small data-i18n="cc.ino">Inocuidad</small><h4>HACCP</h4><p data-i18n="ce14.p">Análisis de peligros y puntos críticos de control en beneficios, plantas y agroindustrias, base de ISO 22000 y FDA.</p><span class="mk" data-i18n="ce14.m">Internacional · Estados Unidos</span></div>
+    </div>
+
+    </div>
+    <div id="cp1" role="tabpanel" aria-labelledby="ct1" hidden>
+      <div class="norms">
+      <div class="norm n1"><small data-i18n="nk1">Carbono</small><b>ISO 14064</b><p data-i18n="np1">Partes 1, 2 y 3: inventarios, proyectos y verificación de GEI.</p></div>
+      <div class="norm n2"><small data-i18n="nk1">Carbono</small><b>ISO 14067</b><p data-i18n="np2">Huella de carbono de productos.</p></div>
+      <div class="norm n3"><small data-i18n="nk1">Carbono</small><b>ISO 14068-1</b><p data-i18n="np3">Gestión hacia la carbono neutralidad.</p></div>
+      <div class="norm n5"><small data-i18n="nk1">Carbono</small><b>GHG Protocol</b><p data-i18n="np4">Alcances 1, 2 y 3 de emisiones.</p></div>
+      <div class="norm n1"><small data-i18n="nk2">Gestión</small><b>ISO 14001</b><p data-i18n="np5">Sistemas de gestión ambiental.</p></div>
+      <div class="norm n2"><small data-i18n="nk2">Gestión</small><b>ISO 9001</b><p data-i18n="np6">Sistemas de gestión de la calidad.</p></div>
+      <div class="norm n4"><small data-i18n="nk2">Gestión</small><b>ISO 45001</b><p data-i18n="np7">Salud y seguridad en el trabajo.</p></div>
+      <div class="norm n3"><small data-i18n="nk3">Inocuidad</small><b>ISO 22000</b><p data-i18n="np8">Inocuidad alimentaria, HACCP y BPM.</p></div>
+      <div class="norm n6"><small data-i18n="nk3">Inocuidad</small><b>FDA · FSMA</b><p data-i18n="np9">Requisitos para exportar alimentos a EE. UU.</p></div>
+      <div class="norm n5"><small data-i18n="nk4">Reporte</small><b>GRI</b><p data-i18n="np10">Reportes de sostenibilidad.</p></div>
+      <div class="norm n4"><small data-i18n="nk5">Mercados</small><b>Verra · CCB</b><p data-i18n="np11">Proyectos de carbono en el mercado voluntario.</p></div>
+      <div class="norm n1"><small>Agenda 2030</small><b data-i18n="nk6">ODS</b><p data-i18n="np12">Objetivos de Desarrollo Sostenible.</p></div>
+    
+    </div>
+
+    <div class="impl">
+      <h3 data-i18n="im.t">Cómo implementamos una certificación</h3>
+      <ol>
+        <li><b>1</b><span data-i18n="im1">Diagnóstico de brechas frente a la norma</span></li>
+        <li><b>2</b><span data-i18n="im2">Plan de implementación y presupuesto</span></li>
+        <li><b>3</b><span data-i18n="im3">Sistema interno de control, registros y capacitación</span></li>
+        <li><b>4</b><span data-i18n="im4">Inspección interna y acciones correctivas</span></li>
+        <li><b>5</b><span data-i18n="im5">Acompañamiento en la auditoría externa</span></li>
+      </ol>
+      <p class="note" data-i18n="im.n">JJ GLOBAL prepara y acompaña la implementación. La certificación la otorga el organismo certificador acreditado para cada norma.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="autodiagnostico">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="duo" data-i18n-html="qz.t">Autodiagnóstico de <span>sostenibilidad</span></h2>
+      <p class="lead center" data-i18n="qz.p">Responda 10 preguntas y conozca en dos minutos qué tan preparada está su finca, cooperativa o empresa para certificarse y medir su carbono.</p>
+    </div>
+    <div class="quiz">
+      <form id="qz" class="qz-form" novalidate>
+        <div class="qz-prog"><span id="qz-count">0 / 10</span><div class="bar"><i id="qz-bar" style="width:0%"></i></div></div>
+        <div id="qz-items"></div>
+        <div class="qz-act">
+          <button class="btn lime" type="submit" id="qz-go" data-i18n="qz.go">Ver mi resultado</button>
+          <button class="btn ghost-d" type="button" id="qz-reset" data-i18n="qz.reset">Reiniciar</button>
+        </div>
+        <p class="qz-note" data-i18n="qz.note">Resultado orientativo. No sustituye una auditoría ni una certificación.</p>
+      </form>
+      <aside class="qz-res" id="qz-res" aria-live="polite">
+        <div class="qz-empty" id="qz-empty">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="3"/><path d="M16 25l6 6 11-13" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3 data-i18n="qz.e1">Su resultado aparecerá aquí</h3>
+          <p data-i18n="qz.e2">Verá su nivel general, el avance en cuatro áreas y las brechas que conviene atender primero.</p>
+        </div>
+        <div id="qz-out" hidden></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="calculadora">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker k-ink" data-i18n="cc.k">Demostración gratuita</p>
+      <h2 class="duo" data-i18n-html="cc.t">Calculadora de <span>huella de carbono</span></h2>
+      <p class="lead center" data-i18n="cc.p">Calcule en segundos las emisiones de un viaje en avión, un recorrido en vehículo o el combustible que consume, como lo hacen las aerolíneas.</p>
+    </div>
+    <div class="calc">
+      <form id="cc" class="cc-form" novalidate>
+        <div class="cc-who">
+          <label for="cc-tr"><span data-i18n="cc.tr">Tratamiento</span>
+            <select id="cc-tr"><option value="Sr." data-i18n="cc.sr">Sr.</option><option value="Sra." data-i18n="cc.sra">Sra.</option><option value="Ing.">Ing.</option><option value="Lic.">Lic.</option><option value="Dr." data-i18n="cc.dr">Dr.</option><option value="" data-i18n="cc.none">Ninguno</option></select></label>
+          <label for="cc-name"><span data-i18n="cc.name">Su nombre</span><input id="cc-name" autocomplete="name" placeholder="Juan Pérez"></label>
+        </div>
+        <div class="cc-tabs" role="tablist" aria-label="Tipo de cálculo">
+          <button type="button" role="tab" class="cc-tab" id="cct-0" aria-controls="ccp-0" aria-selected="true" data-cc="0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 16l20-6-3-2-6 2-6-6H5l3 7-4 1-2-2H1l1 6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span data-i18n="cc.t0">Vuelo</span></button>
+          <button type="button" role="tab" class="cc-tab" id="cct-1" aria-controls="ccp-1" aria-selected="false" data-cc="1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15l2-6h14l2 6v4H3zM3 15h18M7 19v2M17 19v2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="15" r="1" fill="currentColor"/><circle cx="16.5" cy="15" r="1" fill="currentColor"/></svg><span data-i18n="cc.t1">Vehículo</span></button>
+          <button type="button" role="tab" class="cc-tab" id="cct-2" aria-controls="ccp-2" aria-selected="false" data-cc="2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16M3 21h13M15 8h2l3 3v7a1.5 1.5 0 0 1-3 0v-4h-2M7 7h5v4H7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span data-i18n="cc.t2">Combustible</span></button>
+        </div>
+
+        <div class="cc-panel" role="tabpanel" id="ccp-0" aria-labelledby="cct-0">
+          <div class="cc-row">
+            <label for="cc-from"><span data-i18n="cc.from">Origen</span><select id="cc-from"></select></label>
+            <button type="button" class="cc-swap" id="cc-swap" aria-label="Intercambiar origen y destino"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h12l-3-3M17 17H5l3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <label for="cc-to"><span data-i18n="cc.to">Destino</span><select id="cc-to"></select></label>
+          </div>
+          <div class="cc-row2">
+            <label for="cc-pax"><span data-i18n="cc.pax">Pasajeros</span><input id="cc-pax" type="number" min="1" max="500" value="1" inputmode="numeric"></label>
+            <label class="cc-chk"><input type="checkbox" id="cc-rt" checked><span data-i18n="cc.rt">Ida y vuelta</span></label>
+          </div>
+        </div>
+
+        <div class="cc-panel" role="tabpanel" id="ccp-1" aria-labelledby="cct-1" hidden>
+          <label for="cc-veh"><span data-i18n="cc.veh">Tipo de vehículo</span>
+            <select id="cc-veh"><option value="car" data-i18n="cc.v0">Automóvil a gasolina</option><option value="pick" data-i18n="cc.v1">Pickup o camión ligero diésel</option><option value="moto" data-i18n="cc.v2">Motocicleta</option><option value="bus" data-i18n="cc.v3">Autobús interurbano (por pasajero)</option></select></label>
+          <div class="cc-row2">
+            <label for="cc-km"><span data-i18n="cc.km">Distancia (km)</span><input id="cc-km" type="number" min="0" step="any" value="200" inputmode="decimal"></label>
+            <label for="cc-eff" id="cc-effl"><span data-i18n="cc.eff">Rendimiento (km por litro)</span><input id="cc-eff" type="number" min="1" step="any" value="12" inputmode="decimal"></label>
+          </div>
+          <label class="cc-chk"><input type="checkbox" id="cc-vrt"><span data-i18n="cc.rt">Ida y vuelta</span></label>
+        </div>
+
+        <div class="cc-panel" role="tabpanel" id="ccp-2" aria-labelledby="cct-2" hidden>
+          <label for="cc-fuel"><span data-i18n="cc.fuel">Combustible</span>
+            <select id="cc-fuel"><option value="gas" data-i18n="cc.f0">Gasolina</option><option value="dsl" data-i18n="cc.f1">Diésel</option><option value="lpg" data-i18n="cc.f2">Gas LPG (propano)</option></select></label>
+          <div class="cc-row2">
+            <label for="cc-qty"><span data-i18n="cc.qty">Cantidad</span><input id="cc-qty" type="number" min="0" step="any" value="50" inputmode="decimal"></label>
+            <label for="cc-unit"><span data-i18n="cc.unit">Unidad</span><select id="cc-unit"><option value="gal" data-i18n="cc.gal">Galones</option><option value="l" data-i18n="cc.l">Litros</option></select></label>
+          </div>
+          <label for="cc-per"><span data-i18n="cc.per">Período</span><select id="cc-per"><option value="1" data-i18n="cc.p1">Consumo único</option><option value="12" data-i18n="cc.p12">Consumo mensual (calcular el año)</option><option value="52" data-i18n="cc.p52">Consumo semanal (calcular el año)</option></select></label>
+        </div>
+
+        <div class="qz-act"><button class="btn lime" type="submit" data-i18n="cc.go">Calcular mi huella</button></div>
+        <p id="cc-err" class="cc-err" hidden></p>
+      </form>
+
+      <aside class="qz-res cc-res" aria-live="polite">
+        <div class="qz-empty" id="cc-empty">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 34a9 9 0 0 1-1-18 12 12 0 0 1 23 3 7.5 7.5 0 0 1-1 15z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><text x="24" y="29" text-anchor="middle" font-size="9" font-weight="700" fill="currentColor" font-family="sans-serif">CO₂</text></svg>
+          <h3 data-i18n="cc.e1">Su huella aparecerá aquí</h3>
+          <p data-i18n="cc.e2">Elija vuelo, vehículo o combustible, complete los datos y pulse «Calcular mi huella».</p>
+        </div>
+        <div id="cc-out" hidden></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec" id="arraigo">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="duo" data-i18n-html="ar.t">Programa <span>ARRAIGO</span></h2>
+      <p class="lead center" data-i18n="ar.s">Certificación de carbono para café y cacao de Centroamérica. Mide, verifica y valoriza la sostenibilidad de tus cultivos.</p>
+    </div>
+    <article class="arr">
+      <div class="t">
+        <span class="badge" data-i18n="p.badge">Programa propio de JJ GLOBAL</span>
+        <h3 data-i18n="aq.t">¿Qué es ARRAIGO?</h3>
+        <p data-i18n="aq.p1">Una plataforma integral de certificación de carbono diseñada para productores de café y cacao en Centroamérica. ARRAIGO permite cuantificar, verificar y preparar para su comercialización el carbono que capturan las prácticas sostenibles de cada finca.</p>
+        <p data-i18n="aq.p2">Desarrolla e implementa la gestión de carbono con base en el Protocolo de Gases de Efecto Invernadero (GHG Protocol) y las directrices del IPCC, y prepara los resultados para su verificación independiente.</p>
+        <div class="btns"><a class="btn lime" href="#contacto" data-svc="4"><span data-i18n="ar.c1">Inicia tu evaluación</span><svg><use href="#i-arrow"/></svg></a></div>
+      </div>
+      <div class="art" aria-hidden="true"><div class="phone"><div class="scr">
+        <div class="ab"><span>ARRAIGO</span><span class="off" data-i18n="ph.off">Sin señal · guardado</span></div>
+        <div class="pc"><small data-i18n="ph.farm">Finca de ejemplo · Parcela 3</small><b data-i18n="ph.crop">Café bajo sombra</b></div>
+        <div class="pc"><small data-i18n="ph.trees">Árboles de sombra medidos</small><div class="bar"><i style="width:80%"></i></div><b>24 / 30</b></div>
+        <div class="g2"><div class="pc"><small data-i18n="ph.sp">Especie</small><b>Inga sp.</b></div><div class="pc"><small data-i18n="ph.dap">DAP (cm)</small><b>18,4</b></div></div>
+        <div class="pc"><small data-i18n="ph.prod">Producción</small><b>32 qq oro</b></div>
+        <div class="pc"><small data-i18n="ph.ev">Evidencia</small><b data-i18n="ph.evd">3 fotos · GPS registrado</b></div>
+        <div class="sv" data-i18n="ph.save">Guardar parcela</div>
+      </div></div></div>
+    </article>
+
+    <div class="feats">
+      <div class="feat"><span class="ic"><svg><use href="#f-chart"/></svg></span><h4 data-i18n="fe1.t">Medición precisa</h4><p data-i18n="fe1.p">Cálculo de la captura de carbono en cafetales y cacaotales con metodologías del IPCC y el GHG Protocol.</p></div>
+      <div class="feat"><span class="ic"><svg><use href="#f-check"/></svg></span><h4 data-i18n="fe2.t">Verificación independiente</h4><p data-i18n="fe2.p">Resultados documentados y preparados para la auditoría de organismos verificadores acreditados.</p></div>
+      <div class="feat"><span class="ic"><svg><use href="#f-coin"/></svg></span><h4 data-i18n="fe3.t">Acceso a mercados de carbono</h4><p data-i18n="fe3.p">Ruta hacia mercados nacionales e internacionales para comercializar créditos y generar ingresos adicionales.</p></div>
+      <div class="feat"><span class="ic"><svg><use href="#f-phone"/></svg></span><h4 data-i18n="fe4.t">Plataforma digital</h4><p data-i18n="fe4.p">Sistema web que funciona con o sin internet, diseñado para el trabajo en el campo.</p></div>
+      <div class="feat"><span class="ic"><svg><use href="#f-globe"/></svg></span><h4 data-i18n="fe5.t">Sostenibilidad comprobada</h4><p data-i18n="fe5.p">Datos verificables y transparentes para demostrar a sus clientes un compromiso real con el ambiente.</p></div>
+      <div class="feat"><span class="ic"><svg><use href="#f-hand"/></svg></span><h4 data-i18n="fe6.t">Apoyo integral</h4><p data-i18n="fe6.p">Capacitación, asesoría técnica y seguimiento continuo de nuestro equipo de especialistas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <div class="story-g">
+      <div>
+        <p class="kicker" data-i18n="st.k">El protocolo ARRAIGO</p>
+        <h2 data-i18n-html="st.t">Un camino hacia la <span>sostenibilidad</span></h2>
+        <blockquote data-i18n="st.q">«Si cultivas de manera sostenible, deberías ganar dinero por ello.»</blockquote>
+      </div>
+      <div class="story-txt">
+        <p data-i18n="st.p1">En Centroamérica, el café y el cacao enfrentan desafíos climáticos sin precedentes. Los productores luchan contra la erosión de los suelos, la variabilidad del clima y mercados cada vez más exigentes en sostenibilidad.</p>
+        <p data-i18n-html="st.p2">ARRAIGO nace de la convicción de que los productores merecen reconocimiento financiero por su trabajo de conservación. Cada árbol de sombra, cada hectárea restaurada y cada práctica sostenible tiene un valor real: <em>el carbono que captura y almacena</em>.</p>
+        <p data-i18n-html="st.p3">Nuestro protocolo se basa en metodologías científicas reconocidas internacionalmente, adaptadas a los agroecosistemas de café y cacao. Con mediciones rigurosas, verificación independiente y total transparencia, ARRAIGO convierte las prácticas sostenibles en <em>resultados verificables con valor en el mercado</em>.</p>
+        <p data-i18n="st.p4">Con ARRAIGO, los productores de Honduras, Guatemala, El Salvador y el resto de Centroamérica pueden:</p>
+        <ul class="opps">
+          <li data-i18n="op1">Medir objetivamente el carbono que capturan sus cultivos</li>
+          <li data-i18n="op2">Prepararse para la certificación internacional de su trabajo</li>
+          <li data-i18n="op3">Acceder a mercados de carbono para vender sus créditos</li>
+          <li data-i18n="op4">Mejorar sus ingresos sin depender solo del precio del café o el cacao</li>
+          <li data-i18n="op5">Proteger el futuro de sus familias y comunidades</li>
+        </ul>
+        <p class="close" data-i18n-html="st.p5">ARRAIGO no es solo tecnología: es reconocer que <em>los productores sostenibles son guardianes del clima</em>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="protocolo">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="duo" data-i18n-html="pr.t">Cómo funciona <span>en 5 pasos</span></h2></div>
+    <ol class="steps5">
+      <li><span>1</span><h4 data-i18n="s1.t">Evaluación inicial</h4><p data-i18n="s1.p">Evaluamos sus terrenos: cultivo, sistema agroforestal, cobertura de bosque y prácticas actuales.</p></li>
+      <li><span>2</span><h4 data-i18n="s2.t">Medición de carbono</h4><p data-i18n="s2.p">Medición en campo con la aplicación ARRAIGO y teledetección para cuantificar el carbono capturado y almacenado.</p></li>
+      <li><span>3</span><h4 data-i18n="s3.t">Verificación independiente</h4><p data-i18n="s3.p">Un organismo verificador acreditado audita los cálculos frente a los estándares internacionales (ISO 14064-3).</p></li>
+      <li><span>4</span><h4 data-i18n="s4.t">Generación de créditos</h4><p data-i18n="s4.p">Al registrarse en un estándar reconocido, como Verra, este emite los créditos verificados: cada uno equivale a una tonelada de CO₂e capturada o reducida.</p></li>
+      <li><span>5</span><h4 data-i18n="s5.t">Comercialización</h4><p data-i18n="s5.p">Los créditos se ofrecen en mercados nacionales e internacionales y generan ingresos adicionales para la finca.</p></li>
+    </ol>
+    <div class="monitor"><svg><use href="#f-cycle"/></svg><p data-i18n-html="mo.p"><strong>Monitoreo continuo.</strong> Una vez certificada la finca, damos seguimiento anual para confirmar que mantiene y aumenta la captura de carbono. Los beneficios se extienden por años, no dependen de una sola medición.</p></div>
+  </div>
+</section>
+
+<section class="sec svcs" id="beneficios">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="duo" data-i18n-html="be.t">Beneficios de <span>ARRAIGO</span></h2></div>
+    <div class="bens">
+      <div class="ben"><span class="ic"><svg><use href="#f-coin"/></svg></span><h4 data-i18n="b1.t">Ingresos adicionales</h4><p data-i18n="b1.p">Una fuente de ingresos que no depende solo del precio internacional del café o el cacao.</p></div>
+      <div class="ben"><span class="ic"><svg><use href="#f-sprout"/></svg></span><h4 data-i18n="b2.t">Incentivo ambiental</h4><p data-i18n="b2.p">Reconocimiento financiero por cada acción de sostenibilidad y restauración.</p></div>
+      <div class="ben"><span class="ic"><svg><use href="#f-award"/></svg></span><h4 data-i18n="b3.t">Acceso a mercados exigentes</h4><p data-i18n="b3.p">Datos verificados que agregan valor a sus productos en mercados diferenciados.</p></div>
+      <div class="ben"><span class="ic"><svg><use href="#f-phone"/></svg></span><h4 data-i18n="b4.t">Tecnología accesible</h4><p data-i18n="b4.p">Plataforma fácil de usar, disponible aun sin conexión permanente a internet.</p></div>
+      <div class="ben"><span class="ic"><svg><use href="#f-people"/></svg></span><h4 data-i18n="b5.t">Comunidad conectada</h4><p data-i18n="b5.p">Una red de productores sostenibles que comparte experiencias, capacitación y oportunidades.</p></div>
+      <div class="ben"><span class="ic"><svg><use href="#f-globe"/></svg></span><h4 data-i18n="b6.t">Impacto climático real</h4><p data-i18n="b6.p">Una contribución medible a la reducción de emisiones, respaldada con datos verificables.</p></div>
+    </div>
+    <div class="arr-cta">
+      <div><h3 data-i18n="ac.t">¿Listo para transformar tu cultivo en un activo de carbono?</h3><p data-i18n="ac.p">Súmate a los productores centroamericanos que quieren valorizar su sostenibilidad con el Programa ARRAIGO.</p></div>
+      <a class="btn lime" href="#contacto" data-svc="4"><span data-i18n="ac.c">Solicita tu evaluación gratuita</span><svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="sectores" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="duo" data-i18n-html="se.t">Con quién <span>trabajamos</span></h2></div>
+    <div class="sectors">
+      <div class="sector"><span class="ic"><svg><use href="#s-cup"/></svg></span><div><h4 data-i18n="se1">Cooperativas y exportadores de café y cacao</h4><p data-i18n="se1p">Huella de producto, ACI y requisitos de compradores.</p></div></div>
+      <div class="sector"><span class="ic"><svg><use href="#s-fac"/></svg></span><div><h4 data-i18n="se2">Agroindustria y alimentos</h4><p data-i18n="se2p">Inocuidad, FDA, sistemas de gestión y eficiencia.</p></div></div>
+      <div class="sector"><span class="ic"><svg><use href="#s-co2"/></svg></span><div><h4 data-i18n="se3">Empresas de servicios e industria</h4><p data-i18n="se3p">Inventarios de GEI, ESG y carbono neutralidad.</p></div></div>
+      <div class="sector"><span class="ic"><svg><use href="#s-hand"/></svg></span><div><h4 data-i18n="se4">ONG y cooperación internacional</h4><p data-i18n="se4p">Formulación, línea base, evaluación y salvaguardas.</p></div></div>
+      <div class="sector"><span class="ic"><svg><use href="#s-wave"/></svg></span><div><h4 data-i18n="se5">Áreas protegidas y zonas costeras</h4><p data-i18n="se5p">Estudios ambientales y carbono azul en manglares.</p></div></div>
+      <div class="sector"><span class="ic"><svg><use href="#s-tree"/></svg></span><div><h4 data-i18n="se6">Desarrolladores de proyectos de carbono</h4><p data-i18n="se6p">REDD+, MRV y documentación técnica.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+
+<nav aria-label="Artículos del blog" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"><a href="blog/suelo.html">Cambio de uso de suelo en Honduras: 900.000 hectáreas de bosque en 11 años</a><a href="blog/ihcafe.html">Cosecha 2025-2026: lo que dicen las cifras del IHCAFE</a><a href="blog/oic-circular.html">Más allá del grano: la economía circular del café según la OIC</a><a href="blog/oic-clima.html">El clima ya mueve la producción mundial de café: lectura del informe de la OIC</a><a href="blog/clima.html">1,55 °C: lo que el calentamiento global le está haciendo a la agricultura</a><a href="blog/cafe.html">El café frente al cambio climático: la frontera del cultivo se mueve</a><a href="blog/aci.html">Agricultura climáticamente inteligente: tres resultados en la misma parcela</a><a href="blog/huella.html">Huella de carbono del café: por dónde empezar</a><a href="blog/cert.html">¿Qué certificación le conviene a su finca o cooperativa?</a><a href="blog/ods.html">Los ODS en la cadena de valor: de la etiqueta a la gestión</a></nav>
+<section class="sec svcs" id="blog">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="duo" data-i18n-html="bl.t">Nuestro <span>blog</span></h2><p class="lead center" data-i18n="bl.p">Artículos sobre clima, agricultura, carbono, certificaciones y desarrollo sostenible, escritos por nuestro equipo.</p></div>
+    <div class="chips" role="group" aria-label="Filtrar artículos" id="bchips">
+      <button class="chip" type="button" data-b="all" aria-pressed="true" data-i18n="bc.all">Todos</button>
+      <button class="chip" type="button" data-b="suelo" aria-pressed="false" data-i18n="bc.suelo">Bosques y uso de suelo</button>
+      <button class="chip" type="button" data-b="clima" aria-pressed="false" data-i18n="bc.clima">Clima</button>
+      <button class="chip" type="button" data-b="cafe" aria-pressed="false" data-i18n="bc.cafe">Café y cacao</button>
+      <button class="chip" type="button" data-b="agri" aria-pressed="false" data-i18n="bc.agri">Agricultura</button>
+      <button class="chip" type="button" data-b="carbono" aria-pressed="false" data-i18n="bc.carbono">Carbono</button>
+      <button class="chip" type="button" data-b="cert" aria-pressed="false" data-i18n="bc.cert">Certificaciones</button>
+      <button class="chip" type="button" data-b="ods" aria-pressed="false">ODS</button>
+    </div>
+    <div class="posts" id="posts"></div>
+  </div>
+</section>
+<dialog class="reader" id="reader" aria-labelledby="rd-t">
+  <div class="rd-cover" id="rd-cover"></div>
+  <button class="rd-x" id="rd-x" aria-label="Cerrar">×</button>
+  <article class="rd-body">
+    <p class="rd-meta" id="rd-meta"></p>
+    <h2 id="rd-t"></h2>
+    <p class="rd-note" id="rd-note" hidden>This article is available in Spanish.</p>
+    <div id="rd-c"></div>
+    <div class="rd-share"><button class="copy2" type="button" id="rd-copy" data-i18n="rd.copy">Copiar enlace del artículo</button><a class="copy2" id="rd-wa" href="#" target="_blank" rel="noopener" data-i18n="rd.wa">Compartir por WhatsApp</a></div>
+    <div class="rd-src" id="rd-src"></div>
+    <div class="rd-cta"><p data-i18n="rd.cta">¿Quiere aplicar esto en su finca o empresa?</p><a class="btn lime" href="#contacto" id="rd-go"><span data-i18n="h.c1">Solicitar diagnóstico</span><svg><use href="#i-arrow"/></svg></a></div>
+  </article>
+</dialog>
+
+<section class="sec" id="guia">
+  <div class="wrap">
+    <div class="guide">
+      <div class="g-cover" aria-hidden="true">
+        <div class="g-doc">
+          <span class="g-k">JJ GLOBAL · GUÍA</span>
+          <b data-i18n="gd.c">Café libre de deforestación</b>
+          <small data-i18n="gd.cs">Lista de verificación para cooperativas y exportadores</small>
+          <i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+      <div class="g-txt">
+        <p class="kicker" data-i18n="gd.k">Guía gratuita</p>
+        <h2 data-i18n="gd.t">Lista de verificación: café libre de deforestación</h2>
+        <p data-i18n="gd.p">Los compradores europeos ya piden demostrar que el café no proviene de tierras deforestadas. Esta guía resume, en una lista práctica, lo que una cooperativa o exportadora necesita tener en orden.</p>
+        <ul>
+          <li data-i18n="gd.l1">Georreferenciación de parcelas: puntos y polígonos</li>
+          <li data-i18n="gd.l2">Fecha de corte y análisis de cambio de uso de suelo</li>
+          <li data-i18n="gd.l3">Trazabilidad del productor al lote exportado</li>
+          <li data-i18n="gd.l4">Documentos de legalidad y debida diligencia</li>
+        </ul>
+        <div class="btns">
+          <a class="btn lime" href="guia-cafe-libre-deforestacion.pdf" target="_blank" rel="noopener"><span data-i18n="gd.b">Descargar guía en PDF</span><svg><use href="#i-arrow"/></svg></a>
+          <a class="btn ghost-d" href="https://wa.me/50499288718?text=Hola%2C%20me%20interesa%20la%20gu%C3%ADa%20de%20caf%C3%A9%20libre%20de%20deforestaci%C3%B3n" target="_blank" rel="noopener" data-i18n="gd.w">Pedirla por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec svcs" id="preguntas">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="duo" data-i18n-html="fq.t">Preguntas <span>frecuentes</span></h2></div>
+    <div class="faq">
+      <details><summary data-i18n="q1">¿JJ GLOBAL otorga las certificaciones?</summary><p data-i18n="a1">No. JJ GLOBAL prepara y acompaña a la organización durante la implementación. La certificación la otorga un organismo certificador acreditado e independiente para cada norma o sello, y la verificación de carbono la realiza un organismo verificador acreditado.</p></details>
+      <details><summary data-i18n="q2">¿Cuánto tiempo toma prepararse para una certificación?</summary><p data-i18n="a2">Depende del punto de partida y de la norma. Algunas certificaciones de sostenibilidad pueden prepararse en pocos meses si la organización ya lleva registros. Las orgánicas exigen un periodo de transición sin agroquímicos de síntesis que, en cultivos permanentes como el café, suele ser de tres años.</p></details>
+      <details><summary data-i18n="q3">¿Qué datos necesito para medir la huella de carbono?</summary><p data-i18n="a3">Principalmente: producción, tipo y cantidad de fertilizantes, combustibles, electricidad, manejo de pulpa y aguas mieles, y transporte. Si no tiene todos los datos, le ayudamos a organizarlos y a definir cómo registrarlos en adelante.</p></details>
+      <details><summary data-i18n="q4">¿Trabajan con pequeños productores?</summary><p data-i18n="a4">Sí. Trabajamos con fincas individuales y, sobre todo, con grupos organizados en cooperativas o asociaciones, donde la certificación grupal y un sistema interno de control reducen costos para cada productor.</p></details>
+      <details><summary data-i18n="q5">¿Puedo vender créditos de carbono de mi finca?</summary><p data-i18n="a5">Es posible, pero los créditos solo los emite un estándar reconocido después de registrar y verificar el proyecto, y normalmente se requiere agrupar muchas fincas para que sea viable. El Programa ARRAIGO organiza la medición y la evidencia para avanzar en esa ruta.</p></details>
+      <details><summary data-i18n="q6">¿Cómo se cobran los servicios?</summary><p data-i18n="a6">Cada servicio se cotiza según su alcance, después de una conversación inicial o un diagnóstico. Le enviamos una propuesta técnica y económica por escrito. La evaluación inicial del Programa ARRAIGO es gratuita.</p></details>
+      <details><summary data-i18n="q7">¿En qué zonas trabajan?</summary><p data-i18n="a7">Nuestra sede está en Corquín, Copán, y trabajamos en toda Honduras y Centroamérica, con visitas de campo y acompañamiento a distancia.</p></details>
+      <details><summary data-i18n="q8">¿El autodiagnóstico guarda mis respuestas?</summary><p data-i18n="a8">No. El resultado se calcula en su navegador y solo nos llega si usted decide enviárnoslo.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contacto">
+  <div class="wrap">
+    <div class="offer">
+      <div><h2 data-i18n="o.t">Solicite un diagnóstico de sostenibilidad</h2><p data-i18n="o.p">Revisamos su operación o su finca y le entregamos un panorama claro: dónde están sus emisiones, qué le exigen sus compradores y qué medidas dan mejor resultado.</p></div>
+      <ul><li data-i18n="o.l1">Mapa de fuentes de emisión y riesgos</li><li data-i18n="o.l2">Brechas frente a clientes, normas y certificaciones</li><li data-i18n="o.l3">Medidas priorizadas y propuesta de trabajo</li></ul>
+      <a class="btn dark" href="#f"><span data-i18n="o.c">Solicitar diagnóstico</span><svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="contact">
+      <div class="person" data-nosnippet>
+        <h2 style="color:#EEF5EF;font-size:clamp(2rem,4vw,2.8rem);font-weight:700" data-i18n="c.t">Contáctanos</h2>
+        <div class="who"><div class="ini">JG</div><div><h3>Joel Galeas</h3><small data-i18n="c.role">Especialista en Sostenibilidad Corporativa y Gestión de Carbono</small></div></div>
+        <div class="ch"><small data-i18n="c.phone">Teléfono y WhatsApp</small><span class="val"><span id="v-tel">+504 9928-8718</span><button data-nosnippet class="copy" type="button" data-copy="v-tel" data-i18n="c.copy">Copiar</button></span></div>
+        <div class="ch"><small data-i18n="c.mail">Correo electrónico</small><span class="val"><a id="v-mail" href="mailto:jjglobalservicessa@gmail.com" style="color:inherit">jjglobalservicessa@gmail.com</a><button data-nosnippet class="copy" type="button" data-copy="v-mail" data-i18n="c.copy">Copiar</button></span></div>
+        <div class="ch"><small data-i18n="c.addr">Dirección</small><span class="val">Corquín, Copán, Honduras, C.A.</span></div>
+      </div>
+      <form id="f" novalidate>
+        <p class="lead" data-i18n="c.lead">Déjenos sus datos y le enviaremos una propuesta técnica y económica.</p>
+        <div class="row">
+          <label for="f-name"><span data-i18n="f.name">Nombre</span><input id="f-name" autocomplete="name"></label>
+          <label for="f-org"><span data-i18n="f.org">Organización</span><input id="f-org" autocomplete="organization"></label>
+        </div>
+        <div class="row">
+          <label for="f-mail"><span data-i18n="f.mail">Correo electrónico</span><input id="f-mail" type="email" autocomplete="email" inputmode="email"></label>
+          <label for="f-tel"><span data-i18n="f.tel">Teléfono o WhatsApp</span><input id="f-tel" type="tel" autocomplete="tel"></label>
+        </div>
+        <input type="text" name="_honey" id="f-hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+        <label for="f-svc"><span data-i18n="f.svc">Servicio de interés</span>
+          <select id="f-svc">
+            <option data-i18n="f.diag">Diagnóstico de sostenibilidad</option>
+            <option data-i18n="t1">Sostenibilidad corporativa y servicios ambientales</option>
+            <option data-i18n="t2">Agricultura climáticamente inteligente</option>
+            <option data-i18n="t3">Desarrollo sostenible y ODS</option>
+            <option data-i18n="f.arr">Programa ARRAIGO</option>
+            <option data-i18n="f.cert">Implementación de certificaciones</option>
+          </select></label>
+        <label for="f-msg"><span data-i18n="f.msg">Mensaje</span><textarea id="f-msg"></textarea></label>
+        <div><button class="btn lime" type="submit" id="f-go" data-i18n="f.send">Enviar mensaje</button></div>
+        <p class="fnote"><span data-i18n="pv.f">Al enviar sus datos acepta nuestro</span> <button type="button" class="plink" data-priv data-i18n="pv.l">Aviso de privacidad</button>.</p>
+        <p id="err" hidden style="color:#B5462E;font-size:.9rem" data-i18n="f.err">Escriba su nombre, un correo válido y su mensaje para continuar.</p>
+        <p class="ok-msg" id="f-ok" hidden role="status"><b data-i18n="f.okt">¡Mensaje enviado!</b> <span data-i18n="f.ok">Gracias por escribirnos. Joel Galeas le responderá a su correo a la brevedad.</span></p>
+        <div class="out" id="out" hidden>
+          <span data-i18n="f.ready">No pudimos enviar el mensaje automáticamente. Envíelo por correo o WhatsApp con un clic:</span>
+          <pre id="out-txt"></pre>
+          <div class="acts"><button data-nosnippet class="copy" type="button" id="out-copy" data-i18n="f.copy">Copiar mensaje</button><a class="copy" id="out-wa" href="https://wa.me/50499288718" target="_blank" rel="noopener" data-i18n="f.wa">Enviar por WhatsApp</a><a class="copy" id="out-mail" href="mailto:jjglobalservicessa@gmail.com" data-i18n="f.em">Enviar por correo</a></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<dialog class="reader priv" id="priv" aria-labelledby="pv-t">
+  <button class="rd-x" id="pv-x" aria-label="Cerrar">×</button>
+  <article class="rd-body">
+    <p class="rd-meta">JJ GLOBAL</p>
+    <h2 id="pv-t" data-i18n="pv.l">Aviso de privacidad</h2>
+    <div id="rd-pv">
+      <p data-i18n="pv.1">JJ GLOBAL, con domicilio en Corquín, Copán, Honduras, es responsable del tratamiento de los datos personales que usted comparte a través de este sitio.</p>
+      <h3 data-i18n="pv.h1">Qué datos recogemos</h3>
+      <p data-i18n="pv.2">Solo los que usted escribe en el formulario de contacto o envía por WhatsApp o correo: nombre, organización, correo, teléfono, servicio de interés y mensaje. Los mensajes del formulario se transmiten a nuestro correo mediante el servicio FormSubmit. El autodiagnóstico se calcula en su navegador y no se guarda ni se envía a menos que usted decida mandarlo.</p>
+      <h3 data-i18n="pv.h2">Para qué los usamos</h3>
+      <p data-i18n="pv.3">Para responder su consulta y preparar una propuesta. No vendemos ni compartimos sus datos con terceros, salvo obligación legal.</p>
+      <h3 data-i18n="pv.h3">Almacenamiento en su navegador</h3>
+      <p data-i18n="pv.4">El sitio solo guarda en su navegador el idioma que eligió. No usamos cookies de publicidad.</p>
+      <h3 data-i18n="pv.h4">Sus derechos</h3>
+      <p data-i18n="pv.5">Puede pedir que consultemos, corrijamos o eliminemos sus datos escribiendo a jjglobalservicessa@gmail.com.</p>
+      <p class="rd-note" data-i18n="pv.6">Última actualización: octubre de 2026.</p>
+    </div>
+  </article>
+</dialog>
+<footer>
+  <div class="wrap fcols">
+    <div class="fbrand"><span class="b"><svg><use href="#iso"/></svg><b>JJ GLOBAL</b></span><p data-i18n="ft.p">Sostenibilidad corporativa, agricultura climáticamente inteligente y desarrollo sostenible para empresas y cadenas de valor.</p></div>
+    <div><h4 data-i18n="ft.talk">Hablemos</h4><a href="https://wa.me/50499288718" target="_blank" rel="noopener">+504 9928-8718</a><span>jjglobalservicessa@gmail.com</span><a href="https://wa.me/50499288718" target="_blank" rel="noopener">WhatsApp</a></div>
+    <div><h4 data-i18n="ft.visit">Visítanos</h4><span>Corquín, Copán</span><br><span>Honduras, C.A.</span></div>
+    <div><h4 data-i18n="ft.nav">Navegación</h4><a href="#nosotros" data-i18n="n.us">Nosotros</a><a href="#servicios" data-i18n="n.svc">Nuestros servicios</a><a href="#arraigo">ARRAIGO</a><a href="#certificaciones" data-i18n="n.cert">Certificaciones</a><a href="#autodiagnostico" data-i18n="n.quiz">Autodiagnóstico</a><a href="#calculadora" data-i18n="n.calc">Calculadora de huella</a><a href="#blog">Blog</a><a href="#guia" data-i18n="n.guide">Guía gratuita</a><a href="#preguntas" data-i18n="n.faq">Preguntas frecuentes</a><a href="#contacto" data-i18n="n.contact">Contáctanos</a></div>
+  </div>
+  <div class="fbot"><div class="wrap"><span>© 2026 JJ GLOBAL · Corquín, Copán, Honduras · <button type="button" class="plink" data-priv data-i18n="pv.l">Aviso de privacidad</button></span><span data-i18n="ft.b">Sostenibilidad · Carbono · ODS</span></div></div>
+</footer>
+<a class="wa" href="https://wa.me/50499288718" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+const EN={"cc.t":"Carbon <span>footprint calculator</span>","n.calc":"Carbon calculator","cc.k":"Free demo","cc.p":"Estimate in seconds the emissions of a flight, a vehicle trip or the fuel you use, just like airlines do.","cc.tr":"Title","cc.sr":"Mr.","cc.sra":"Mrs.","cc.dr":"Dr.","cc.none":"None","cc.name":"Your name","cc.t0":"Flight","cc.t1":"Vehicle","cc.t2":"Fuel","cc.from":"From","cc.to":"To","cc.pax":"Passengers","cc.rt":"Round trip","cc.veh":"Vehicle type","cc.v0":"Gasoline car","cc.v1":"Diesel pickup or light truck","cc.v2":"Motorcycle","cc.v3":"Intercity bus (per passenger)","cc.km":"Distance (km)","cc.eff":"Fuel efficiency (km per litre)","cc.fuel":"Fuel","cc.f0":"Gasoline","cc.f1":"Diesel","cc.f2":"LPG (propane)","cc.qty":"Amount","cc.unit":"Unit","cc.gal":"Gallons","cc.l":"Litres","cc.per":"Period","cc.p1":"One-time use","cc.p12":"Monthly use (estimate the year)","cc.p52":"Weekly use (estimate the year)","cc.go":"Calculate my footprint","cc.e1":"Your footprint will appear here","cc.e2":"Choose flight, vehicle or fuel, fill in the details and press “Calculate my footprint”.",
+"n.us":"About us","n.who":"Who we are","n.mv":"Mission and vision","n.sec":"Who we work with","n.svc":"Our services","n.norms":"Standards","n.contact":"Contact us","n.more":"More","n.aq":"What is ARRAIGO?","n.pr":"How it works","n.be":"Benefits",
+"t1":"Corporate sustainability and environmental services","t2":"Climate-smart agriculture","t3":"Sustainable development and SDGs",
+"h.k":"Sustainability · Carbon · SDGs","h.t":"Sustainability that is <span>grown</span>, measured and proven.",
+"h.s":"Specialists in corporate sustainability and environmental services, climate-smart and low-carbon agriculture, and sustainable development aligned with the SDGs for companies and value chains.",
+"h.c1":"Request an assessment","h.c2":"Our services","more":"See more",
+"c1":"Corporate sustainability and environmental services","c2":"Climate-smart agriculture","c3":"Sustainable development and SDGs",
+"ind.t":"Our <span>capabilities</span>","ind.1":"Service <strong>lines</strong>","ind.2":"Specialized <strong>services</strong>","ind.3":"Certifications we <strong>implement</strong>","ind.4":"<strong>SDGs</strong> we contribute to",
+"ab.t":"Who <span>we are</span>",
+"ab.p1":"<strong>JJ GLOBAL</strong> is a Honduran company based in Corquín, Copán, in the heart of the western coffee region. We help companies, cooperatives, producer organizations and development projects build sustainability into their operations and across their value chain.",
+"ab.p2":"We bring together environmental management, climate science and field knowledge, with a team that works in the office and on the farm.",
+"v1":"Technical rigor","v2":"Transparency","v3":"Local roots","v4":"Innovation",
+"m.k":"Mission","m.p":"To advance the sustainability of companies, producer organizations and value chains through environmental services, carbon management and climate-smart agriculture, with technical rigor, local knowledge and measurable results aligned with the SDGs.",
+"vi.k":"Vision","vi.p":"By 2030, to be Central America's reference firm in corporate sustainability and low-carbon productive management, recognized for turning rural value chains into competitive, resilient models with proven impact.",
+"s.t":"Our <span>services</span>","s.p":"Three lines that can be contracted on their own or combined into a sustainability program built for your organization.",
+"l1.p":"For companies that need to manage their environmental, social and governance performance, and prove it.",
+"l1.a":"ESG strategy and sustainability reporting","l1.ad":"Materiality, indicators and reports under GRI standards.",
+"l1.b":"Carbon footprint and GHG projects","l1.bd":"Organizational and product inventories, reduction and removal projects, and readiness for validation and verification.",
+"l1.e":"Path to carbon neutrality","l1.ed":"Roadmap, emission reductions, offsetting with quality credits and support for the claim ahead of verification.",
+"l1.ct":"EIA · Permits","l1.c":"Environmental assessment and compliance","l1.cd":"Environmental impact studies, assessments and management plans.",
+"l1.d":"Management systems","l1.dd":"Design and implementation of environmental and quality systems.",
+"l1.f":"Occupational health and safety","l1.fd":"Hazard identification, risk assessment and safety programs for field and plant staff.",
+"l2.p":"Low-carbon productive management for farms, cooperatives and agribusinesses.",
+"l2.at":"Productivity · Adaptation · Mitigation","l2.a":"Climate-smart farm plans","l2.ad":"Practices that raise yields and resilience while cutting emissions.",
+"l2.bt":"Low emissions","l2.b":"Low-carbon production","l2.bd":"Fertilization, pulp composting, wastewater and wet-mill efficiency.",
+"l2.ct":"Agroforestry","l2.c":"Agroforestry and soils","l2.cd":"Diverse shade, soil conservation and carbon in permanent crops.",
+"l2.dt":"Certification","l2.d":"Certification and traceability","l2.dd":"Readiness for sustainability and organic labels and deforestation-free requirements.",
+"l2.e":"Food safety","l2.ed":"Good manufacturing practices, HACCP plans and ISO 22000 / FSSC 22000 systems at mills, plants and agribusinesses.",
+"l2.f":"FDA compliance for export","l2.fd":"FDA food facility registration, FSMA requirements and supporting documentation for U.S. importers.",
+"l3.p":"Mechanisms that link the activities of companies and chains to measurable SDG targets.",
+"l3.at":"2030 Agenda","l3.a":"SDG alignment","l3.ad":"Targets your operation contributes to and indicators to measure them.",
+"l3.bt":"Value chains","l3.b":"Sustainable value chains","l3.bd":"Risks and impacts from producer to market, with improvement plans.",
+"l3.ct":"REDD+ · Blue carbon","l3.c":"Carbon projects and ecosystem services","l3.cd":"Project design for carbon markets and payments for environmental services.",
+"l3.dt":"Cooperation","l3.d":"Development projects and safeguards","l3.dd":"Design, baselines and evaluation with a gender and community participation approach.",
+"ar.t":"The <span>ARRAIGO</span> program",
+"p.p":"JJ GLOBAL runs the ARRAIGO Program, which develops and implements carbon management based on the Greenhouse Gas Protocol (GHG Protocol) on shade-grown coffee and cocoa farms in Central America, and prepares results for independent verification.",
+"p.l1":"Carbon management under the GHG Protocol","p.l2":"Field data capture app that works offline","p.l3":"Reports by farm and by producer organization","p.l4":"Training for technicians and producers",
+"ph.off":"No signal · saved","ph.farm":"Sample farm · Plot 3","ph.crop":"Shade-grown coffee","ph.trees":"Shade trees measured","ph.sp":"Species","ph.dap":"DBH (cm)","ph.prod":"Production","ph.ev":"Evidence","ph.evd":"3 photos · GPS recorded","ph.save":"Save plot",
+"a1.t":"Field capture","a1.p":"Technicians record trees, inputs and production in the app, even offline.","a2.t":"Calculation","a2.p":"Emissions and removals under the GHG Protocol with IPCC factors.","a3.t":"Report","a3.p":"Results by farm and by organization, with their evidence.","a4.t":"Verification","a4.p":"File prepared for independent verification under ISO 14064-3.",
+"se.t":"Who we <span>work with</span>",
+"se1":"Coffee and cocoa cooperatives and exporters","se1p":"Product footprint, CSA and buyer requirements.","se2":"Agribusiness and food","se2p":"Food safety, FDA, management systems and efficiency.","se3":"Service and industrial companies","se3p":"GHG inventories, ESG and carbon neutrality.","se4":"NGOs and international cooperation","se4p":"Design, baselines, evaluation and safeguards.","se5":"Protected areas and coastal zones","se5p":"Environmental studies and blue carbon in mangroves.","se6":"Carbon project developers","se6p":"REDD+, MRV and technical documentation.",
+"no.t":"Standards we <span>work with</span>",
+"nk1":"Carbon","nk2":"Management","nk3":"Food safety","nk4":"Reporting","nk5":"Markets","nk6":"SDGs",
+"np1":"Parts 1, 2 and 3: GHG inventories, projects and verification.","np2":"Product carbon footprint.","np3":"Path to carbon neutrality.","np4":"Scope 1, 2 and 3 emissions.","np5":"Environmental management systems.","np6":"Quality management systems.","np7":"Occupational health and safety.","np8":"Food safety, HACCP and GMP.","np9":"Requirements to export food to the U.S.","np10":"Sustainability reporting.","np11":"Carbon projects in the voluntary market.","np12":"Sustainable Development Goals.",
+"o.t":"Request a sustainability assessment","o.p":"We review your operation or farm and give you a clear picture: where your emissions are, what your buyers require and which measures pay off best.","o.l1":"Map of emission sources and risks","o.l2":"Gaps against customers, standards and certifications","o.l3":"Prioritized measures and work proposal","o.c":"Request assessment",
+"c.t":"Contact us","c.role":"Corporate Sustainability and Carbon Management Specialist","c.phone":"Phone and WhatsApp","c.mail":"Email","c.addr":"Address","c.copy":"Copy",
+"c.lead":"Leave us your details and we will send you a technical and financial proposal.",
+"f.name":"Name","f.org":"Organization","f.svc":"Service of interest","f.diag":"Sustainability assessment","f.arr":"ARRAIGO program","f.msg":"Message","f.send":"Send message","f.mail":"Email","f.tel":"Phone or WhatsApp","f.sending":"Sending…","f.okt":"Message sent!","f.ok":"Thank you for writing. Joel Galeas will reply to your email shortly.","f.em":"Send by email","f.err":"Enter your name, a valid email and your message to continue.","f.ready":"We could not send the message automatically. Send it by email or WhatsApp with one click:","f.copy":"Copy message","f.wa":"Send via WhatsApp",
+"ar.s":"Carbon certification for Central American coffee and cocoa. Measure, verify and add value to the sustainability of your crops.","p.badge":"A JJ GLOBAL program",
+"aq.t":"What is ARRAIGO?","aq.p1":"An integrated carbon certification platform designed for coffee and cocoa producers in Central America. ARRAIGO quantifies, verifies and prepares for market the carbon captured by each farm's sustainable practices.",
+"aq.p2":"It develops and implements carbon management based on the Greenhouse Gas Protocol (GHG Protocol) and IPCC guidelines, and prepares results for independent verification.","ar.c1":"Start your assessment",
+"fe1.t":"Accurate measurement","fe1.p":"Carbon capture calculated in coffee and cocoa plots with IPCC and GHG Protocol methods.","fe2.t":"Independent verification","fe2.p":"Documented results prepared for audit by accredited verification bodies.","fe3.t":"Access to carbon markets","fe3.p":"A path to national and international markets to sell credits and earn additional income.","fe4.t":"Digital platform","fe4.p":"A web system that works online or offline, designed for fieldwork.","fe5.t":"Proven sustainability","fe5.p":"Verifiable, transparent data that show your customers a real environmental commitment.","fe6.t":"Full support","fe6.p":"Training, technical advice and ongoing follow-up from our team of specialists.",
+"st.k":"The ARRAIGO protocol","st.t":"A path toward <span>sustainability</span>","st.q":"“If you farm sustainably, you should earn money for it.”",
+"st.p1":"In Central America, coffee and cocoa face unprecedented climate challenges. Producers struggle with soil erosion, climate variability and markets that demand more and more on sustainability.",
+"st.p2":"ARRAIGO was born from the belief that producers deserve financial recognition for their conservation work. Every shade tree, every restored hectare and every sustainable practice has real value: <em>the carbon it captures and stores</em>.",
+"st.p3":"Our protocol is based on internationally recognized scientific methods, adapted to coffee and cocoa agroecosystems. With rigorous measurement, independent verification and full transparency, ARRAIGO turns sustainable practices into <em>verifiable results with market value</em>.",
+"st.p4":"With ARRAIGO, producers in Honduras, Guatemala, El Salvador and the rest of Central America can:",
+"op1":"Objectively measure the carbon their crops capture","op2":"Prepare for international certification of their work","op3":"Access carbon markets to sell their credits","op4":"Improve their income without relying only on coffee or cocoa prices","op5":"Protect the future of their families and communities",
+"st.p5":"ARRAIGO is not just technology: it recognizes that <em>sustainable producers are guardians of the climate</em>.",
+"pr.t":"How it works <span>in 5 steps</span>",
+"s1.t":"Initial assessment","s1.p":"We assess your land: crop, agroforestry system, forest cover and current practices.","s2.t":"Carbon measurement","s2.p":"Field measurement with the ARRAIGO app and remote sensing to quantify captured and stored carbon.","s3.t":"Independent verification","s3.p":"An accredited verification body audits the calculations against international standards (ISO 14064-3).","s4.t":"Credit generation","s4.p":"Once registered with a recognized standard such as Verra, the standard issues verified credits: each equals one tonne of CO₂e captured or reduced.","s5.t":"Commercialization","s5.p":"Credits are offered in national and international markets, generating additional income for the farm.",
+"mo.p":"<strong>Continuous monitoring.</strong> Once a farm is certified, we follow up every year to confirm it maintains and increases carbon capture. The benefits last for years, not just one measurement.",
+"be.t":"Benefits of <span>ARRAIGO</span>","b1.t":"Additional income","b1.p":"An income source that does not depend only on international coffee or cocoa prices.","b2.t":"Environmental incentive","b2.p":"Financial recognition for every sustainability and restoration action.","b3.t":"Access to demanding markets","b3.p":"Verified data that add value to your products in differentiated markets.","b4.t":"Accessible technology","b4.p":"An easy-to-use platform, available even without a permanent internet connection.","b5.t":"Connected community","b5.p":"A network of sustainable producers sharing experience, training and opportunities.","b6.t":"Real climate impact","b6.p":"A measurable contribution to emission reductions, backed by verifiable data.",
+"ac.t":"Ready to turn your crop into a carbon asset?","ac.p":"Join the Central American producers who want to add value to their sustainability with the ARRAIGO Program.","ac.c":"Request your free assessment",
+"n.cert":"Certifications","f.cert":"Certification implementation",
+"ce.t":"Certification <span>implementation</span>","ce.p":"We prepare farms, cooperatives and agribusinesses to obtain and keep the certifications their buyers require, from gap assessment to audit.",
+"cf.all":"All","cf.org":"Organic and regenerative","cf.sus":"Sustainability and fair trade","cf.cli":"Climate","cf.ino":"Food safety",
+"cc.org":"Organic","cc.bio":"Biodynamic","cc.reg":"Regenerative","cc.sus":"Sustainability","cc.bird":"Biodiversity","cc.fair":"Fair trade","cc.gen":"Gender","cc.cli":"Climate","cc.ino":"Food safety",
+"ce1.t":"EU and USDA NOP organic","ce1.p":"Production without synthetic agrochemicals under the EU regulation and the U.S. National Organic Program.","ce1.m":"Europe · United States",
+"ce2.p":"Japan's organic agricultural standard, required to sell organic products in that market.","ce2.m":"Japan",
+"ce3.p":"Swiss organic standard with additional requirements on the whole farm, biodiversity and trade.","ce3.m":"Switzerland",
+"ce4.p":"German organic standard that includes social and fair-trade criteria.","ce4.m":"Germany · Europe",
+"ce5.p":"Biodynamic agriculture: the farm as a living organism, with its own preparations and cycles. Built on an organic base.","ce5.m":"International",
+"ce6.p":"Regenerative Organic Certified: soil health, animal welfare and social fairness on an organic base.","ce6.m":"United States · International",
+"ce7.p":"Sustainable agriculture: forest protection, labor rights, livelihoods and continuous improvement.","ce7.m":"International",
+"ce8.p":"Starbucks' responsible sourcing program: quality, economic transparency, social responsibility and environmental leadership.","ce8.m":"Starbucks supply chain",
+"ce9.p":"Smithsonian seal for diverse shade-grown coffee that conserves bird habitat. Requires organic certification.","ce9.m":"United States · Japan",
+"ce10.t":"Fair Trade","ce10.p":"Minimum prices, social premium and democratic organization of small producers (Fairtrade, SPP).","ce10.m":"International",
+"ce11.t":"Con Manos de Mujer","ce11.p":"Recognizes coffee produced and managed by women, with equity and participation criteria along the chain.","ce11.m":"Differentiated markets",
+"ce12.t":"Carbon footprint","ce12.p":"Quantifying product or organizational emissions with ISO 14067, ISO 14064-1 and the GHG Protocol.","ce12.m":"Buyers and carbon markets",
+"ce13.t":"Carbon neutral","ce13.p":"Emission reduction and offsetting pathway under ISO 14068-1, with a third-party verified claim.","ce13.m":"International",
+"ce14.p":"Hazard analysis and critical control points at mills, plants and agribusinesses; the basis of ISO 22000 and FDA requirements.","ce14.m":"International · United States",
+"im.t":"How we implement a certification","im1":"Gap assessment against the standard","im2":"Implementation plan and budget","im3":"Internal control system, records and training","im4":"Internal inspection and corrective actions","im5":"Support during the external audit",
+"im.n":"JJ GLOBAL prepares and supports implementation. Certification is granted by the accredited certification body for each standard.",
+"bl.t":"Our <span>blog</span>","bl.p":"Articles on climate, agriculture, carbon, certifications and sustainable development, written by our team.",
+"bc.all":"All","bc.suelo":"Forests and land use","bc.clima":"Climate","bc.cafe":"Coffee and cocoa","bc.agri":"Agriculture","bc.carbono":"Carbon","bc.cert":"Certifications","rd.cta":"Want to apply this on your farm or company?",
+"ct.0":"Seals and certifications","ct.1":"ISO standards and reference frameworks","n.quiz":"Self-assessment",
+"qz.t":"Sustainability <span>self-assessment</span>","qz.p":"Answer 10 questions and find out in two minutes how ready your farm, cooperative or company is to get certified and measure its carbon.",
+"qz.go":"See my result","qz.reset":"Reset","qz.note":"Indicative result. It does not replace an audit or a certification.","qz.e1":"Your result will appear here","qz.e2":"You will see your overall level, progress in four areas and the gaps to address first.",
+"pv.l":"Privacy notice","pv.f":"By sending your details you accept our","pv.1":"JJ GLOBAL, based in Corquín, Copán, Honduras, is responsible for the personal data you share through this site.","pv.h1":"What data we collect","pv.2":"Only what you write in the contact form or send by WhatsApp or email: name, organization, email, phone, service of interest and message. Form messages are delivered to our inbox through the FormSubmit service. The self-assessment is calculated in your browser and is not stored or sent unless you choose to send it.","pv.h2":"How we use it","pv.3":"To answer your inquiry and prepare a proposal. We do not sell or share your data with third parties, except where required by law.","pv.h3":"Storage in your browser","pv.4":"The site only stores the language you chose in your browser. We do not use advertising cookies.","pv.h4":"Your rights","pv.5":"You can ask us to access, correct or delete your data by writing to jjglobalservicessa@gmail.com.","pv.6":"Last updated: October 2026.",
+"rd.copy":"Copy article link","rd.wa":"Share on WhatsApp",
+"n.faq":"FAQ","n.guide":"Free guide",
+"gd.c":"Deforestation-free coffee","gd.cs":"Checklist for cooperatives and exporters","gd.k":"Free guide","gd.t":"Checklist: deforestation-free coffee","gd.p":"European buyers already ask for proof that coffee does not come from deforested land. This guide sums up, in a practical checklist, what a cooperative or exporter needs to have in order.","gd.l1":"Plot geolocation: points and polygons","gd.l2":"Cut-off date and land-use change analysis","gd.l3":"Traceability from producer to exported lot","gd.l4":"Legality documents and due diligence","gd.b":"Download the PDF guide","gd.w":"Request it on WhatsApp",
+"fq.t":"Frequently asked <span>questions</span>",
+"q1":"Does JJ GLOBAL grant certifications?","a1":"No. JJ GLOBAL prepares and supports the organization during implementation. Certification is granted by an accredited, independent certification body for each standard or seal, and carbon verification is carried out by an accredited verification body.",
+"q2":"How long does it take to prepare for a certification?","a2":"It depends on the starting point and the standard. Some sustainability certifications can be prepared in a few months if the organization already keeps records. Organic standards require a transition period without synthetic agrochemicals that, for permanent crops such as coffee, is usually three years.",
+"q3":"What data do I need to measure the carbon footprint?","a3":"Mainly: production, type and amount of fertilizers, fuels, electricity, pulp and wastewater management, and transport. If you do not have all the data, we help you organize it and define how to record it from now on.",
+"q4":"Do you work with smallholders?","a4":"Yes. We work with individual farms and especially with groups organized in cooperatives or associations, where group certification and an internal control system lower costs for each producer.",
+"q5":"Can I sell carbon credits from my farm?","a5":"It is possible, but credits are only issued by a recognized standard after the project is registered and verified, and many farms usually need to be grouped for it to be viable. The ARRAIGO Program organizes measurement and evidence to move along that path.",
+"q6":"How are services priced?","a6":"Each service is quoted according to its scope, after an initial conversation or assessment. We send you a written technical and financial proposal. The initial ARRAIGO Program assessment is free.",
+"q7":"Where do you work?","a7":"We are based in Corquín, Copán, and work across Honduras and Central America, with field visits and remote support.",
+"q8":"Does the self-assessment store my answers?","a8":"No. The result is calculated in your browser and only reaches us if you choose to send it.",
+"ft.p":"Corporate sustainability, climate-smart agriculture and sustainable development for companies and value chains.","ft.talk":"Let's talk","ft.visit":"Visit us","ft.nav":"Navigation","ft.b":"Sustainability · Carbon · SDGs"
+};
+const ES={};
+document.querySelectorAll("[data-i18n]").forEach(e=>{if(!(e.dataset.i18n in ES))ES[e.dataset.i18n]=e.textContent});
+document.querySelectorAll("[data-i18n-html]").forEach(e=>{if(!(e.dataset.i18nHtml in ES))ES[e.dataset.i18nHtml]=e.innerHTML});
+let lang="es";
+function setLang(l){
+  lang=l; const d=l==="en"?EN:ES; document.documentElement.lang=l;
+  document.querySelectorAll("[data-i18n]").forEach(e=>{const v=d[e.dataset.i18n]; if(v!==undefined) e.textContent=v;});
+  document.querySelectorAll("[data-i18n-html]").forEach(e=>{const v=d[e.dataset.i18nHtml]; if(v!==undefined) e.innerHTML=v;});
+  document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l));
+  try{localStorage.setItem("jjg-lang",l)}catch(e){}
+  if(window.__blog) renderPosts();
+  if(window.__quiz) qRender();
+  if(window.__calc) ccLang();
+  if(!document.getElementById("out").hidden) build();
+}
+document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+try{if(localStorage.getItem("jjg-lang")==="en") setLang("en");}catch(e){}
+
+/* Menú móvil */
+const mm=document.getElementById("mm"), bg=document.getElementById("burger");
+function menu(open){mm.hidden=!open;bg.setAttribute("aria-expanded",open);document.body.style.overflow=open?"hidden":"";}
+bg.onclick=()=>menu(true); document.getElementById("mmx").onclick=()=>menu(false);
+mm.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>menu(false)));
+addEventListener("keydown",e=>{if(e.key==="Escape")menu(false)});
+
+/* Pestañas de servicios */
+const tabs=[...document.querySelectorAll(".tab")];
+function selTab(i){tabs.forEach((t,k)=>{t.setAttribute("aria-selected",k===i);t.tabIndex=k===i?0:-1;document.getElementById("p"+k).hidden=k!==i;});}
+tabs.forEach((t,k)=>{t.onclick=()=>selTab(k);t.onkeydown=e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){e.preventDefault();const n=(k+(e.key==="ArrowRight"?1:2))%3;selTab(n);tabs[n].focus();}}});
+document.querySelectorAll("[data-svc]").forEach(a=>a.addEventListener("click",()=>{document.getElementById("f-svc").selectedIndex=+a.dataset.svc;}));
+document.querySelectorAll("[data-tab]").forEach(a=>a.addEventListener("click",()=>selTab(+a.dataset.tab)));
+selTab(0);
+
+/* Contadores: valor final visible en reposo; animan al entrar en pantalla */
+const still=matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(!still&&"IntersectionObserver" in window){
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;io.unobserve(en.target);const el=en.target,n=+el.dataset.count,t0=performance.now();
+    const step=t=>{const p=Math.min(1,(t-t0)/1100);el.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step);}),{threshold:.6});
+  document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+}
+
+/* Copiar y formulario */
+async function copyText(txt,btn,el){const old=btn.textContent;
+  try{await navigator.clipboard.writeText(txt);btn.textContent=lang==="en"?"Copied":"Copiado";}
+  catch(e){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent=lang==="en"?"Selected":"Seleccionado";}
+  setTimeout(()=>btn.textContent=old,1600);}
+document.querySelectorAll("[data-copy]").forEach(b=>b.addEventListener("click",()=>{const el=document.getElementById(b.dataset.copy);copyText(el.textContent,b,el)}));
+const f=document.getElementById("f");
+function build(){const n=f["f-name"].value.trim(),o=f["f-org"].value.trim(),em=f["f-mail"].value.trim(),tl=f["f-tel"].value.trim(),s=f["f-svc"].selectedOptions[0].textContent,m=f["f-msg"].value.trim(),en=lang==="en";
+  const t=(en?"Hello Joel,\n\n":"Estimado Joel:\n\n")+m+"\n\n"+(en?"Service: ":"Servicio: ")+s+"\n"+(en?"Name: ":"Nombre: ")+n+(o?"\n"+(en?"Organization: ":"Organización: ")+o:"")+(em?"\n"+(en?"Email: ":"Correo: ")+em:"")+(tl?"\n"+(en?"Phone: ":"Teléfono: ")+tl:"");
+  document.getElementById("out-txt").textContent=t;document.getElementById("out-wa").href="https://wa.me/50499288718?text="+encodeURIComponent(t);
+  document.getElementById("out-mail").href="mailto:jjglobalservicessa@gmail.com?subject="+encodeURIComponent((en?"Website inquiry – ":"Consulta desde la web – ")+s)+"&body="+encodeURIComponent(t);return t;}
+const FORM_URL="https://formsubmit.co/ajax/jjglobalservicessa@gmail.com";
+f.addEventListener("submit",async e=>{e.preventDefault();
+  const en=lang==="en",em=f["f-mail"].value.trim(),okMail=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em);
+  const ok=f["f-name"].value.trim()&&f["f-msg"].value.trim()&&okMail;
+  document.getElementById("err").hidden=!!ok;document.getElementById("f-ok").hidden=true;document.getElementById("out").hidden=true;if(!ok)return;
+  if(f["f-hp"].value)return;
+  const txt=build(),btn=document.getElementById("f-go"),lbl=btn.textContent;btn.disabled=true;btn.textContent=en?"Sending…":"Enviando…";
+  const data={_subject:(en?"Website inquiry – ":"Nueva consulta desde la web – ")+f["f-svc"].selectedOptions[0].textContent,_template:"table",_captcha:"false",_replyto:em,
+    [en?"Name":"Nombre"]:f["f-name"].value.trim(),[en?"Organization":"Organización"]:f["f-org"].value.trim()||"—",[en?"Email":"Correo"]:em,[en?"Phone":"Teléfono"]:f["f-tel"].value.trim()||"—",
+    [en?"Service":"Servicio"]:f["f-svc"].selectedOptions[0].textContent,[en?"Message":"Mensaje"]:f["f-msg"].value.trim()};
+  let sent=false;
+  try{const r=await fetch(FORM_URL,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(data)});
+    const j=await r.json().catch(()=>({}));sent=r.ok&&String(j.success)==="true";}catch(err){sent=false;}
+  btn.disabled=false;btn.textContent=lbl;
+  if(sent){document.getElementById("f-ok").hidden=false;["f-name","f-org","f-mail","f-tel","f-msg"].forEach(k=>f[k].value="");}
+  else{document.getElementById("out").hidden=false;}
+});
+document.getElementById("out-copy").addEventListener("click",e=>copyText(build(),e.currentTarget,document.getElementById("out-txt")));
+
+const POSTS=[
+{id:"clima",cat:"clima",art:"therm",date:"Octubre 2026",
+ t:{es:"1,55 °C: lo que el calentamiento global le está haciendo a la agricultura",en:"1.55 °C: what global warming is doing to agriculture"},
+ x:{es:"2024 fue el primer año en superar 1,5 °C sobre la era preindustrial. Qué significa cada décima de grado para los cultivos de Centroamérica.",en:"2024 was the first year above 1.5 °C over pre-industrial levels. What every tenth of a degree means for Central American crops."},
+ b:`<p>La Organización Meteorológica Mundial (OMM) confirmó que 2024 fue el año más cálido desde que existen registros, con una temperatura media global de <strong>1,55 °C (±0,13 °C) por encima del promedio de 1850-1900</strong>. Es probablemente el primer año calendario que supera el umbral de 1,5 °C del Acuerdo de París. Un solo año no significa que el acuerdo se haya incumplido, porque la meta se mide en promedios de décadas, pero confirma la tendencia.</p>
+<h3>¿Por qué importa una décima de grado?</h3>
+<p>Los cultivos responden a umbrales. Cuando la temperatura supera el rango óptimo durante la floración o el llenado del grano, la planta aborta flores, el fruto madura de forma irregular y el rendimiento cae. A eso se suman lluvias más concentradas, sequías más largas y noches más cálidas que favorecen plagas y enfermedades.</p>
+<p>Los modelos citados por el Sexto Informe del IPCC proyectan que la productividad mundial del maíz disminuirá en los escenarios de calentamiento futuro, con impactos más fuertes en las regiones tropicales y del sur global. El mismo trabajo advierte que la señal climática en la agricultura se hará evidente en muchas regiones productoras en los próximos 10 a 15 años.</p>
+<h3>Centroamérica, en primera fila</h3>
+<p>En el Corredor Seco centroamericano, que atraviesa Honduras, Guatemala, El Salvador y Nicaragua, las familias que dependen del maíz y el frijol de temporal ya conviven con canículas más largas y pérdidas de cosecha recurrentes. En las zonas cafetaleras, el aumento de temperatura empuja el cultivo hacia mayor altitud y favorece enfermedades como la roya, que causó una de las peores crisis del sector en la región en 2012-2013.</p>
+<h3>Qué se puede hacer desde la finca</h3>
+<ul><li>Diversificar la sombra para bajar la temperatura del cafetal y proteger el suelo.</li><li>Conservar la humedad con coberturas, barreras vivas y cosecha de agua.</li><li>Usar variedades tolerantes y renovar plantaciones envejecidas.</li><li>Registrar datos de clima, plagas y producción para decidir a tiempo.</li><li>Medir la huella de carbono para reducir emisiones y acceder a mercados que premian la gestión climática.</li></ul>
+<p>La adaptación no es un lujo: es la condición para que la agricultura de la región siga siendo un negocio viable en las próximas décadas.</p>`,
+ src:[["OMM: State of the Global Climate 2024","https://wmo.int/media/33461"],["AgMIP: proyecciones de cultivos en el Informe de Síntesis del IPCC (AR6)","https://agmip.org/agmip-crop-modeling-study-included-in-ipcc-ar6-syr/"]]},
+
+{id:"cafe",cat:"cafe",art:"cherry",date:"Octubre 2026",
+ t:{es:"El café frente al cambio climático: la frontera del cultivo se mueve",en:"Coffee and climate change: the growing frontier is moving"},
+ x:{es:"Un estudio de CIAT proyecta que gran parte de las zonas cálidas y secas dejarán de ser aptas para el arábica hacia 2050.",en:"A CIAT study projects that much of today's hot, dry arabica land will become unsuitable by 2050."},
+ b:`<p>El café arábica es exigente: necesita temperaturas moderadas, una estación seca definida para florecer de forma uniforme y lluvias bien distribuidas. Por eso es uno de los cultivos más sensibles al calentamiento.</p>
+<p>Un estudio publicado en 2015 en la revista <em>PLOS ONE</em> por investigadores del CIAT (hoy Alianza Bioversity-CIAT) proyectó que <strong>casi el 80 % de las tierras que hoy cultivan arábica en zonas cálidas con estaciones secas largas</strong>, como partes de Brasil y Centroamérica, podrían dejar de ser aptas hacia 2050. Incluso las zonas más seguras, como las tierras altas ecuatoriales, podrían perder alrededor de un tercio de su aptitud.</p>
+<h3>Lo que significa para Honduras</h3>
+<p>La tendencia es clara: las zonas bajas y medias se vuelven marginales y el cultivo se desplaza hacia mayor altitud, muchas veces hacia áreas de bosque que deben protegerse. Para las familias productoras significa más riesgo, más costos y la necesidad de tomar decisiones con información.</p>
+<h3>Cómo responder</h3>
+<ul><li><strong>Sombra diversificada:</strong> los sistemas agroforestales reducen la temperatura del cafetal y almacenan carbono.</li><li><strong>Manejo del suelo:</strong> materia orgánica, compost de pulpa y coberturas mejoran la retención de agua.</li><li><strong>Variedades y renovación:</strong> elegir materiales adaptados a cada altitud.</li><li><strong>Diversificación:</strong> cacao, frutales o maderables donde el café deje de ser rentable.</li><li><strong>Datos:</strong> monitorear clima, plagas y rendimiento parcela por parcela.</li></ul>
+<p>El Programa ARRAIGO de JJ GLOBAL integra estas prácticas con la medición de carbono, para que la adaptación también se traduzca en valor para el productor.</p>`,
+ src:[["Alianza Bioversity-CIAT: Climate change: arabica coffee faces a roasting","https://alliancebioversityciat.org/stories/climate-change-arabica-coffee-faces-roasting"],["Bunn et al. (2015), PLOS ONE","https://doi.org/10.1371/journal.pone.0140490"]]},
+
+{id:"aci",cat:"agri",art:"sprout",date:"Octubre 2026",
+ t:{es:"Agricultura climáticamente inteligente: tres resultados en la misma parcela",en:"Climate-smart agriculture: three results on the same plot"},
+ x:{es:"Producir más, resistir mejor el clima y emitir menos. Cómo se aplica el enfoque de la FAO en café y cacao.",en:"Produce more, withstand the climate better and emit less. How the FAO approach applies to coffee and cocoa."},
+ b:`<p>La FAO define la agricultura climáticamente inteligente (ACI) como un enfoque que busca tres objetivos al mismo tiempo: <strong>aumentar de forma sostenible la productividad y los ingresos, adaptarse y aumentar la resiliencia al cambio climático, y reducir o eliminar las emisiones de gases de efecto invernadero</strong> cuando sea posible.</p>
+<h3>No es una receta, es una forma de decidir</h3>
+<p>No existe una lista única de prácticas ACI. Lo que funciona en una finca de café a 1.400 metros en Copán no es lo mismo que en un cacaotal de tierras bajas. El enfoque consiste en evaluar cada práctica según sus efectos sobre los tres objetivos y priorizar las que dan mejores resultados combinados.</p>
+<h3>Ejemplos en café y cacao</h3>
+<ul><li><strong>Productividad:</strong> nutrición basada en análisis de suelo, renovación de plantaciones y control integrado de plagas.</li><li><strong>Adaptación:</strong> sombra diversificada, conservación de suelos, cosecha de agua y variedades tolerantes.</li><li><strong>Mitigación:</strong> uso eficiente del nitrógeno, compostaje de pulpa, tratamiento de aguas mieles y árboles que almacenan carbono.</li></ul>
+<h3>Medir para demostrar</h3>
+<p>El paso que muchas veces falta es la medición. Sin datos de producción, insumos y carbono no se puede demostrar el avance ante compradores, cooperantes o mercados de carbono. Por eso en JJ GLOBAL acompañamos los planes de finca con indicadores y registros que permiten verificar los resultados.</p>`,
+ src:[["FAO: Agricultura climáticamente inteligente","https://www.fao.org/climate-smart-agriculture/es/"]]},
+
+{id:"huella",cat:"carbono",art:"co2",date:"Octubre 2026",
+ t:{es:"Huella de carbono del café: por dónde empezar",en:"Coffee's carbon footprint: where to start"},
+ x:{es:"Qué se mide, qué normas aplican y cuáles son las fuentes de emisión más importantes en la finca y el beneficio.",en:"What is measured, which standards apply and the main emission sources at farm and mill."},
+ b:`<p>Cada vez más compradores de café y cacao piden datos de huella de carbono. Antes de contratar un estudio conviene entender qué se mide y para qué.</p>
+<h3>Dos tipos de huella</h3>
+<ul><li><strong>Huella de la organización</strong> (ISO 14064-1 y GHG Protocol): todas las emisiones de la cooperativa o empresa, organizadas en alcances 1, 2 y 3.</li><li><strong>Huella de producto</strong> (ISO 14067): las emisiones de un quintal o un kilogramo de café a lo largo de su ciclo de vida, normalmente de la finca hasta el puerto.</li></ul>
+<h3>Las fuentes que más pesan</h3>
+<p>Los análisis de ciclo de vida del café coinciden en que la etapa de cultivo concentra buena parte de las emisiones hasta la exportación. Dentro de ella, el <strong>óxido nitroso (N₂O) que se libera por la fertilización nitrogenada</strong> suele ser la fuente principal. En el beneficio húmedo destacan el <strong>metano de las aguas mieles y de la pulpa</strong> que se descompone sin control, además del combustible y la electricidad para secar el grano.</p>
+<h3>Primeros pasos</h3>
+<ul><li>Definir el objetivo: reporte a un comprador, reducción interna o proyecto de carbono.</li><li>Fijar los límites: qué etapas y qué año se miden.</li><li>Ordenar los datos: fertilizantes, combustible, electricidad, producción y manejo de subproductos.</li><li>Calcular con factores reconocidos (IPCC y nacionales) y documentar cada fuente.</li><li>Elaborar un plan de reducción: eficiencia del nitrógeno, compost de pulpa y tratamiento de aguas mieles.</li></ul>
+<p>Una huella bien hecha no es solo un número: es el diagnóstico que dice dónde invertir para reducir emisiones y costos al mismo tiempo.</p>`,
+ src:[["Usva et al. (2020): Carbon and water footprint of coffee, Int. J. Life Cycle Assessment","https://link.springer.com/doi/10.1007/s11367-020-01799-5"]]},
+
+{id:"cert",cat:"cert",art:"seal",date:"Octubre 2026",
+ t:{es:"¿Qué certificación le conviene a su finca o cooperativa?",en:"Which certification is right for your farm or cooperative?"},
+ x:{es:"Orgánico, Rainforest Alliance, Comercio Justo, Bird Friendly: cómo elegir según el mercado y la capacidad de la organización.",en:"Organic, Rainforest Alliance, Fair Trade, Bird Friendly: how to choose by market and organizational capacity."},
+ b:`<p>Una certificación es una inversión: exige cambios en la finca, registros, inspecciones y pago de auditorías. Antes de elegir, la pregunta clave es <strong>¿quién va a comprar y qué le exige?</strong></p>
+<h3>Tres criterios para decidir</h3>
+<ul><li><strong>Mercado:</strong> algunos compradores exigen un sello específico. Japón pide JAS para vender como orgánico; Starbucks trabaja con C.A.F.E. Practices; Suiza valora Bio Suisse.</li><li><strong>Punto de partida:</strong> una finca que ya no usa agroquímicos de síntesis está más cerca de Orgánico, y desde ahí puede avanzar a Demeter, ROC o Bird Friendly, que exigen la base orgánica.</li><li><strong>Capacidad de la organización:</strong> las certificaciones de grupo requieren un sistema interno de control, personal capacitado y registros al día.</li></ul>
+<h3>Combinar sellos con cuidado</h3>
+<p>Muchas cooperativas tienen dos o tres certificaciones a la vez, por ejemplo Orgánico y Comercio Justo. Es posible y puede abrir mercados, pero multiplica auditorías y costos. Conviene priorizar las que realmente pagan un diferencial.</p>
+<h3>El papel del implementador</h3>
+<p>JJ GLOBAL prepara a la organización: diagnóstico de brechas, plan de implementación, sistema interno de control, capacitación e inspecciones internas. La certificación la otorga siempre un organismo certificador acreditado e independiente.</p>`,
+ src:[]},
+
+{id:"ods",cat:"ods",art:"globe",date:"Octubre 2026",
+ t:{es:"Los ODS en la cadena de valor: de la etiqueta a la gestión",en:"The SDGs in the value chain: from label to management"},
+ x:{es:"Cómo pasar de declarar contribuciones a los Objetivos de Desarrollo Sostenible a medirlas con indicadores reales.",en:"How to move from claiming SDG contributions to measuring them with real indicators."},
+ b:`<p>Es común ver informes empresariales con los íconos de los Objetivos de Desarrollo Sostenible, pero pocas veces con datos que demuestren la contribución. La Agenda 2030 tiene 17 objetivos y 169 metas; el valor está en conectar las actividades de la empresa con metas concretas y medibles.</p>
+<h3>Cuatro pasos prácticos</h3>
+<ul><li><strong>Mapear la cadena:</strong> identificar dónde la operación tiene impactos positivos y negativos, del productor al cliente.</li><li><strong>Priorizar:</strong> elegir los ODS donde la empresa tiene mayor influencia, no los que quedan mejor en la portada.</li><li><strong>Definir indicadores:</strong> por ejemplo, ingresos de las familias proveedoras (ODS 1 y 8), agua tratada en el beneficio (ODS 6) o toneladas de CO₂e reducidas (ODS 13).</li><li><strong>Reportar con evidencia:</strong> integrar los resultados en el informe de sostenibilidad bajo GRI.</li></ul>
+<h3>Del cumplimiento a la ventaja</h3>
+<p>Compradores, bancos y cooperantes revisan cada vez con más detalle lo que las empresas declaran. Una gestión de los ODS basada en datos protege la reputación y abre acceso a financiamiento y mercados diferenciados.</p>`,
+ src:[["Naciones Unidas: Objetivos de Desarrollo Sostenible","https://www.un.org/sustainabledevelopment/es/objetivos-de-desarrollo-sostenible/"]]}
+];
+
+POSTS.unshift(
+{id:"suelo",cat:"suelo",art:"forest",date:"Octubre 2026",
+ t:{es:"Cambio de uso de suelo en Honduras: 900.000 hectáreas de bosque en 11 años",en:"Land-use change in Honduras: 900,000 hectares of forest in 11 years"},
+ x:{es:"Entre 2013 y 2024 el país pasó de 6,6 a 5,7 millones de hectáreas de bosque. Qué está detrás y qué significa para las cadenas de café y cacao.",en:"Between 2013 and 2024 forest cover fell from 6.6 to 5.7 million hectares. What is behind it and what it means for coffee and cocoa chains."},
+ b:`<p>El informe <em>Estado de País 2026: Cambio climático, bosques y vida en riesgo</em>, presentado por la Asociación para una Sociedad más Justa (ASJ) con datos del Instituto de Conservación Forestal (ICF), estima que Honduras perdió cerca de <strong>900.000 hectáreas de bosque entre 2013 y 2024</strong>: la cobertura bajó de 6,6 a 5,7 millones de hectáreas, una reducción del 7,3 %.</p>
+<div class="chart"><p class="ch-t">Cobertura forestal de Honduras (millones de hectáreas)</p>
+<div class="hb"><span>2013</span><div class="bar"><i style="width:100%"></i></div><b>6,6</b></div>
+<div class="hb"><span>2024</span><div class="bar"><i style="width:86.4%"></i></div><b>5,7</b></div>
+<p class="ch-s">Fuente: ASJ, Estado de País 2026, con datos del ICF. Barras a escala desde cero.</p></div>
+<p>El mismo análisis reporta una pérdida promedio de <strong>71.399 hectáreas por año entre 2015 y 2024</strong>. Según Global Forest Watch, en 2020 el país conservaba 6,2 millones de hectáreas de bosque natural, el 55 % de su territorio.</p>
+<h3>¿Qué está cambiando el uso del suelo?</h3>
+<ul><li><strong>Incendios forestales</strong>, en su mayoría provocados por personas.</li><li><strong>Expansión agrícola y ganadera</strong>, incluida la agricultura migratoria, la causa más difícil de erradicar.</li><li><strong>Tala ilegal</strong>.</li><li><strong>Plagas</strong>, como el gorgojo descortezador del pino, que golpeó con fuerza entre 2014 y 2017.</li></ul>
+<p>El patrón no es nuevo. Un análisis de la FAO estimó que entre 1964 y 1990 el país perdía en promedio unas 87.600 hectáreas de bosque por año, y que los manglares perdieron el 83 % de su superficie en ese periodo, principalmente por la expansión de camaroneras.</p>
+<h3>Dónde se concentra la pérdida</h3>
+<div class="chart"><p class="ch-t">Municipios con mayor pérdida de bosque, 2001-2024 (hectáreas)</p>
+<div class="hb"><span>Catacamas, Olancho</span><div class="bar"><i style="width:100%"></i></div><b>207.000</b></div>
+<div class="hb"><span>Iriona, Colón</span><div class="bar"><i style="width:52.7%"></i></div><b>109.000</b></div>
+<div class="hb"><span>Dulce Nombre de Culmí, Olancho</span><div class="bar"><i style="width:47.3%"></i></div><b>97.928</b></div>
+<p class="ch-s">Fuente: ASJ, Estado de País 2026. Valores aproximados reportados.</p></div>
+<p>El informe señala que cerca del 80 % de la deforestación ocurre dentro de áreas protegidas, entre ellas la Biosfera del Río Plátano.</p>
+<h3>Lo que significa para el café y el cacao</h3>
+<p>Los mercados ya exigen demostrar que el producto no viene de tierras deforestadas. Eso obliga a las cooperativas y exportadoras a contar con <strong>georreferenciación de parcelas, trazabilidad y análisis de cambio de uso de suelo</strong> con imágenes satelitales. Al mismo tiempo, la restauración con sistemas agroforestales abre oportunidades: recuperar cobertura, proteger fuentes de agua y almacenar carbono que puede medirse y valorizarse.</p>
+<p>En JJ GLOBAL combinamos SIG, teledetección y trabajo de campo para que las organizaciones conozcan la historia de uso del suelo de cada parcela y puedan demostrarla.</p>`,
+ src:[["El Heraldo: Honduras perdió 7,3 % de sus bosques en 11 años (informe ASJ, Estado de País 2026)","https://www.elheraldo.hn/ehambiente/honduras-bosques-tala-perdida-deforestacion-areas-protegidas-AE30255511"],["Global Forest Watch / Global Nature Watch: Honduras","https://globalnaturewatch.org/dashboards/country/HND/"],["FAO: Principales causas del cambio de cobertura forestal en Honduras","https://www.fao.org/4/ac768s/AC768S03.htm"],["ICF: Estrategia Nacional de Restauración Forestal 2023-2030","https://sigmof.icf.gob.hn/wp-content/uploads/2024/09/ENRFHonduras2023-2030_.pdf"]]},
+
+{id:"ihcafe",cat:"cafe",art:"bag",date:"Octubre 2026",
+ t:{es:"Cosecha 2025-2026: lo que dicen las cifras del IHCAFE",en:"2025-2026 harvest: what IHCAFE figures say"},
+ x:{es:"Honduras exportó 7,3 millones de quintales y recibió 2.285 millones de dólares. Las oportunidades y los riesgos detrás del buen año.",en:"Honduras exported 7.3 million quintales for US$2.285 billion. Opportunities and risks behind a good year."},
+ b:`<p>Según el Instituto Hondureño del Café (IHCAFE), en el año cosecha 2025-2026 Honduras exportó <strong>7,3 millones de quintales</strong> de una producción de 7,5 millones, con ventas por <strong>2.285 millones de dólares</strong> y un precio promedio de 312 dólares por quintal. La cosecha anterior, 2024-2025, había cerrado con 6,1 millones de quintales vendidos y más de 2.100 millones de dólares.</p>
+<div class="chart"><p class="ch-t">Exportaciones de café de Honduras (millones de quintales)</p>
+<div class="hb"><span>2016-2017 (récord)</span><div class="bar"><i style="width:100%"></i></div><b>9,48</b></div>
+<div class="hb"><span>2024-2025</span><div class="bar"><i style="width:64.3%"></i></div><b>6,1</b></div>
+<div class="hb"><span>2025-2026</span><div class="bar"><i style="width:77%"></i></div><b>7,3</b></div>
+<p class="ch-s">Fuente: IHCAFE, citado por EFE y El Heraldo (30 de septiembre de 2026). Barras a escala desde cero.</p></div>
+<h3>¿Quién produce el café hondureño?</h3>
+<p>El IHCAFE registró <strong>96.903 productores</strong> en el año cosecha. La Asociación de Exportadores de Café de Honduras (Adecafeh) señala que el 80 % tiene menos de 3,6 hectáreas, y el café se cultiva en 223 de los 298 municipios del país. Es, por tanto, un cultivo de pequeños productores y de alcance nacional.</p>
+<h3>Hacia dónde va</h3>
+<p>Estados Unidos compra el 32,9 % del volumen, Alemania el 16,7 % y Bélgica el 10,8 %. Europa, en conjunto, es un destino clave, y es también el mercado que más exige trazabilidad, ausencia de deforestación y datos de sostenibilidad.</p>
+<h3>Lectura para el sector</h3>
+<ul><li><strong>Los buenos precios no resuelven la productividad:</strong> el país todavía exporta menos que en su récord de 2016-2017. El IHCAFE destaca su estrategia de renovación de áreas productivas.</li><li><strong>El clima sigue siendo el principal riesgo</strong> para sostener estos volúmenes.</li><li><strong>La sostenibilidad se convierte en requisito de acceso:</strong> georreferenciación, certificaciones y huella de carbono pesan cada vez más en la decisión de compra.</li></ul>
+<p>Aprovechar el buen momento para invertir en renovación, adaptación climática y sistemas de gestión es la forma de que la bonanza no sea pasajera.</p>`,
+ src:[["El Heraldo / EFE: Ventas de café de Honduras sumaron 2.285 millones de dólares en el año cosecha 2025-2026","https://www.elheraldo.hn/economia/ventas-cafe-honduras-sumaron-2-285-millones-dolares-ano-cosecha-2025-2026-FD32206425"],["Swissinfo / EFE: Exportaciones de café hondureño en la cosecha 2024-2025","https://www.swissinfo.ch/spa/las-exportaciones-de-caf%C3%A9-hondure%C3%B1o-crecen-un-3-%25-en-la-cosecha-2024-2025/89680129"]]},
+
+{id:"oic-circular",cat:"cafe",art:"cycle",date:"Octubre 2026",
+ t:{es:"Más allá del grano: la economía circular del café según la OIC",en:"Beyond the bean: the ICO on coffee's circular economy"},
+ x:{es:"El procesamiento del café genera más de 40 millones de toneladas de residuos; el 72 % queda en los países productores. Una oportunidad para las fincas.",en:"Coffee processing generates over 40 million tonnes of waste; 72% stays in producing countries. An opportunity for farms."},
+ b:`<p>En noviembre de 2024, la Organización Internacional del Café (OIC) presentó su Informe sobre el Desarrollo del Café <em>Beyond Coffee: Towards a Circular Coffee Economy</em>, elaborado con el Centro de Comercio Internacional (ITC). Su mensaje central: lo que hoy se trata como desecho puede convertirse en ingreso.</p>
+<h3>Los datos clave</h3>
+<ul><li>El procesamiento del café genera <strong>más de 40 millones de toneladas de residuos</strong>.</li><li>El <strong>72 % de los subproductos</strong> se produce en las regiones cafetaleras, es decir, en las fincas y beneficios de países como Honduras.</li></ul>
+<h3>Qué se puede hacer con la pulpa, el pergamino y la cascarilla</h3>
+<ul><li>Compost y abonos orgánicos para la propia finca.</li><li>Biocarbón (biochar), que mejora el suelo y almacena carbono.</li><li>Cultivo de hongos comestibles.</li><li>Alimentos y bebidas, como la infusión de cáscara de café.</li><li>Ingredientes para cosméticos, empaques y energía renovable.</li></ul>
+<h3>Por qué también es un tema de clima</h3>
+<p>La pulpa y las aguas mieles que se descomponen sin control liberan metano, un gas de efecto invernadero mucho más potente que el CO₂. Aprovecharlas reduce emisiones, contaminación del agua y costos de fertilización. Por eso la economía circular aparece en los planes de huella de carbono y en varias certificaciones.</p>
+<p>La OIC recomienda investigación precompetitiva, colaboración entre industrias, normas claras, mercados para los productos circulares e inversión, en especial para las pequeñas empresas de los países productores. Para cooperativas y beneficios hondureños es una línea concreta de valor agregado.</p>`,
+ src:[["OIC: comunicado de prensa 359/24, Beyond Coffee (8 de noviembre de 2024)","https://www.icocoffee.org/documents/cy2024-25/pr-359e-itc-ico-cdr22-23.pdf"],["ITC: Coffee Development Report unveils income opportunities in coffee’s circular economy","https://www.intracen.org/news-and-events/news/coffee-development-report-unveils-income-opportunities-in-coffees-circular"]]},
+
+{id:"oic-clima",cat:"clima",art:"rain",date:"Octubre 2026",
+ t:{es:"El clima ya mueve la producción mundial de café: lectura del informe de la OIC",en:"Weather is already moving world coffee output: reading the ICO report"},
+ x:{es:"Sequías, lluvias en exceso y heladas explican las variaciones de producción en los grandes países cafetaleros. Honduras creció pese a la roya y las lluvias.",en:"Droughts, excess rain and frost explain output swings in major producers. Honduras grew despite rust and rain."},
+ b:`<p>El informe <em>Coffee Report and Outlook</em> de la Sección de Estadística de la OIC, que analiza el año cafetero 2022-2023, muestra con claridad que el tiempo atmosférico se ha vuelto un factor decisivo en la oferta mundial de café.</p>
+<h3>Lo que pasó en los grandes productores</h3>
+<ul><li><strong>Brasil:</strong> creció 8,4 %, menos de lo esperado por los efectos de la helada de julio de 2021.</li><li><strong>Colombia:</strong> el exceso de lluvia llevó su producción al nivel más bajo desde 2012.</li><li><strong>Uganda:</strong> la sequía redujo la producción 6,8 %.</li><li><strong>Costa de Marfil:</strong> la sequía la redujo 64,7 %.</li></ul>
+<p>En conjunto, la producción mundial apenas creció 0,1 %, hasta 168,2 millones de sacos.</p>
+<h3>El caso de Honduras</h3>
+<p>Según la OIC, Honduras aumentó su producción <strong>14,7 %, hasta 5,7 millones de sacos</strong>, a pesar de la escasez de mano de obra, las lluvias intensas, el alto costo de los fertilizantes y la roya. Es una señal de la capacidad del sector, pero también de lo expuesto que está a factores que no controla.</p>
+<h3>Qué aprender</h3>
+<ul><li>La variabilidad climática ya no es una excepción: hay que planificar con ella.</li><li>Los fertilizantes caros y el clima extremo hacen más valiosa la eficiencia: nutrición basada en análisis de suelo y aprovechamiento de subproductos.</li><li>La información de finca (lluvia, plagas y rendimiento) permite anticiparse.</li></ul>
+<p>La agricultura climáticamente inteligente y la gestión del riesgo climático dejaron de ser temas de proyectos piloto: son parte del negocio cafetalero.</p>`,
+ src:[["Global Coffee Report: ICO examines the impact of weather on coffee production (enero de 2024)","https://www.gcrmag.com/ico-examines-the-impact-of-weather-on-coffee-production/"]]}
+);
+
+const CATC={clima:"#B5462E",cafe:"#6B3F1F",agri:"#4E7F1B",carbono:"#123B29",cert:"#1F6E8C",ods:"#19486A",suelo:"#5C6B1E"};
+const CATN={clima:["Clima","Climate"],cafe:["Café y cacao","Coffee and cocoa"],agri:["Agricultura","Agriculture"],carbono:["Carbono","Carbon"],cert:["Certificaciones","Certifications"],ods:["ODS","SDGs"],suelo:["Bosques y uso de suelo","Forests and land use"]};
+const ART={
+ forest:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 82V62M30 62L14 62 30 22 46 62zM66 82V58M66 58c-12 0-20-8-20-18s8-20 20-20 20 10 20 20-8 18-20 18zM10 84h80"/></svg>',
+ bag:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"><path d="M26 22h48l6 60H20zM34 22c0-8 32-8 32 0"/><text x="50" y="62" font-size="15" font-family="sans-serif" font-weight="700" text-anchor="middle" fill="currentColor" stroke="none">HN</text></svg>',
+ cycle:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M80 50a30 30 0 0 1-52 20M20 50a30 30 0 0 1 52-20M74 16v14H60M26 84V70h14"/><ellipse cx="50" cy="50" rx="9" ry="12"/><path d="M50 38c-3 8-3 16 0 24"/></svg>',
+ rain:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M28 58a16 16 0 0 1-2-32 24 24 0 0 1 46-4 18 18 0 0 1 4 36z"/><path d="M34 68l-4 10M50 68l-4 10M66 68l-4 10"/></svg>',
+ therm:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M42 14a8 8 0 0 1 16 0v42a16 16 0 1 1-16 0z"/><circle cx="50" cy="70" r="8" fill="currentColor"/><path d="M50 62V30M66 22h12M66 34h8M66 46h12"/></svg>',
+ cherry:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><ellipse cx="38" cy="60" rx="16" ry="20"/><ellipse cx="64" cy="58" rx="16" ry="20"/><path d="M38 42c2 10-2 26 0 36M64 40c-2 10 2 26 0 36M50 30c0-10 8-16 18-16-2 8-8 14-18 16zM50 30c-2-8-10-12-18-10 2 7 9 11 18 10"/></svg>',
+ sprout:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 86V46M50 46C50 28 38 18 20 18c0 18 12 28 30 28zM50 56c0-14 10-24 28-24 0 14-10 24-28 24"/><path d="M26 86h48"/></svg>',
+ co2:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"><path d="M28 72a16 16 0 0 1-2-32 24 24 0 0 1 46-4 18 18 0 0 1 4 36z"/><text x="50" y="62" font-size="20" font-family="sans-serif" font-weight="700" text-anchor="middle" fill="currentColor" stroke="none">CO₂</text></svg>',
+ seal:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="42" r="24"/><path d="M38 42l8 8 16-16M36 62l-8 24 22-10 22 10-8-24"/></svg>',
+ globe:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><circle cx="50" cy="50" r="30"/><path d="M20 50h60M50 20c12 10 12 50 0 60M50 20c-12 10-12 50 0 60"/></svg>'};
+const L=()=>lang==="en"?1:0;
+function cover(p,el,tag){el.style.background=`radial-gradient(circle at 75% 20%,rgba(255,255,255,.18),transparent 45%),linear-gradient(140deg,${CATC[p.cat]},#0B1F17)`;el.innerHTML=(tag?`<span class="tg">${CATN[p.cat][L()]}</span>`:"")+ART[p.art];}
+function mins(p){return Math.max(2,Math.round(p.b.replace(/<[^>]+>/g," ").split(/\s+/).length/200));}
+let bf="all";
+function renderPosts(){
+  const box=document.getElementById("posts"); box.innerHTML="";
+  const list=POSTS.filter(p=>bf==="all"||p.cat===bf), feat=bf==="all"&&list.length>2, rest=list.length-(feat?1:0);
+  list.forEach((p,i)=>{
+    const b=document.createElement("button"); b.type="button"; b.className="post"+(feat&&i===0?" feat-post":"");
+    if(i===list.length-1&&!(feat&&i===0)){if(rest%3===2)b.classList.add("lg2");if(rest%3===1&&rest>1)b.classList.add("lg3");if(rest%2===1&&rest>1)b.classList.add("md2");}
+    const c=document.createElement("div"); c.className="cover"; cover(p,c,true);
+    const d=document.createElement("div"); d.className="pbody";
+    d.innerHTML=`<small>${p.date.replace("Octubre",L()?"October":"Octubre")} · ${mins(p)} min</small><h3></h3><p></p><span class="rd">${L()?"Read article":"Leer artículo"}<svg><use href="#i-arrow"/></svg></span>`;
+    d.querySelector("h3").textContent=p.t[lang]; d.querySelector("p").textContent=p.x[lang];
+    b.append(c,d); b.onclick=()=>openPost(p); box.append(b);
+  });
+}
+const rd=document.getElementById("reader");
+function openPost(p){
+  cover(p,document.getElementById("rd-cover"),false);
+  document.getElementById("rd-meta").textContent=CATN[p.cat][L()]+" · "+p.date.replace("Octubre",L()?"October":"Octubre")+" · "+mins(p)+" min · Joel Galeas";
+  document.getElementById("rd-t").textContent=p.t[lang];
+  document.getElementById("rd-note").hidden=lang!=="en";
+  document.getElementById("rd-c").innerHTML=p.b;
+  const s=document.getElementById("rd-src");
+  s.innerHTML=p.src.length?`<b>${L()?"Sources":"Fuentes"}</b>`+p.src.map(x=>`<a href="${x[1]}" target="_blank" rel="noopener"></a>`).join(""):"";
+  s.querySelectorAll("a").forEach((a,i)=>a.textContent=p.src[i][0]);
+  if(rd.showModal){rd.showModal();}else{rd.setAttribute("open","");}
+  rd.scrollTop=0; curPost=p;
+  const tag="articulo-"+p.id;
+  try{history.replaceState(null,"","#"+tag);}catch(e){}
+  let url=location.href.split("#")[0]+"#"+tag; try{const t=window.top.location.href;if(t)url=t.split("#")[0]+"#"+tag;}catch(e){}
+  curUrl=location.origin&&location.origin!=="null"?location.origin+"/blog/"+p.id+".html":url;
+  document.getElementById("rd-wa").href="https://wa.me/?text="+encodeURIComponent(p.t[lang]+" — JJ GLOBAL\n"+curUrl);
+}
+let curPost=null,curUrl="";
+document.getElementById("rd-copy").onclick=async e=>{const b=e.currentTarget,o=b.textContent;try{await navigator.clipboard.writeText(curUrl);b.textContent=L()?"Link copied":"Enlace copiado";}catch(_){b.textContent=curUrl;}setTimeout(()=>b.textContent=o,2200);};
+rd.addEventListener("close",()=>{try{if(location.hash.startsWith("#articulo-"))history.replaceState(null,"","#blog");}catch(e){}});
+function openFromHash(){const h=location.hash.replace("#","");if(h.startsWith("articulo-")){const p=POSTS.find(x=>"articulo-"+x.id===h);if(p){document.getElementById("blog").scrollIntoView();openPost(p);}}}
+document.getElementById("rd-x").onclick=()=>rd.close();
+document.getElementById("rd-go").onclick=()=>rd.close();
+rd.addEventListener("click",e=>{if(e.target===rd)rd.close();});
+document.querySelectorAll("#bchips .chip").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("#bchips .chip").forEach(x=>x.setAttribute("aria-pressed",x===b));bf=b.dataset.b;renderPosts();}));
+renderPosts();window.__blog=true;
+/* Autodiagnóstico */
+const QA=[
+ {a:0,q:{es:"¿Lleva registros de producción, insumos y ventas por parcela o finca?",en:"Do you keep production, input and sales records by plot or farm?"},r:{es:"Implementar registros de finca: producción, insumos, labores y ventas.",en:"Set up farm records: production, inputs, labor and sales."}},
+ {a:0,q:{es:"¿Tiene sus parcelas georreferenciadas (coordenadas o polígonos)?",en:"Are your plots geolocated (coordinates or polygons)?"},r:{es:"Georreferenciar parcelas con polígonos: es requisito para mercados libres de deforestación.",en:"Map plots with polygons: required for deforestation-free markets."}},
+ {a:0,q:{es:"¿Cuenta con un responsable o sistema interno de control para la sostenibilidad?",en:"Do you have a person or internal control system in charge of sustainability?"},r:{es:"Designar un responsable y crear un sistema interno de control.",en:"Appoint a lead and build an internal control system."}},
+ {a:1,q:{es:"¿Maneja la pulpa y las aguas mieles sin verterlas a fuentes de agua?",en:"Do you manage coffee pulp and wastewater without dumping them into water sources?"},r:{es:"Tratar las aguas mieles y compostar la pulpa: reduce metano y contaminación.",en:"Treat wastewater and compost pulp: cuts methane and pollution."}},
+ {a:1,q:{es:"¿Fertiliza según análisis de suelo y evita agroquímicos prohibidos?",en:"Do you fertilize based on soil tests and avoid banned agrochemicals?"},r:{es:"Hacer análisis de suelo y un plan de nutrición; revisar la lista de productos prohibidos.",en:"Run soil tests and a nutrition plan; check the banned-products list."}},
+ {a:1,q:{es:"¿Tiene sombra diversificada o prácticas de conservación de suelo y agua?",en:"Do you have diverse shade or soil and water conservation practices?"},r:{es:"Diversificar la sombra y establecer barreras vivas y coberturas.",en:"Diversify shade and set up live barriers and ground cover."}},
+ {a:2,q:{es:"¿Cumple con salario mínimo, edad mínima de trabajo y equipo de protección?",en:"Do you meet minimum wage, minimum working age and protective equipment rules?"},r:{es:"Revisar condiciones laborales: salario, edad mínima, contratos y seguridad ocupacional.",en:"Review labor conditions: wages, minimum age, contracts and occupational safety."}},
+ {a:2,q:{es:"¿Participan mujeres y jóvenes en las decisiones de la organización?",en:"Do women and young people take part in the organization's decisions?"},r:{es:"Incorporar un enfoque de género y participación en la gobernanza.",en:"Build a gender and participation approach into governance."}},
+ {a:3,q:{es:"¿Puede demostrar que sus parcelas no provienen de deforestación reciente?",en:"Can you show that your plots do not come from recent deforestation?"},r:{es:"Analizar el cambio de uso de suelo de cada parcela con imágenes satelitales.",en:"Analyze each plot's land-use change with satellite imagery."}},
+ {a:3,q:{es:"¿Ha medido la huella de carbono de su producto u organización?",en:"Have you measured the carbon footprint of your product or organization?"},r:{es:"Medir la huella de carbono con ISO 14067 o ISO 14064-1 y definir metas de reducción.",en:"Measure the carbon footprint with ISO 14067 or ISO 14064-1 and set reduction targets."}}
+];
+const QAREA=[["Gestión y registros","Management and records"],["Prácticas ambientales","Environmental practices"],["Social y laboral","Social and labor"],["Carbono y mercado","Carbon and market"]];
+const QOPT=[["Sí","Yes",2],["En parte","Partly",1],["No","No",0]];
+const qAns={};
+function qRender(){
+  const box=document.getElementById("qz-items"),k=L(); box.innerHTML="";
+  QAREA.forEach((ar,ai)=>{
+    const fs=document.createElement("fieldset"); fs.className="qz-area";
+    fs.innerHTML=`<legend>${ar[k]}</legend>`;
+    QA.forEach((it,i)=>{ if(it.a!==ai) return;
+      const d=document.createElement("div"); d.className="qz-q";
+      d.innerHTML=`<p id="qq${i}">${i+1}. ${it.q[lang]}</p><div class="qz-opts" role="radiogroup" aria-labelledby="qq${i}">`+QOPT.map((o,j)=>`<label class="qz-o"><input type="radio" name="q${i}" id="q${i}_${j}" value="${o[2]}" ${qAns[i]===o[2]?"checked":""}><span>${o[k]}</span></label>`).join("")+`</div>`;
+      fs.append(d);
+    });
+    box.append(fs);
+  });
+  box.querySelectorAll("input").forEach(inp=>inp.addEventListener("change",()=>{qAns[+inp.name.slice(1)]=+inp.value;qProg();}));
+  qProg();
+  if(!document.getElementById("qz-out").hidden) qResult();
+}
+function qProg(){const n=Object.keys(qAns).length;document.getElementById("qz-count").textContent=n+" / 10";document.getElementById("qz-bar").style.width=(n*10)+"%";}
+function qResult(){
+  const k=L(), n=Object.keys(qAns).length;
+  const tot=QA.reduce((s,_,i)=>s+(qAns[i]??0),0), pct=Math.round(tot/20*100);
+  const lvl=pct>=75?["ok",["Lista para avanzar","Ready to move forward"],["Su organización tiene buenas bases. El siguiente paso es formalizar la evidencia y elegir la certificación o el estándar de carbono adecuado.","Your organization has solid foundations. The next step is to formalize evidence and choose the right certification or carbon standard."]]
+    :pct>=45?["mid",["En camino","On the way"],["Hay avances importantes, pero también brechas que un auditor detectaría. Un plan de implementación ordenado las cierra en pocos meses.","There is real progress, but also gaps an auditor would find. An organized implementation plan can close them in a few months."]]
+    :["low",["Etapa inicial","Early stage"],["Conviene empezar por los registros y las prácticas básicas antes de buscar una certificación. Un diagnóstico de campo le dará la ruta.","Start with records and basic practices before seeking certification. A field assessment will give you the roadmap."]];
+  const areas=QAREA.map((ar,ai)=>{const idx=QA.map((q,i)=>q.a===ai?i:-1).filter(i=>i>=0);const s=idx.reduce((t,i)=>t+(qAns[i]??0),0);return [ar[k],Math.round(s/(idx.length*2)*100)];});
+  const gaps=QA.map((q,i)=>[i,qAns[i]??0]).filter(x=>x[1]<2).sort((a,b)=>a[1]-b[1]).slice(0,4);
+  const o=document.getElementById("qz-out");
+  o.innerHTML=`<div class="qz-score ${lvl[0]}"><b>${pct}<small>%</small></b><div><span>${k?"Overall level":"Nivel general"}</span><h3>${lvl[1][k]}</h3></div></div>
+  <p class="qz-msg">${lvl[2][k]}</p>
+  ${n<10?`<p class="qz-warn">${k?`You answered ${n} of 10 questions; unanswered ones count as “No”.`:`Respondió ${n} de 10 preguntas; las que faltan se cuentan como «No».`}</p>`:""}
+  <div class="qz-areas">${areas.map(a=>`<div class="hb"><span>${a[0]}</span><div class="bar"><i style="width:${a[1]}%"></i></div><b>${a[1]} %</b></div>`).join("")}</div>
+  ${gaps.length?`<h4>${k?"Gaps to address first":"Brechas a atender primero"}</h4><ul class="qz-gaps">${gaps.map(g=>`<li>${QA[g[0]].r[lang]}</li>`).join("")}</ul>`:""}
+  <button class="btn lime" type="button" id="qz-send">${k?"Send my result and request an assessment":"Enviar mi resultado y solicitar diagnóstico"}<svg><use href="#i-arrow"/></svg></button>`;
+  document.getElementById("qz-empty").hidden=true; o.hidden=false;
+  document.getElementById("qz-send").onclick=()=>{
+    const f=document.getElementById("f"); f["f-svc"].selectedIndex=0;
+    f["f-msg"].value=(k?"My self-assessment result: ":"Resultado de mi autodiagnóstico: ")+pct+"% ("+lvl[1][k]+").\n"+areas.map(a=>"- "+a[0]+": "+a[1]+"%").join("\n")+(gaps.length?"\n"+(k?"Main gaps:":"Brechas principales:")+"\n"+gaps.map(g=>"- "+QA[g[0]].r[lang]).join("\n"):"");
+    document.getElementById("contacto").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+    setTimeout(()=>f["f-name"].focus({preventScroll:true}),400);
+  };
+}
+document.getElementById("qz").addEventListener("submit",e=>{e.preventDefault();qResult();if(innerWidth<900)document.getElementById("qz-res").scrollIntoView({behavior:"smooth",block:"start"});});
+document.getElementById("qz-reset").onclick=()=>{Object.keys(qAns).forEach(x=>delete qAns[x]);document.getElementById("qz-out").hidden=true;document.getElementById("qz-empty").hidden=false;qRender();};
+qRender(); window.__quiz=true;
+
+/* Calculadora de huella de carbono (demostración) */
+const AP=[
+ ["SAP","San Pedro Sula","San Pedro Sula",15.4526,-87.9236],["XPL","Tegucigalpa / Comayagua (Palmerola)","Tegucigalpa / Comayagua (Palmerola)",14.3824,-87.6212],
+ ["RTB","Roatán","Roatán",16.3168,-86.5230],["LCE","La Ceiba","La Ceiba",15.7425,-86.8530],
+ ["GUA","Ciudad de Guatemala","Guatemala City",14.5833,-90.5275],["SAL","San Salvador","San Salvador",13.4409,-89.0557],
+ ["MGA","Managua","Managua",12.1415,-86.1682],["SJO","San José, Costa Rica","San José, Costa Rica",9.9939,-84.2088],
+ ["PTY","Ciudad de Panamá","Panama City",9.0714,-79.3835],["BOG","Bogotá","Bogotá",4.7016,-74.1469],
+ ["MEX","Ciudad de México","Mexico City",19.4363,-99.0721],["CUN","Cancún","Cancún",21.0365,-86.8771],
+ ["MIA","Miami","Miami",25.7959,-80.2870],["FLL","Fort Lauderdale","Fort Lauderdale",26.0726,-80.1527],
+ ["IAH","Houston","Houston",29.9902,-95.3368],["ATL","Atlanta","Atlanta",33.6407,-84.4277],
+ ["JFK","Nueva York","New York",40.6413,-73.7781],["LAX","Los Ángeles","Los Angeles",33.9416,-118.4085],
+ ["MAD","Madrid","Madrid",40.4983,-3.5676],["AMS","Ámsterdam","Amsterdam",52.3105,4.7683],["FRA","Fráncfort","Frankfurt",50.0379,8.5622]
+];
+/* Factores de referencia (demostración):
+   vuelos: DESNZ/DEFRA (Reino Unido), kg CO2e por pasajero-km con forzamiento radiativo; +8 % por desvíos de ruta
+   combustibles: US EPA GHG Emission Factors Hub, kg CO2 por galón (gasolina 8,78; diésel 10,21; propano 5,72) */
+const CF={sh:0.186,lh:0.148,uplift:1.08,limit:3700,
+  fuel:{gas:8.78/3.785,dsl:10.21/3.785,lpg:5.72/3.785},bus:0.027,
+  veh:{car:["gas",12],pick:["dsl",10],moto:["gas",30]}};
+let ccTab=0;
+const ccNF=(n,d=0)=>n.toLocaleString(lang==="en"?"en-US":"es-HN",{minimumFractionDigits:d,maximumFractionDigits:d});
+function gcd(a,b){const R=6371,r=x=>x*Math.PI/180,dLa=r(b[3]-a[3]),dLo=r(b[4]-a[4]);
+  const h=Math.sin(dLa/2)**2+Math.cos(r(a[3]))*Math.cos(r(b[3]))*Math.sin(dLo/2)**2;return 2*R*Math.asin(Math.sqrt(h));}
+function ccFill(){const k=L();["cc-from","cc-to"].forEach((id,j)=>{const s=document.getElementById(id),v=s.value||(j?"MIA":"SAP");
+  s.innerHTML=AP.map(a=>`<option value="${a[0]}">${a[1+k]} (${a[0]})</option>`).join("");s.value=v;});}
+function ccShow(i){ccTab=i;document.querySelectorAll(".cc-tab").forEach(t=>t.setAttribute("aria-selected",+t.dataset.cc===i));
+  [0,1,2].forEach(j=>document.getElementById("ccp-"+j).hidden=j!==i);}
+document.querySelectorAll(".cc-tab").forEach(t=>t.onclick=()=>ccShow(+t.dataset.cc));
+document.getElementById("cc-swap").onclick=()=>{const a=document.getElementById("cc-from"),b=document.getElementById("cc-to"),x=a.value;a.value=b.value;b.value=x;};
+document.getElementById("cc-veh").onchange=e=>{const v=CF.veh[e.target.value];document.getElementById("cc-effl").hidden=!v;if(v)document.getElementById("cc-eff").value=v[1];};
+let ccLast=null;
+function ccCalc(){
+  const k=L(),en=k===1,g=id=>document.getElementById(id);
+  let kg=0,lines=[],what="";
+  if(ccTab===0){
+    const a=AP.find(x=>x[0]===g("cc-from").value),b=AP.find(x=>x[0]===g("cc-to").value);
+    if(a===b) return en?"Choose different origin and destination airports.":"Elija aeropuertos de origen y destino diferentes.";
+    const pax=Math.max(1,Math.round(+g("cc-pax").value||1)),rt=g("cc-rt").checked;
+    const d=gcd(a,b),f=d<CF.limit?CF.sh:CF.lh,km=d*CF.uplift*(rt?2:1);kg=km*f*pax;
+    what=(en?"Flight ":"Vuelo ")+a[0]+(rt?" ⇄ ":" → ")+b[0];
+    lines=[[en?"Route":"Ruta",`${a[1+k]} ${rt?"⇄":"→"} ${b[1+k]}`],[en?"Distance flown":"Distancia volada",ccNF(km)+" km"+(rt?(en?" (round trip)":" (ida y vuelta)"):"")],
+      [en?"Passengers":"Pasajeros",ccNF(pax)],[en?"Flight type":"Tipo de vuelo",d<CF.limit?(en?"Short haul":"Corto alcance"):(en?"Long haul":"Largo alcance")]];
+  }else if(ccTab===1){
+    const t=g("cc-veh").value,km0=+g("cc-km").value,rt=g("cc-vrt").checked;
+    if(!(km0>0)) return en?"Enter the distance in kilometres.":"Escriba la distancia en kilómetros.";
+    const km=km0*(rt?2:1),vn=g("cc-veh").selectedOptions[0].textContent;
+    if(t==="bus"){kg=km*CF.bus;lines=[[en?"Vehicle":"Vehículo",vn],[en?"Distance":"Distancia",ccNF(km)+" km"]];}
+    else{const eff=+g("cc-eff").value;if(!(eff>0)) return en?"Enter the fuel efficiency in km per litre.":"Escriba el rendimiento en km por litro.";
+      const lt=km/eff;kg=lt*CF.fuel[CF.veh[t][0]];
+      lines=[[en?"Vehicle":"Vehículo",vn],[en?"Distance":"Distancia",ccNF(km)+" km"],[en?"Estimated fuel":"Combustible estimado",ccNF(lt,1)+(en?" litres (":" litros (")+ccNF(lt/3.785,1)+(en?" gal)":" gal)")]];}
+    what=(en?"Trip by ":"Recorrido en ")+vn.toLowerCase()+", "+ccNF(km)+" km";
+  }else{
+    const f=g("cc-fuel").value,q=+g("cc-qty").value,u=g("cc-unit").value,p=+g("cc-per").value;
+    if(!(q>0)) return en?"Enter the amount of fuel.":"Escriba la cantidad de combustible.";
+    const lt=(u==="gal"?q*3.785:q)*p;kg=lt*CF.fuel[f];
+    const fn=g("cc-fuel").selectedOptions[0].textContent;
+    lines=[[en?"Fuel":"Combustible",fn],[en?"Amount":"Cantidad",ccNF(q,q%1?1:0)+" "+g("cc-unit").selectedOptions[0].textContent.toLowerCase()+(p>1?(p===12?(en?" per month":" al mes"):(en?" per week":" por semana")):"")],
+      [en?"Total litres":"Litros totales",ccNF(lt)+(p>1?(en?" per year":" al año"):"")]];
+    what=fn+", "+ccNF(lt)+(en?" litres":" litros")+(p>1?(en?" per year":" al año"):"");
+  }
+  ccLast={kg,what,lines,annual:ccTab===2&&+g("cc-per").value>1};
+  return null;
+}
+function ccRender(){
+  if(!ccLast) return;
+  const k=L(),en=k===1,{kg,lines,annual}=ccLast;
+  const trE=document.getElementById("cc-tr"),tv=trE.value,tr=tv?trE.selectedOptions[0].textContent:"",nm=document.getElementById("cc-name").value.trim();
+  const who=nm?((tr?tr+" ":"")+nm):(tv==="Sra."?(en?"Madam":"Señora"):tv==="Sr."?(en?"Sir":"Señor"):tr);
+  const t=kg/1000,big=kg>=1000;
+  const lvl=kg<100?["ok",en?"Low":"Baja"]:kg<1000?["mid",en?"Moderate":"Moderada"]:["low",en?"High":"Alta"];
+  const gas=kg/CF.fuel.gas/3.785;
+  document.getElementById("cc-out").innerHTML=
+   `<p class="cc-hi">${who?`<b>${who.replace(/[<>&]/g,"")}</b>, `:""}${en?(who?"your carbon footprint is":"Your carbon footprint is"):(who?"su huella de carbono es de":"Su huella de carbono es de")}</p>
+   <div class="qz-score ${lvl[0]} cc-big"><b>${big?ccNF(t,2):ccNF(kg,kg<10?1:0)}<small> ${big?(en?"t":"t"):"kg"} CO₂e</small></b></div>
+   <p class="cc-sub">${big?ccNF(kg)+" kg CO₂e":ccNF(t,3)+(en?" tonnes CO₂e":" toneladas de CO₂e")}${annual?(en?" per year":" al año"):""} · ${en?"Level":"Nivel"}: <span class="lv ${lvl[0]}">${lvl[1]}</span></p>
+   <dl class="cc-dl">${lines.map(l=>`<div><dt>${l[0]}</dt><dd>${l[1]}</dd></div>`).join("")}</dl>
+   ${ccTab===0?`<p class="cc-eq">${en?"Equivalent to burning about":"Equivale a quemar unos"} <b>${ccNF(gas,gas<10?1:0)} ${en?"gallons of gasoline":"galones de gasolina"}</b>.</p>`:""}
+   <p class="cc-src">${en?"Demo with reference factors: DESNZ/DEFRA (flights, with radiative forcing and +8% routing) and US EPA (fuels). Indicative result; it is not a verified inventory under ISO 14064.":"Demostración con factores de referencia: DESNZ/DEFRA (vuelos, con forzamiento radiativo y +8 % por desvíos de ruta) y US EPA (combustibles). Resultado orientativo; no es un inventario verificado bajo ISO 14064."}</p>
+   <div class="cc-acts"><button class="btn lime" type="button" id="cc-send">${en?"Request a full carbon assessment":"Solicitar medición completa"}<svg><use href="#i-arrow"/></svg></button><button class="btn ghost" type="button" id="cc-again">${en?"New calculation":"Nuevo cálculo"}</button></div>`;
+  document.getElementById("cc-empty").hidden=true;document.getElementById("cc-out").hidden=false;
+  document.getElementById("cc-again").onclick=()=>{ccLast=null;document.getElementById("cc-out").hidden=true;document.getElementById("cc-empty").hidden=false;document.querySelector(".cc-tab[aria-selected=true]").focus();};
+  document.getElementById("cc-send").onclick=()=>{
+    const f=document.getElementById("f");f["f-svc"].selectedIndex=1;
+    if(nm&&!f["f-name"].value) f["f-name"].value=nm;
+    f["f-msg"].value=(en?"I used the carbon calculator on your website: ":"Usé la calculadora de huella de su sitio web: ")+ccLast.what+" = "+(big?ccNF(t,2)+" t":ccNF(kg)+" kg")+" CO₂e"+(annual?(en?" per year":" al año"):"")+".\n"+(en?"I would like a full carbon footprint assessment for my organization.":"Me interesa una medición completa de la huella de carbono de mi organización.");
+    document.getElementById("contacto").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+    setTimeout(()=>f[nm?"f-mail":"f-name"].focus({preventScroll:true}),400);
+  };
+}
+document.getElementById("cc").addEventListener("submit",e=>{e.preventDefault();const err=ccCalc(),el=document.getElementById("cc-err");
+  el.hidden=!err;if(err){el.textContent=err;return;}ccRender();
+  if(innerWidth<900)document.querySelector(".cc-res").scrollIntoView({behavior:"smooth",block:"start"});});
+function ccLang(){ccFill();if(ccLast&&!document.getElementById("cc-out").hidden){ccCalc();ccRender();}}
+ccFill();window.__calc=true;
+
+
+/* Pestañas Certificaciones / Normas */
+const ctabs=[...document.querySelectorAll(".ctab")];
+function selCt(i){ctabs.forEach((t,k)=>{t.setAttribute("aria-selected",k===i);t.tabIndex=k===i?0:-1;document.getElementById("cp"+k).hidden=k!==i;});}
+ctabs.forEach((t,k)=>{t.onclick=()=>selCt(k);t.onkeydown=e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){e.preventDefault();const n=1-k;selCt(n);ctabs[n].focus();}}});
+document.querySelectorAll("[data-ct]").forEach(a=>a.addEventListener("click",()=>selCt(+a.dataset.ct)));
+/* Aviso de privacidad */
+const pv=document.getElementById("priv");
+document.querySelectorAll("[data-priv]").forEach(b=>b.addEventListener("click",()=>{pv.showModal?pv.showModal():pv.setAttribute("open","");}));
+document.getElementById("pv-x").onclick=()=>pv.close();
+pv.addEventListener("click",e=>{if(e.target===pv)pv.close();});
+addEventListener("hashchange",openFromHash); openFromHash();
+
+/* Filtro de certificaciones */
+document.querySelectorAll("#certificaciones .chip").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll("#certificaciones .chip").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  const f=b.dataset.f; document.querySelectorAll(".cert").forEach(c=>c.hidden=!(f==="all"||c.dataset.c===f));
+}));
+/* Hojas flotantes en la portada */
+(function(){
+  const c=document.getElementById("leaves"),x=c.getContext("2d");let w,h,L=[];
+  function size(){const r=c.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);w=r.width;h=r.height;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0);
+    const n=Math.round(Math.min(26,Math.max(12,w/55)));L=Array.from({length:n},(_,i)=>mk(true,i));}
+  function mk(init,i){const s=8+Math.random()*16;return{x:Math.random()*w,y:init?Math.random()*h:-30,s,vx:.2+Math.random()*.5,vy:.35+Math.random()*.7,a:Math.random()*6.28,va:(Math.random()-.5)*.03,ph:Math.random()*6.28,hue:Math.random(),blur:s<12}}
+  function leaf(l){x.save();x.translate(l.x,l.y);x.rotate(l.a);const s=l.s;
+    const g=x.createLinearGradient(-s,0,s,0);g.addColorStop(0,l.hue>.5?"#D9E66A":"#B6D44A");g.addColorStop(1,l.hue>.5?"#8DBF3F":"#6E9E2C");
+    x.globalAlpha=l.blur?.55:.9;x.fillStyle=g;x.beginPath();x.moveTo(-s,0);x.quadraticCurveTo(0,-s*.55,s,0);x.quadraticCurveTo(0,s*.55,-s,0);x.fill();
+    x.strokeStyle="rgba(60,90,20,.45)";x.lineWidth=.8;x.beginPath();x.moveTo(-s*.9,0);x.lineTo(s*.9,0);x.stroke();x.restore();}
+  function frame(t){x.clearRect(0,0,w,h);L.forEach((l,i)=>{l.x+=l.vx+Math.sin(t/900+l.ph)*.4;l.y+=l.vy;l.a+=l.va;if(l.y>h+30||l.x>w+30)L[i]=mk(false);leaf(l);});requestAnimationFrame(frame);}
+  size();addEventListener("resize",size);
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches){L.forEach(leaf);}else requestAnimationFrame(frame);
+})();
+</script>
+
+</body>
+</html>
