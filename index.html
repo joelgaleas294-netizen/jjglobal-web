@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>JJ GLOBAL · Sostenibilidad corporativa y gestión de carbono</title>
+<title>JJ Global S.A.</title>
 <meta name="description" content="JJ GLOBAL (Joel Galeas): sostenibilidad corporativa, gestión de carbono, agricultura climáticamente inteligente y ODS. Corquín, Copán, Honduras.">
 <meta name="theme-color" content="#123B29">
 <meta property="og:type" content="website">
-<meta property="og:title" content="JJ GLOBAL · Sostenibilidad corporativa y gestión de carbono">
+<meta property="og:title" content="JJ Global S.A.">
 <meta property="og:description" content="JJ GLOBAL (Joel Galeas): sostenibilidad corporativa, gestión de carbono, agricultura climáticamente inteligente y ODS. Corquín, Copán, Honduras.">
 <meta property="og:image" content="https://jjglobal-web.vercel.app/og-jjglobal.jpg">
-<meta property="og:site_name" content="JJ GLOBAL">
+<meta property="og:site_name" content="JJ Global S.A.">
 <meta property="og:url" content="https://jjglobal-web.vercel.app/">
-<meta name="application-name" content="JJ GLOBAL">
+<meta name="application-name" content="JJ Global S.A.">
 <link rel="canonical" href="https://jjglobal-web.vercel.app/">
 <meta property="og:locale" content="es_HN">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -270,6 +270,39 @@ textarea{min-height:7rem;resize:vertical}
 #f-go[disabled]{opacity:.6;cursor:wait}
 .out .copy{color:var(--ink);border-color:var(--line)}
 @media (max-width:900px){.contact{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+#calculadora .kicker{color:var(--lime-ink)}
+.calc{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:1.5rem;align-items:start}
+.cc-form{background:var(--soft);border:1px solid var(--line);border-radius:var(--r);padding:clamp(1.2rem,3vw,2rem);display:grid;gap:1.2rem}
+.cc-who{display:grid;grid-template-columns:minmax(7rem,.4fr) 1fr;gap:1rem}
+.cc-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem}
+.cc-tab{display:flex;align-items:center;justify-content:center;gap:.45rem;border:0;background:transparent;border-radius:999px;padding:.65rem .5rem;font:inherit;font-weight:600;font-size:.92rem;color:var(--muted);cursor:pointer}
+.cc-tab svg{width:1.2rem;height:1.2rem;flex:none}
+.cc-tab[aria-selected=true]{background:var(--deep);color:#EEF5EF}
+.cc-tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.cc-panel{display:grid;gap:1rem}
+.cc-row{display:grid;grid-template-columns:1fr auto 1fr;gap:.6rem;align-items:end}
+.cc-row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:end}
+.cc-swap{width:2.8rem;height:2.8rem;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;display:grid;place-items:center;margin-bottom:.1rem}
+.cc-swap svg{width:1.2rem;height:1.2rem}
+.cc-chk{display:flex;align-items:center;gap:.6rem;font-size:.95rem;color:var(--ink);cursor:pointer;padding:.75rem 0}
+.cc-chk input{width:1.2rem;height:1.2rem;accent-color:var(--deep);padding:0}
+.cc-err{color:#B5462E;font-size:.9rem;margin:0}
+.cc-res .cc-hi{font-size:1.15rem;color:#EEF5EF;margin:0}
+.cc-res .cc-hi b{color:#9ACD4E}
+.cc-big b{font-size:clamp(3rem,7vw,4.4rem)}
+.cc-big{grid-template-columns:1fr}
+.cc-sub{margin:0;color:var(--on-dark-muted);font-size:.95rem}
+.cc-sub .lv{font-weight:700}.cc-sub .lv.ok{color:#9ACD4E}.cc-sub .lv.mid{color:#E8C25A}.cc-sub .lv.low{color:#F08A6E}
+.cc-dl{margin:0;display:grid;gap:0;border-top:1px solid rgba(238,245,239,.15)}
+.cc-dl div{display:grid;grid-template-columns:minmax(7rem,.8fr) 1.2fr;gap:.8rem;padding:.55rem 0;border-bottom:1px solid rgba(238,245,239,.15);font-size:.9rem}
+.cc-dl dt{color:var(--on-dark-muted)}.cc-dl dd{margin:0;color:#EEF5EF}
+.cc-eq{margin:0;font-size:.95rem;color:#EEF5EF}
+.cc-src{margin:0;font-size:.78rem;color:var(--on-dark-muted);line-height:1.5}
+.cc-acts{display:flex;flex-wrap:wrap;gap:.6rem}
+.cc-acts .btn.ghost{background:transparent;border:1px solid rgba(238,245,239,.35);color:#EEF5EF}
+@media (max-width:900px){.calc{grid-template-columns:1fr}}
+@media (max-width:520px){.cc-who,.cc-row2{grid-template-columns:1fr}.cc-row{grid-template-columns:1fr}.cc-swap{justify-self:center;transform:rotate(90deg)}.cc-tab span{font-size:.85rem}}
+
 
 /* Pie */
 footer{background:var(--deep);color:var(--on-dark-muted);font-size:.92rem}
@@ -495,7 +528,7 @@ footer{background:var(--deep);color:var(--on-dark-muted);font-size:.92rem}
 .faq summary:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:6px}
 .faq details p{color:var(--muted);padding-bottom:1.2rem;max-width:46rem}
 </style>
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebSite", "name": "JJ GLOBAL", "alternateName": ["JJ GLOBAL S.A.", "JJ Global Services"], "url": "https://jjglobal-web.vercel.app/", "inLanguage": ["es", "en"]}, {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "JJ GLOBAL", "url": "https://jjglobal-web.vercel.app/", "logo": "https://jjglobal-web.vercel.app/logo-jjglobal.png", "image": "https://jjglobal-web.vercel.app/og-jjglobal.jpg", "description": "JJ GLOBAL (Joel Galeas): sostenibilidad corporativa, gestión de carbono, agricultura climáticamente inteligente y ODS. Corquín, Copán, Honduras.", "telephone": "+504 9928-8718", "email": "jjglobalservicessa@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Corquín", "addressRegion": "Copán", "addressCountry": "HN"}, "areaServed": ["Honduras", "Centroamérica"], "founder": {"@type": "Person", "name": "Joel Galeas", "jobTitle": "Especialista en Sostenibilidad Corporativa y Gestión de Carbono"}}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebSite", "name": "JJ Global S.A.", "alternateName": ["JJ GLOBAL", "JJ Global Services S.A."], "url": "https://jjglobal-web.vercel.app/", "inLanguage": ["es", "en"]}, {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "JJ Global S.A.", "url": "https://jjglobal-web.vercel.app/", "logo": "https://jjglobal-web.vercel.app/logo-jjglobal.png", "image": "https://jjglobal-web.vercel.app/og-jjglobal.jpg", "description": "JJ GLOBAL (Joel Galeas): sostenibilidad corporativa, gestión de carbono, agricultura climáticamente inteligente y ODS. Corquín, Copán, Honduras.", "telephone": "+504 9928-8718", "email": "jjglobalservicessa@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Corquín", "addressRegion": "Copán", "addressCountry": "HN"}, "areaServed": ["Honduras", "Centroamérica"], "founder": {"@type": "Person", "name": "Joel Galeas", "jobTitle": "Especialista en Sostenibilidad Corporativa y Gestión de Carbono"}, "alternateName": "JJ GLOBAL"}]</script>
 </head>
 <body>
 
@@ -546,7 +579,7 @@ footer{background:var(--deep);color:var(--on-dark-muted);font-size:.92rem}
       <li><button type="button"><span>ARRAIGO</span><svg><use href="#i-chev"/></svg></button>
         <div class="dd"><a href="#arraigo" data-i18n="n.aq">¿Qué es ARRAIGO?</a><a href="#protocolo" data-i18n="n.pr">Cómo funciona</a><a href="#beneficios" data-i18n="n.be">Beneficios</a></div></li>
       <li><button type="button"><span data-i18n="n.cert">Certificaciones</span><svg><use href="#i-chev"/></svg></button>
-        <div class="dd"><a href="#certificaciones" data-ct="0" data-i18n="ct.0">Sellos y certificaciones</a><a href="#certificaciones" data-ct="1" data-i18n="ct.1">Normas ISO y marcos de referencia</a><a href="#autodiagnostico" data-i18n="n.quiz">Autodiagnóstico</a></div></li>
+        <div class="dd"><a href="#certificaciones" data-ct="0" data-i18n="ct.0">Sellos y certificaciones</a><a href="#certificaciones" data-ct="1" data-i18n="ct.1">Normas ISO y marcos de referencia</a><a href="#autodiagnostico" data-i18n="n.quiz">Autodiagnóstico</a><a href="#calculadora" data-i18n="n.calc">Calculadora de huella</a></div></li>
       <li><a href="#blog">Blog</a></li>
       <li><a class="cta" href="#contacto" data-i18n="n.contact">Contáctanos</a></li>
     </ul>
@@ -577,6 +610,7 @@ footer{background:var(--deep);color:var(--on-dark-muted);font-size:.92rem}
     <a href="#certificaciones" data-i18n="n.cert">Certificaciones</a>
     <a class="sub" href="#certificaciones" data-ct="1" data-i18n="ct.1">Normas ISO y marcos de referencia</a>
     <a class="sub" href="#autodiagnostico" data-i18n="n.quiz">Autodiagnóstico</a>
+    <a class="sub" href="#calculadora" data-i18n="n.calc">Calculadora de huella</a>
     <a href="#blog">Blog</a>
     <a href="#contacto" data-i18n="n.contact">Contáctanos</a>
   </nav>
@@ -781,6 +815,74 @@ footer{background:var(--deep);color:var(--on-dark-muted);font-size:.92rem}
           <p data-i18n="qz.e2">Verá su nivel general, el avance en cuatro áreas y las brechas que conviene atender primero.</p>
         </div>
         <div id="qz-out" hidden></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="calculadora">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker k-ink" data-i18n="cc.k">Demostración gratuita</p>
+      <h2 class="duo" data-i18n-html="cc.t">Calculadora de <span>huella de carbono</span></h2>
+      <p class="lead center" data-i18n="cc.p">Calcule en segundos las emisiones de un viaje en avión, un recorrido en vehículo o el combustible que consume, como lo hacen las aerolíneas.</p>
+    </div>
+    <div class="calc">
+      <form id="cc" class="cc-form" novalidate>
+        <div class="cc-who">
+          <label for="cc-tr"><span data-i18n="cc.tr">Tratamiento</span>
+            <select id="cc-tr"><option value="Sr." data-i18n="cc.sr">Sr.</option><option value="Sra." data-i18n="cc.sra">Sra.</option><option value="Ing.">Ing.</option><option value="Lic.">Lic.</option><option value="Dr." data-i18n="cc.dr">Dr.</option><option value="" data-i18n="cc.none">Ninguno</option></select></label>
+          <label for="cc-name"><span data-i18n="cc.name">Su nombre</span><input id="cc-name" autocomplete="name" placeholder="Juan Pérez"></label>
+        </div>
+        <div class="cc-tabs" role="tablist" aria-label="Tipo de cálculo">
+          <button type="button" role="tab" class="cc-tab" id="cct-0" aria-controls="ccp-0" aria-selected="true" data-cc="0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 16l20-6-3-2-6 2-6-6H5l3 7-4 1-2-2H1l1 6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span data-i18n="cc.t0">Vuelo</span></button>
+          <button type="button" role="tab" class="cc-tab" id="cct-1" aria-controls="ccp-1" aria-selected="false" data-cc="1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15l2-6h14l2 6v4H3zM3 15h18M7 19v2M17 19v2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="15" r="1" fill="currentColor"/><circle cx="16.5" cy="15" r="1" fill="currentColor"/></svg><span data-i18n="cc.t1">Vehículo</span></button>
+          <button type="button" role="tab" class="cc-tab" id="cct-2" aria-controls="ccp-2" aria-selected="false" data-cc="2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16M3 21h13M15 8h2l3 3v7a1.5 1.5 0 0 1-3 0v-4h-2M7 7h5v4H7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span data-i18n="cc.t2">Combustible</span></button>
+        </div>
+
+        <div class="cc-panel" role="tabpanel" id="ccp-0" aria-labelledby="cct-0">
+          <div class="cc-row">
+            <label for="cc-from"><span data-i18n="cc.from">Origen</span><select id="cc-from"></select></label>
+            <button type="button" class="cc-swap" id="cc-swap" aria-label="Intercambiar origen y destino"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h12l-3-3M17 17H5l3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <label for="cc-to"><span data-i18n="cc.to">Destino</span><select id="cc-to"></select></label>
+          </div>
+          <div class="cc-row2">
+            <label for="cc-pax"><span data-i18n="cc.pax">Pasajeros</span><input id="cc-pax" type="number" min="1" max="500" value="1" inputmode="numeric"></label>
+            <label class="cc-chk"><input type="checkbox" id="cc-rt" checked><span data-i18n="cc.rt">Ida y vuelta</span></label>
+          </div>
+        </div>
+
+        <div class="cc-panel" role="tabpanel" id="ccp-1" aria-labelledby="cct-1" hidden>
+          <label for="cc-veh"><span data-i18n="cc.veh">Tipo de vehículo</span>
+            <select id="cc-veh"><option value="car" data-i18n="cc.v0">Automóvil a gasolina</option><option value="pick" data-i18n="cc.v1">Pickup o camión ligero diésel</option><option value="moto" data-i18n="cc.v2">Motocicleta</option><option value="bus" data-i18n="cc.v3">Autobús interurbano (por pasajero)</option></select></label>
+          <div class="cc-row2">
+            <label for="cc-km"><span data-i18n="cc.km">Distancia (km)</span><input id="cc-km" type="number" min="0" step="any" value="200" inputmode="decimal"></label>
+            <label for="cc-eff" id="cc-effl"><span data-i18n="cc.eff">Rendimiento (km por litro)</span><input id="cc-eff" type="number" min="1" step="any" value="12" inputmode="decimal"></label>
+          </div>
+          <label class="cc-chk"><input type="checkbox" id="cc-vrt"><span data-i18n="cc.rt">Ida y vuelta</span></label>
+        </div>
+
+        <div class="cc-panel" role="tabpanel" id="ccp-2" aria-labelledby="cct-2" hidden>
+          <label for="cc-fuel"><span data-i18n="cc.fuel">Combustible</span>
+            <select id="cc-fuel"><option value="gas" data-i18n="cc.f0">Gasolina</option><option value="dsl" data-i18n="cc.f1">Diésel</option><option value="lpg" data-i18n="cc.f2">Gas LPG (propano)</option></select></label>
+          <div class="cc-row2">
+            <label for="cc-qty"><span data-i18n="cc.qty">Cantidad</span><input id="cc-qty" type="number" min="0" step="any" value="50" inputmode="decimal"></label>
+            <label for="cc-unit"><span data-i18n="cc.unit">Unidad</span><select id="cc-unit"><option value="gal" data-i18n="cc.gal">Galones</option><option value="l" data-i18n="cc.l">Litros</option></select></label>
+          </div>
+          <label for="cc-per"><span data-i18n="cc.per">Período</span><select id="cc-per"><option value="1" data-i18n="cc.p1">Consumo único</option><option value="12" data-i18n="cc.p12">Consumo mensual (calcular el año)</option><option value="52" data-i18n="cc.p52">Consumo semanal (calcular el año)</option></select></label>
+        </div>
+
+        <div class="qz-act"><button class="btn lime" type="submit" data-i18n="cc.go">Calcular mi huella</button></div>
+        <p id="cc-err" class="cc-err" hidden></p>
+      </form>
+
+      <aside class="qz-res cc-res" aria-live="polite">
+        <div class="qz-empty" id="cc-empty">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 34a9 9 0 0 1-1-18 12 12 0 0 1 23 3 7.5 7.5 0 0 1-1 15z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><text x="24" y="29" text-anchor="middle" font-size="9" font-weight="700" fill="currentColor" font-family="sans-serif">CO₂</text></svg>
+          <h3 data-i18n="cc.e1">Su huella aparecerá aquí</h3>
+          <p data-i18n="cc.e2">Elija vuelo, vehículo o combustible, complete los datos y pulse «Calcular mi huella».</p>
+        </div>
+        <div id="cc-out" hidden></div>
       </aside>
     </div>
   </div>
@@ -1049,14 +1151,14 @@ footer{background:var(--deep);color:var(--on-dark-muted);font-size:.92rem}
     <div class="fbrand"><span class="b"><svg><use href="#iso"/></svg><b>JJ GLOBAL</b></span><p data-i18n="ft.p">Sostenibilidad corporativa, agricultura climáticamente inteligente y desarrollo sostenible para empresas y cadenas de valor.</p></div>
     <div><h4 data-i18n="ft.talk">Hablemos</h4><a href="https://wa.me/50499288718" target="_blank" rel="noopener">+504 9928-8718</a><span>jjglobalservicessa@gmail.com</span><a href="https://wa.me/50499288718" target="_blank" rel="noopener">WhatsApp</a></div>
     <div><h4 data-i18n="ft.visit">Visítanos</h4><span>Corquín, Copán</span><br><span>Honduras, C.A.</span></div>
-    <div><h4 data-i18n="ft.nav">Navegación</h4><a href="#nosotros" data-i18n="n.us">Nosotros</a><a href="#servicios" data-i18n="n.svc">Nuestros servicios</a><a href="#arraigo">ARRAIGO</a><a href="#certificaciones" data-i18n="n.cert">Certificaciones</a><a href="#autodiagnostico" data-i18n="n.quiz">Autodiagnóstico</a><a href="#blog">Blog</a><a href="#guia" data-i18n="n.guide">Guía gratuita</a><a href="#preguntas" data-i18n="n.faq">Preguntas frecuentes</a><a href="#contacto" data-i18n="n.contact">Contáctanos</a></div>
+    <div><h4 data-i18n="ft.nav">Navegación</h4><a href="#nosotros" data-i18n="n.us">Nosotros</a><a href="#servicios" data-i18n="n.svc">Nuestros servicios</a><a href="#arraigo">ARRAIGO</a><a href="#certificaciones" data-i18n="n.cert">Certificaciones</a><a href="#autodiagnostico" data-i18n="n.quiz">Autodiagnóstico</a><a href="#calculadora" data-i18n="n.calc">Calculadora de huella</a><a href="#blog">Blog</a><a href="#guia" data-i18n="n.guide">Guía gratuita</a><a href="#preguntas" data-i18n="n.faq">Preguntas frecuentes</a><a href="#contacto" data-i18n="n.contact">Contáctanos</a></div>
   </div>
   <div class="fbot"><div class="wrap"><span>© 2026 JJ GLOBAL · Corquín, Copán, Honduras · <button type="button" class="plink" data-priv data-i18n="pv.l">Aviso de privacidad</button></span><span data-i18n="ft.b">Sostenibilidad · Carbono · ODS</span></div></div>
 </footer>
 <a class="wa" href="https://wa.me/50499288718" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
 <script>
-const EN={
+const EN={"cc.t":"Carbon <span>footprint calculator</span>","n.calc":"Carbon calculator","cc.k":"Free demo","cc.p":"Estimate in seconds the emissions of a flight, a vehicle trip or the fuel you use, just like airlines do.","cc.tr":"Title","cc.sr":"Mr.","cc.sra":"Mrs.","cc.dr":"Dr.","cc.none":"None","cc.name":"Your name","cc.t0":"Flight","cc.t1":"Vehicle","cc.t2":"Fuel","cc.from":"From","cc.to":"To","cc.pax":"Passengers","cc.rt":"Round trip","cc.veh":"Vehicle type","cc.v0":"Gasoline car","cc.v1":"Diesel pickup or light truck","cc.v2":"Motorcycle","cc.v3":"Intercity bus (per passenger)","cc.km":"Distance (km)","cc.eff":"Fuel efficiency (km per litre)","cc.fuel":"Fuel","cc.f0":"Gasoline","cc.f1":"Diesel","cc.f2":"LPG (propane)","cc.qty":"Amount","cc.unit":"Unit","cc.gal":"Gallons","cc.l":"Litres","cc.per":"Period","cc.p1":"One-time use","cc.p12":"Monthly use (estimate the year)","cc.p52":"Weekly use (estimate the year)","cc.go":"Calculate my footprint","cc.e1":"Your footprint will appear here","cc.e2":"Choose flight, vehicle or fuel, fill in the details and press “Calculate my footprint”.",
 "n.us":"About us","n.who":"Who we are","n.mv":"Mission and vision","n.sec":"Who we work with","n.svc":"Our services","n.norms":"Standards","n.contact":"Contact us","n.more":"More","n.aq":"What is ARRAIGO?","n.pr":"How it works","n.be":"Benefits",
 "t1":"Corporate sustainability and environmental services","t2":"Climate-smart agriculture","t3":"Sustainable development and SDGs",
 "h.k":"Sustainability · Carbon · SDGs","h.t":"Sustainability that is <span>grown</span>, measured and proven.",
@@ -1172,6 +1274,7 @@ function setLang(l){
   try{localStorage.setItem("jjg-lang",l)}catch(e){}
   if(window.__blog) renderPosts();
   if(window.__quiz) qRender();
+  if(window.__calc) ccLang();
   if(!document.getElementById("out").hidden) build();
 }
 document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
@@ -1492,6 +1595,102 @@ function qResult(){
 document.getElementById("qz").addEventListener("submit",e=>{e.preventDefault();qResult();if(innerWidth<900)document.getElementById("qz-res").scrollIntoView({behavior:"smooth",block:"start"});});
 document.getElementById("qz-reset").onclick=()=>{Object.keys(qAns).forEach(x=>delete qAns[x]);document.getElementById("qz-out").hidden=true;document.getElementById("qz-empty").hidden=false;qRender();};
 qRender(); window.__quiz=true;
+
+/* Calculadora de huella de carbono (demostración) */
+const AP=[
+ ["SAP","San Pedro Sula","San Pedro Sula",15.4526,-87.9236],["XPL","Tegucigalpa / Comayagua (Palmerola)","Tegucigalpa / Comayagua (Palmerola)",14.3824,-87.6212],
+ ["RTB","Roatán","Roatán",16.3168,-86.5230],["LCE","La Ceiba","La Ceiba",15.7425,-86.8530],
+ ["GUA","Ciudad de Guatemala","Guatemala City",14.5833,-90.5275],["SAL","San Salvador","San Salvador",13.4409,-89.0557],
+ ["MGA","Managua","Managua",12.1415,-86.1682],["SJO","San José, Costa Rica","San José, Costa Rica",9.9939,-84.2088],
+ ["PTY","Ciudad de Panamá","Panama City",9.0714,-79.3835],["BOG","Bogotá","Bogotá",4.7016,-74.1469],
+ ["MEX","Ciudad de México","Mexico City",19.4363,-99.0721],["CUN","Cancún","Cancún",21.0365,-86.8771],
+ ["MIA","Miami","Miami",25.7959,-80.2870],["FLL","Fort Lauderdale","Fort Lauderdale",26.0726,-80.1527],
+ ["IAH","Houston","Houston",29.9902,-95.3368],["ATL","Atlanta","Atlanta",33.6407,-84.4277],
+ ["JFK","Nueva York","New York",40.6413,-73.7781],["LAX","Los Ángeles","Los Angeles",33.9416,-118.4085],
+ ["MAD","Madrid","Madrid",40.4983,-3.5676],["AMS","Ámsterdam","Amsterdam",52.3105,4.7683],["FRA","Fráncfort","Frankfurt",50.0379,8.5622]
+];
+/* Factores de referencia (demostración):
+   vuelos: DESNZ/DEFRA (Reino Unido), kg CO2e por pasajero-km con forzamiento radiativo; +8 % por desvíos de ruta
+   combustibles: US EPA GHG Emission Factors Hub, kg CO2 por galón (gasolina 8,78; diésel 10,21; propano 5,72) */
+const CF={sh:0.186,lh:0.148,uplift:1.08,limit:3700,
+  fuel:{gas:8.78/3.785,dsl:10.21/3.785,lpg:5.72/3.785},bus:0.027,
+  veh:{car:["gas",12],pick:["dsl",10],moto:["gas",30]}};
+let ccTab=0;
+const ccNF=(n,d=0)=>n.toLocaleString(lang==="en"?"en-US":"es-HN",{minimumFractionDigits:d,maximumFractionDigits:d});
+function gcd(a,b){const R=6371,r=x=>x*Math.PI/180,dLa=r(b[3]-a[3]),dLo=r(b[4]-a[4]);
+  const h=Math.sin(dLa/2)**2+Math.cos(r(a[3]))*Math.cos(r(b[3]))*Math.sin(dLo/2)**2;return 2*R*Math.asin(Math.sqrt(h));}
+function ccFill(){const k=L();["cc-from","cc-to"].forEach((id,j)=>{const s=document.getElementById(id),v=s.value||(j?"MIA":"SAP");
+  s.innerHTML=AP.map(a=>`<option value="${a[0]}">${a[1+k]} (${a[0]})</option>`).join("");s.value=v;});}
+function ccShow(i){ccTab=i;document.querySelectorAll(".cc-tab").forEach(t=>t.setAttribute("aria-selected",+t.dataset.cc===i));
+  [0,1,2].forEach(j=>document.getElementById("ccp-"+j).hidden=j!==i);}
+document.querySelectorAll(".cc-tab").forEach(t=>t.onclick=()=>ccShow(+t.dataset.cc));
+document.getElementById("cc-swap").onclick=()=>{const a=document.getElementById("cc-from"),b=document.getElementById("cc-to"),x=a.value;a.value=b.value;b.value=x;};
+document.getElementById("cc-veh").onchange=e=>{const v=CF.veh[e.target.value];document.getElementById("cc-effl").hidden=!v;if(v)document.getElementById("cc-eff").value=v[1];};
+let ccLast=null;
+function ccCalc(){
+  const k=L(),en=k===1,g=id=>document.getElementById(id);
+  let kg=0,lines=[],what="";
+  if(ccTab===0){
+    const a=AP.find(x=>x[0]===g("cc-from").value),b=AP.find(x=>x[0]===g("cc-to").value);
+    if(a===b) return en?"Choose different origin and destination airports.":"Elija aeropuertos de origen y destino diferentes.";
+    const pax=Math.max(1,Math.round(+g("cc-pax").value||1)),rt=g("cc-rt").checked;
+    const d=gcd(a,b),f=d<CF.limit?CF.sh:CF.lh,km=d*CF.uplift*(rt?2:1);kg=km*f*pax;
+    what=(en?"Flight ":"Vuelo ")+a[0]+(rt?" ⇄ ":" → ")+b[0];
+    lines=[[en?"Route":"Ruta",`${a[1+k]} ${rt?"⇄":"→"} ${b[1+k]}`],[en?"Distance flown":"Distancia volada",ccNF(km)+" km"+(rt?(en?" (round trip)":" (ida y vuelta)"):"")],
+      [en?"Passengers":"Pasajeros",ccNF(pax)],[en?"Flight type":"Tipo de vuelo",d<CF.limit?(en?"Short haul":"Corto alcance"):(en?"Long haul":"Largo alcance")]];
+  }else if(ccTab===1){
+    const t=g("cc-veh").value,km0=+g("cc-km").value,rt=g("cc-vrt").checked;
+    if(!(km0>0)) return en?"Enter the distance in kilometres.":"Escriba la distancia en kilómetros.";
+    const km=km0*(rt?2:1),vn=g("cc-veh").selectedOptions[0].textContent;
+    if(t==="bus"){kg=km*CF.bus;lines=[[en?"Vehicle":"Vehículo",vn],[en?"Distance":"Distancia",ccNF(km)+" km"]];}
+    else{const eff=+g("cc-eff").value;if(!(eff>0)) return en?"Enter the fuel efficiency in km per litre.":"Escriba el rendimiento en km por litro.";
+      const lt=km/eff;kg=lt*CF.fuel[CF.veh[t][0]];
+      lines=[[en?"Vehicle":"Vehículo",vn],[en?"Distance":"Distancia",ccNF(km)+" km"],[en?"Estimated fuel":"Combustible estimado",ccNF(lt,1)+(en?" litres (":" litros (")+ccNF(lt/3.785,1)+(en?" gal)":" gal)")]];}
+    what=(en?"Trip by ":"Recorrido en ")+vn.toLowerCase()+", "+ccNF(km)+" km";
+  }else{
+    const f=g("cc-fuel").value,q=+g("cc-qty").value,u=g("cc-unit").value,p=+g("cc-per").value;
+    if(!(q>0)) return en?"Enter the amount of fuel.":"Escriba la cantidad de combustible.";
+    const lt=(u==="gal"?q*3.785:q)*p;kg=lt*CF.fuel[f];
+    const fn=g("cc-fuel").selectedOptions[0].textContent;
+    lines=[[en?"Fuel":"Combustible",fn],[en?"Amount":"Cantidad",ccNF(q,q%1?1:0)+" "+g("cc-unit").selectedOptions[0].textContent.toLowerCase()+(p>1?(p===12?(en?" per month":" al mes"):(en?" per week":" por semana")):"")],
+      [en?"Total litres":"Litros totales",ccNF(lt)+(p>1?(en?" per year":" al año"):"")]];
+    what=fn+", "+ccNF(lt)+(en?" litres":" litros")+(p>1?(en?" per year":" al año"):"");
+  }
+  ccLast={kg,what,lines,annual:ccTab===2&&+g("cc-per").value>1};
+  return null;
+}
+function ccRender(){
+  if(!ccLast) return;
+  const k=L(),en=k===1,{kg,lines,annual}=ccLast;
+  const trE=document.getElementById("cc-tr"),tv=trE.value,tr=tv?trE.selectedOptions[0].textContent:"",nm=document.getElementById("cc-name").value.trim();
+  const who=nm?((tr?tr+" ":"")+nm):(tv==="Sra."?(en?"Madam":"Señora"):tv==="Sr."?(en?"Sir":"Señor"):tr);
+  const t=kg/1000,big=kg>=1000;
+  const lvl=kg<100?["ok",en?"Low":"Baja"]:kg<1000?["mid",en?"Moderate":"Moderada"]:["low",en?"High":"Alta"];
+  const gas=kg/CF.fuel.gas/3.785;
+  document.getElementById("cc-out").innerHTML=
+   `<p class="cc-hi">${who?`<b>${who.replace(/[<>&]/g,"")}</b>, `:""}${en?(who?"your carbon footprint is":"Your carbon footprint is"):(who?"su huella de carbono es de":"Su huella de carbono es de")}</p>
+   <div class="qz-score ${lvl[0]} cc-big"><b>${big?ccNF(t,2):ccNF(kg,kg<10?1:0)}<small> ${big?(en?"t":"t"):"kg"} CO₂e</small></b></div>
+   <p class="cc-sub">${big?ccNF(kg)+" kg CO₂e":ccNF(t,3)+(en?" tonnes CO₂e":" toneladas de CO₂e")}${annual?(en?" per year":" al año"):""} · ${en?"Level":"Nivel"}: <span class="lv ${lvl[0]}">${lvl[1]}</span></p>
+   <dl class="cc-dl">${lines.map(l=>`<div><dt>${l[0]}</dt><dd>${l[1]}</dd></div>`).join("")}</dl>
+   ${ccTab===0?`<p class="cc-eq">${en?"Equivalent to burning about":"Equivale a quemar unos"} <b>${ccNF(gas,gas<10?1:0)} ${en?"gallons of gasoline":"galones de gasolina"}</b>.</p>`:""}
+   <p class="cc-src">${en?"Demo with reference factors: DESNZ/DEFRA (flights, with radiative forcing and +8% routing) and US EPA (fuels). Indicative result; it is not a verified inventory under ISO 14064.":"Demostración con factores de referencia: DESNZ/DEFRA (vuelos, con forzamiento radiativo y +8 % por desvíos de ruta) y US EPA (combustibles). Resultado orientativo; no es un inventario verificado bajo ISO 14064."}</p>
+   <div class="cc-acts"><button class="btn lime" type="button" id="cc-send">${en?"Request a full carbon assessment":"Solicitar medición completa"}<svg><use href="#i-arrow"/></svg></button><button class="btn ghost" type="button" id="cc-again">${en?"New calculation":"Nuevo cálculo"}</button></div>`;
+  document.getElementById("cc-empty").hidden=true;document.getElementById("cc-out").hidden=false;
+  document.getElementById("cc-again").onclick=()=>{ccLast=null;document.getElementById("cc-out").hidden=true;document.getElementById("cc-empty").hidden=false;document.querySelector(".cc-tab[aria-selected=true]").focus();};
+  document.getElementById("cc-send").onclick=()=>{
+    const f=document.getElementById("f");f["f-svc"].selectedIndex=1;
+    if(nm&&!f["f-name"].value) f["f-name"].value=nm;
+    f["f-msg"].value=(en?"I used the carbon calculator on your website: ":"Usé la calculadora de huella de su sitio web: ")+ccLast.what+" = "+(big?ccNF(t,2)+" t":ccNF(kg)+" kg")+" CO₂e"+(annual?(en?" per year":" al año"):"")+".\n"+(en?"I would like a full carbon footprint assessment for my organization.":"Me interesa una medición completa de la huella de carbono de mi organización.");
+    document.getElementById("contacto").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+    setTimeout(()=>f[nm?"f-mail":"f-name"].focus({preventScroll:true}),400);
+  };
+}
+document.getElementById("cc").addEventListener("submit",e=>{e.preventDefault();const err=ccCalc(),el=document.getElementById("cc-err");
+  el.hidden=!err;if(err){el.textContent=err;return;}ccRender();
+  if(innerWidth<900)document.querySelector(".cc-res").scrollIntoView({behavior:"smooth",block:"start"});});
+function ccLang(){ccFill();if(ccLast&&!document.getElementById("cc-out").hidden){ccCalc();ccRender();}}
+ccFill();window.__calc=true;
+
 
 /* Pestañas Certificaciones / Normas */
 const ctabs=[...document.querySelectorAll(".ctab")];
