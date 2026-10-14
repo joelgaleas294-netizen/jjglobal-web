@@ -2,7 +2,45 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "(.*)\\.vercel\\.app" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "jjglobal-web.vercel.app"
+        }
+      ],
+      "destination": "https://www.jjglobalsa.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "jjglobal-web-jj-global.vercel.app"
+        }
+      ],
+      "destination": "https://www.jjglobalsa.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "jjglobal-web-git-main-jj-global.vercel.app"
+        }
+      ],
+      "destination": "https://www.jjglobalsa.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<sub>.*)\\.vercel\\.app"
+        }
+      ],
       "destination": "https://www.jjglobalsa.com/:path*",
       "permanent": true
     }
