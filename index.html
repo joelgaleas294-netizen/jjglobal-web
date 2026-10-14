@@ -45,9 +45,12 @@
   --deep:#0F3022; --lime:#9ACD4E; --lime-ink:#A7D65F; --water:#62B4D3; --gold:#DDB05A;
   --hero:#07130D; --on-dark:#E6EEE8; --on-dark-muted:#93AD9D; --tint-lime:#1A2B17; --tint-lime-line:#3B5A28; --tint-gold:#2A2618; color-scheme:dark}
 
+@keyframes arrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.arrive{animation:arrive .45s ease-out both}
+@media (prefers-reduced-motion:reduce){.arrive{animation:none}}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-html{scroll-behavior:smooth;scroll-padding-top:5.5rem}
+html{scroll-behavior:auto;scroll-padding-top:5.5rem}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.65;margin:0}
 .wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,4vw,2.5rem)}
@@ -1694,11 +1697,11 @@ function qResult(){
   document.getElementById("qz-send").onclick=()=>{
     const f=document.getElementById("f"); f["f-svc"].selectedIndex=0;
     f["f-msg"].value=(k?"My self-assessment result: ":"Resultado de mi autodiagnóstico: ")+pct+"% ("+lvl[1][k]+").\n"+areas.map(a=>"- "+a[0]+": "+a[1]+"%").join("\n")+(gaps.length?"\n"+(k?"Main gaps:":"Brechas principales:")+"\n"+gaps.map(g=>"- "+QA[g[0]].r[lang]).join("\n"):"");
-    document.getElementById("contacto").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+    document.getElementById("contacto").scrollIntoView({block:"start"});
     setTimeout(()=>f["f-name"].focus({preventScroll:true}),400);
   };
 }
-document.getElementById("qz").addEventListener("submit",e=>{e.preventDefault();qResult();if(innerWidth<900)document.getElementById("qz-res").scrollIntoView({behavior:"smooth",block:"start"});});
+document.getElementById("qz").addEventListener("submit",e=>{e.preventDefault();qResult();if(innerWidth<900)document.getElementById("qz-res").scrollIntoView({block:"start"});});
 document.getElementById("qz-reset").onclick=()=>{Object.keys(qAns).forEach(x=>delete qAns[x]);document.getElementById("qz-out").hidden=true;document.getElementById("qz-empty").hidden=false;qRender();};
 qRender(); window.__quiz=true;
 
@@ -1787,13 +1790,13 @@ function ccRender(){
     const f=document.getElementById("f");f["f-svc"].selectedIndex=1;
     if(nm&&!f["f-name"].value) f["f-name"].value=nm;
     f["f-msg"].value=(en?"I used the carbon calculator on your website: ":"Usé la calculadora de huella de su sitio web: ")+ccLast.what+" = "+(big?ccNF(t,2)+" t":ccNF(kg)+" kg")+" CO₂e"+(annual?(en?" per year":" al año"):"")+".\n"+(en?"I would like a full carbon footprint assessment for my organization.":"Me interesa una medición completa de la huella de carbono de mi organización.");
-    document.getElementById("contacto").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+    document.getElementById("contacto").scrollIntoView({block:"start"});
     setTimeout(()=>f[nm?"f-mail":"f-name"].focus({preventScroll:true}),400);
   };
 }
 document.getElementById("cc").addEventListener("submit",e=>{e.preventDefault();const err=ccCalc(),el=document.getElementById("cc-err");
   el.hidden=!err;if(err){el.textContent=err;return;}ccRender();
-  if(innerWidth<900)document.querySelector(".cc-res").scrollIntoView({behavior:"smooth",block:"start"});});
+  if(innerWidth<900)document.querySelector(".cc-res").scrollIntoView({block:"start"});});
 function ccLang(){ccFill();if(ccLast&&!document.getElementById("cc-out").hidden){ccCalc();ccRender();}}
 ccFill();window.__calc=true;
 
@@ -1831,5 +1834,17 @@ document.querySelectorAll("#certificaciones .chip").forEach(b=>b.addEventListene
 })();
 </script>
 
+<script>
+/* Navegación interna: salto directo a la sección (sin recorrer la página) y aparición suave */
+document.addEventListener("click",e=>{
+  const a=e.target.closest('a[href^="#"]');if(!a||e.defaultPrevented)return;
+  const id=a.getAttribute("href").slice(1);if(!id)return;
+  const el=document.getElementById(id);if(!el)return;
+  e.preventDefault();
+  el.scrollIntoView({block:"start"});
+  history.replaceState(null,"","#"+id);
+  el.classList.remove("arrive");void el.offsetWidth;el.classList.add("arrive");
+});
+</script>
 </body>
 </html>
