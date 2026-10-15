@@ -529,6 +529,23 @@ footer{background:var(--deep);color:var(--on-dark-muted);font-size:.92rem}
 .ctab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 @media (max-width:560px){.ctabs{border-radius:20px;width:100%}.ctab{flex:1 1 100%}}
 #cp1 .norms{margin-top:.4rem}
+/* Cuadros de color (mismo estilo que las normas ISO) para servicios y sellos */
+.list .it:not(.feat){--tile:#123B29;background:var(--tile);color:#fff;border:0;position:relative;overflow:hidden;box-shadow:0 18px 30px -22px rgba(10,30,20,.6);min-height:11.5rem;align-content:start;padding:1.35rem}
+.list .it:not(.feat)::after{content:"";position:absolute;right:-22%;bottom:-38%;width:62%;aspect-ratio:1;border-radius:50%;border:14px solid rgba(255,255,255,.1);pointer-events:none}
+.list .it:not(.feat):nth-child(6n+2){--tile:#1F6E8C}.list .it:not(.feat):nth-child(6n+3){--tile:#3F6A16}.list .it:not(.feat):nth-child(6n+4){--tile:#7E5B1C}.list .it:not(.feat):nth-child(6n+5){--tile:#2F5D4A}.list .it:not(.feat):nth-child(6n+6){--tile:#5B3E7A}
+.list .it:not(.feat) .tag{color:rgba(255,255,255,.92)}
+.list .it:not(.feat) h4{color:#fff;font-size:1.15rem;font-weight:700;position:relative;z-index:1}
+.list .it:not(.feat) p{color:rgba(255,255,255,.93);position:relative;z-index:1}
+.list .it:not(.feat) .more{color:#fff;text-decoration:underline;text-underline-offset:3px;position:relative;z-index:1}
+.certs .cert{background:var(--c);border:0;color:#fff;box-shadow:0 18px 30px -22px rgba(10,30,20,.6);min-height:12rem}
+.certs .cert::before{display:none}
+.certs .cert::after{content:"";position:absolute;right:-22%;bottom:-38%;width:62%;aspect-ratio:1;border-radius:50%;border:14px solid rgba(255,255,255,.1);pointer-events:none}
+.certs .cert small{color:rgba(255,255,255,.92)!important}
+.certs .cert h4{color:#fff;font-size:1.35rem;font-weight:800;position:relative;z-index:1}
+.certs .cert p{color:rgba(255,255,255,.93);position:relative;z-index:1}
+.certs .cert .mk{color:#fff;position:relative;z-index:1}
+.certs .cert .mk::before{background:#fff}
+
 /* Autodiagnóstico */
 #autodiagnostico{background:var(--soft)}
 .quiz{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:1.5rem;align-items:start}
@@ -841,17 +858,17 @@ footer{background:var(--deep);color:var(--on-dark-muted);font-size:.92rem}
       <button class="chip" type="button" data-f="ino" aria-pressed="false" data-i18n="cf.ino">Inocuidad</button>
     </div>
     <div class="certs" id="certs">
-      <div class="cert wide" data-c="org" style="--c:#4E7F1B"><small data-i18n="cc.org">Orgánica</small><h4 data-i18n="ce1.t">Orgánico UE y USDA NOP</h4><p data-i18n="ce1.p">Producción sin agroquímicos de síntesis bajo el reglamento europeo y el programa orgánico de Estados Unidos.</p><span class="mk" data-i18n="ce1.m">Europa · Estados Unidos</span></div>
-      <div class="cert" data-c="org" style="--c:#4E7F1B"><small data-i18n="cc.org">Orgánica</small><h4>JAS</h4><p data-i18n="ce2.p">Norma orgánica agrícola de Japón, requisito para vender productos orgánicos en ese mercado.</p><span class="mk" data-i18n="ce2.m">Japón</span></div>
-      <div class="cert" data-c="org" style="--c:#4E7F1B"><small data-i18n="cc.org">Orgánica</small><h4>Bio Suisse</h4><p data-i18n="ce3.p">Estándar orgánico suizo con exigencias adicionales sobre la finca completa, biodiversidad y comercio.</p><span class="mk" data-i18n="ce3.m">Suiza</span></div>
-      <div class="cert" data-c="org" style="--c:#4E7F1B"><small data-i18n="cc.org">Orgánica</small><h4>Naturland</h4><p data-i18n="ce4.p">Estándar orgánico alemán que integra criterios sociales y de comercio justo.</p><span class="mk" data-i18n="ce4.m">Alemania · Europa</span></div>
+      <div class="cert wide" data-c="org" style="--c:#3F6A16"><small data-i18n="cc.org">Orgánica</small><h4 data-i18n="ce1.t">Orgánico UE y USDA NOP</h4><p data-i18n="ce1.p">Producción sin agroquímicos de síntesis bajo el reglamento europeo y el programa orgánico de Estados Unidos.</p><span class="mk" data-i18n="ce1.m">Europa · Estados Unidos</span></div>
+      <div class="cert" data-c="org" style="--c:#3F6A16"><small data-i18n="cc.org">Orgánica</small><h4>JAS</h4><p data-i18n="ce2.p">Norma orgánica agrícola de Japón, requisito para vender productos orgánicos en ese mercado.</p><span class="mk" data-i18n="ce2.m">Japón</span></div>
+      <div class="cert" data-c="org" style="--c:#3F6A16"><small data-i18n="cc.org">Orgánica</small><h4>Bio Suisse</h4><p data-i18n="ce3.p">Estándar orgánico suizo con exigencias adicionales sobre la finca completa, biodiversidad y comercio.</p><span class="mk" data-i18n="ce3.m">Suiza</span></div>
+      <div class="cert" data-c="org" style="--c:#3F6A16"><small data-i18n="cc.org">Orgánica</small><h4>Naturland</h4><p data-i18n="ce4.p">Estándar orgánico alemán que integra criterios sociales y de comercio justo.</p><span class="mk" data-i18n="ce4.m">Alemania · Europa</span></div>
       <div class="cert" data-c="org" style="--c:#2F5D4A"><small data-i18n="cc.bio">Biodinámica</small><h4>Demeter</h4><p data-i18n="ce5.p">Agricultura biodinámica: la finca como organismo vivo, con preparados y ciclos propios. Parte de la base orgánica.</p><span class="mk" data-i18n="ce5.m">Internacional</span></div>
       <div class="cert" data-c="org" style="--c:#2F5D4A"><small data-i18n="cc.reg">Regenerativa</small><h4>ROC</h4><p data-i18n="ce6.p">Regenerative Organic Certified: salud del suelo, bienestar animal y justicia social sobre una base orgánica.</p><span class="mk" data-i18n="ce6.m">Estados Unidos · Internacional</span></div>
       <div class="cert" data-c="sus" style="--c:#1F6E8C"><small data-i18n="cc.sus">Sostenibilidad</small><h4>Rainforest Alliance</h4><p data-i18n="ce7.p">Agricultura sostenible: protección de bosques, derechos laborales, medios de vida y mejora continua.</p><span class="mk" data-i18n="ce7.m">Internacional</span></div>
       <div class="cert" data-c="sus" style="--c:#1F6E8C"><small data-i18n="cc.sus">Sostenibilidad</small><h4>C.A.F.E. Practices</h4><p data-i18n="ce8.p">Programa de abastecimiento responsable de Starbucks: calidad, transparencia económica, responsabilidad social y liderazgo ambiental.</p><span class="mk" data-i18n="ce8.m">Cadena Starbucks</span></div>
       <div class="cert" data-c="sus" style="--c:#1F6E8C"><small data-i18n="cc.bird">Biodiversidad</small><h4>Bird Friendly</h4><p data-i18n="ce9.p">Sello del Smithsonian para café de sombra diversa que conserva el hábitat de las aves. Requiere certificación orgánica.</p><span class="mk" data-i18n="ce9.m">Estados Unidos · Japón</span></div>
-      <div class="cert" data-c="sus" style="--c:#8A6420"><small data-i18n="cc.fair">Comercio justo</small><h4 data-i18n="ce10.t">Comercio Justo</h4><p data-i18n="ce10.p">Precios mínimos, prima social y organización democrática de pequeños productores (Fairtrade, SPP).</p><span class="mk" data-i18n="ce10.m">Internacional</span></div>
-      <div class="cert" data-c="sus" style="--c:#8A6420"><small data-i18n="cc.gen">Género</small><h4 data-i18n="ce11.t">Con Manos de Mujer</h4><p data-i18n="ce11.p">Distingue el café producido y gestionado por mujeres, con criterios de equidad y participación en la cadena.</p><span class="mk" data-i18n="ce11.m">Mercados diferenciados</span></div>
+      <div class="cert" data-c="sus" style="--c:#7E5B1C"><small data-i18n="cc.fair">Comercio justo</small><h4 data-i18n="ce10.t">Comercio Justo</h4><p data-i18n="ce10.p">Precios mínimos, prima social y organización democrática de pequeños productores (Fairtrade, SPP).</p><span class="mk" data-i18n="ce10.m">Internacional</span></div>
+      <div class="cert" data-c="sus" style="--c:#7E5B1C"><small data-i18n="cc.gen">Género</small><h4 data-i18n="ce11.t">Con Manos de Mujer</h4><p data-i18n="ce11.p">Distingue el café producido y gestionado por mujeres, con criterios de equidad y participación en la cadena.</p><span class="mk" data-i18n="ce11.m">Mercados diferenciados</span></div>
       <div class="cert wide" data-c="cli" style="--c:#123B29"><small data-i18n="cc.cli">Clima</small><h4 data-i18n="ce12.t">Huella de carbono</h4><p data-i18n="ce12.p">Cuantificación de las emisiones del producto o la organización con ISO 14067, ISO 14064-1 y el GHG Protocol.</p><span class="mk" data-i18n="ce12.m">Compradores y mercados de carbono</span></div>
       <div class="cert" data-c="cli" style="--c:#123B29"><small data-i18n="cc.cli">Clima</small><h4 data-i18n="ce13.t">Carbono neutro</h4><p data-i18n="ce13.p">Ruta de reducción y compensación de emisiones bajo ISO 14068-1, con declaración verificada por un tercero.</p><span class="mk" data-i18n="ce13.m">Internacional</span></div>
       <div class="cert" data-c="ino" style="--c:#5B3E7A"><small data-i18n="cc.ino">Inocuidad</small><h4>HACCP</h4><p data-i18n="ce14.p">Análisis de peligros y puntos críticos de control en beneficios, plantas y agroindustrias, base de ISO 22000 y FDA.</p><span class="mk" data-i18n="ce14.m">Internacional · Estados Unidos</span></div>
