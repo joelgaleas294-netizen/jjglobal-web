@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/trabaje-con-nosotros.html",
+      "destination": "/",
+      "permanent": false
+    },
+    {
       "source": "/:path*",
       "has": [
         {
